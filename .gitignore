@@ -55,3 +55,21 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# OpenCode agent workspace (local tooling, do not commit)
+.opencode/
+.superpowers/
+openspec
+docs
+
+# 本機下載的完整 Laya bundle 不納入版本控制；保留 models/README.md。
+/models/laya/
+
+# Laya model weights are downloaded locally and are not source artifacts.
+models/**/*.onnx
+models/**/*.onnx.data
+models/**/*.safetensors
+models/**/model.*
+
+# Benchmark output is generated from the local machine and model bundle.
+BenchmarkDotNet.Artifacts/

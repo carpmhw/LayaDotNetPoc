@@ -1,0 +1,36 @@
+id,description,amount,currency,direction,expected_category,language
+tx-001,Uber Eats Taiwan,-580,TWD,debit,food,en
+tx-002,全家便利商店,125,TWD,debit,food,zh
+tx-003,Starbucks Taipei,160,TWD,debit,food,en
+tx-004,鼎泰豐,980,TWD,debit,food,zh
+tx-005,台灣大車隊,280,TWD,debit,transport,zh
+tx-006,長榮航空,12500,TWD,debit,transport,zh
+tx-007,Hotel booking Taipei,4500,TWD,debit,transport,en
+tx-008,Carrefour Taiwan,860,TWD,debit,shopping,en
+tx-009,Amazon Marketplace,1200,TWD,debit,shopping,en
+tx-010,屈臣氏,540,TWD,debit,shopping,zh
+tx-011,Costco Taiwan,2300,TWD,debit,shopping,en
+tx-012,台灣電力公司,1340,TWD,debit,utilities,zh
+tx-013,中華電信,799,TWD,debit,utilities,zh
+tx-014,瓦斯費,480,TWD,debit,utilities,zh
+tx-015,Water utility bill,320,TWD,debit,utilities,en
+tx-016,Transfer to savings,10000,TWD,debit,transfer,en
+tx-017,轉帳至家人,8000,TWD,debit,transfer,zh
+tx-018,銀行轉入,6000,TWD,credit,transfer,zh
+tx-019,ETF monthly purchase,5000,TWD,debit,investment,en
+tx-020,ETF monthly purchase 台股,15000,TWD,debit,investment,zh
+tx-021,Index fund contribution,8000,TWD,debit,investment,en
+tx-022,Salary ACME Corp,68000,TWD,credit,salary,en
+tx-023,薪資入帳,72000,TWD,credit,salary,zh
+tx-024,Payroll bonus,15000,TWD,credit,salary,en
+tx-025,ATM service fee,15,TWD,debit,bank_fee,en
+tx-026,跨行手續費,15,TWD,debit,bank_fee,zh
+tx-027,Foreign exchange fee,80,TWD,debit,bank_fee,en
+tx-028,Netflix.com,390,TWD,debit,entertainment,en
+tx-029,Steam Games,1200,TWD,debit,entertainment,en
+tx-030,台北電影院,450,TWD,debit,entertainment,zh
+tx-031,Taipei hospital,1200,TWD,debit,medical,en
+tx-032,台大醫院掛號,500,TWD,debit,medical,zh
+tx-033,房租,22000,TWD,debit,other,zh
+tx-034,ATM Cash Withdrawal,5000,TWD,debit,other,en
+tx-035,未分類商店,77,TWD,debit,other,zh

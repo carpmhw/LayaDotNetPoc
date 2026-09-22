@@ -1,0 +1,78 @@
+{
+  "bundle": {
+    "repository": "receptron/laya-onnx",
+    "revision": "68f27dfe5a27a54fb2b1fefc432f43f972e90868",
+    "baseModel": "convaiinnovations/laya",
+    "license": "Apache-2.0",
+    "totalBytes": 1689065531,
+    "downloadedLocally": true,
+    "files": {
+      "laya.onnx": {
+        "size": 3807291,
+        "sha256": "a874eb254b58b0fcb1e7ad56fbb188c29d64e08c9a46b689433e1f52c66dba1e",
+        "remoteOid": "4a33afc18f32e45e4a7c10896af107bbce107ac3"
+      },
+      "laya.onnx.data": {
+        "size": 1685258240,
+        "sha256": "487746363a8da57bcadb4345352997d22a0fb90d70aa22c6856668d023242aba",
+        "remoteOid": "b08df8aaa57db06da483088fa7420320570de862"
+      },
+      "laya_config.json": {
+        "size": 369,
+        "sha256": "5049005dc6ae3ca5e82cc7d85c421357d5c543817300c8e8c5281ddbc69bb561",
+        "remoteOid": "54fdeafc06abca5d4232a02857238ff53c975c38"
+      },
+      "tokenizer/tokenizer.json": {
+        "size": 3583228,
+        "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "remoteOid": "2f4d8583e507b7466d2490e2d6c045647a822698"
+      },
+      "tokenizer/tokenizer_config.json": {
+        "size": 308,
+        "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12",
+        "remoteOid": "9fd800115c5c92353220aa66addfce67a9135f32"
+      }
+    }
+  },
+  "onnxSchema": {
+    "inputs": {
+      "input_ids": { "dtype": "int64", "shape": [-1, -1] },
+      "attention_mask": { "dtype": "int64", "shape": [-1, -1] },
+      "marker_pos": { "dtype": "int64", "shape": [-1, -1] },
+      "marker_mask": { "dtype": "bool", "shape": [-1, -1] },
+      "qtype": { "dtype": "int64", "shape": [-1] }
+    },
+    "outputs": {
+      "logits": { "dtype": "float32", "shape": [-1, -1] },
+      "act_probs": { "dtype": "float32", "shape": [-1, 2] }
+    },
+    "validatedBy": "Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema"
+  },
+  "reference": {
+    "package": "@receptron/laya",
+    "version": "0.1.2",
+    "gitHead": "6478649e723122ca24bbf5fb69ed1010023c9750",
+    "sequenceSource": "dist/sequence.js",
+    "runtimeSource": "dist/laya.js",
+    "fixtureCommand": "LAYA_REFERENCE_NODE_MODULES=/tmp/opencode/laya-reference/node_modules node tools/generate-reference-fixtures.mjs",
+    "fixtureFile": "test-data/parity-fixtures.json",
+    "notes": [
+      "The reference serializes object state like Python json.dumps with ensure_ascii=False and insertion order.",
+      "The reference rounds public probabilities to four decimal places, while parity must retain raw values before presentation rounding.",
+      "The English reference model exposes logits and act_probs outputs.",
+      "The fixture suite contains ten cases covering Choice, Noul, mixed batches, Chinese/mixed text, mask scrubbing and long-state truncation."
+    ]
+  },
+  "config": {
+    "max_len": 512,
+    "head_max_len": 192,
+    "temperature_by_options": {
+      "choice:2": 1.9063563346862793,
+      "choice:3-5": 1.7601518630981445,
+      "choice:6-10": 1.0000158548355103,
+      "choice:11+": 0.10058280825614929,
+      "score:3-5": 1.2514300346374512,
+      "noul:2": 1.983399510383606
+    }
+  }
+}
