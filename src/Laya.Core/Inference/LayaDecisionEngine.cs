@@ -1,4 +1,5 @@
 using Laya.Core.Abstractions;
+using Laya.Core.Configuration;
 using Laya.Core.Encoding;
 using Laya.Core.Exceptions;
 using Laya.Core.Models;
@@ -32,7 +33,14 @@ public sealed class LayaDecisionEngine : ILayaDecisionEngine, IDisposable
     /// <summary>載入 bundle、tokenizer 並建立可釋放的 decision engine。</summary>
     public static LayaDecisionEngine Open(string modelRoot)
     {
-        var session = LayaOnnxSession.Open(modelRoot);
+        return Open(new LayaOptions(modelRoot));
+    }
+
+    /// <summary>使用 host 已解析的 options 載入 bundle、tokenizer 與長生命週期 engine。</summary>
+    public static LayaDecisionEngine Open(LayaOptions options)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        var session = LayaOnnxSession.Open(options);
         LayaTokenizer? tokenizer = null;
 
         try
@@ -61,7 +69,11 @@ public sealed class LayaDecisionEngine : ILayaDecisionEngine, IDisposable
         var raw = _inferenceRunner.Run(batch);
         var answers = _postProcessor.Process(request, batch, raw, session.Bundle.Config);
 
-        return new LayaResult(answers, raw.RunDuration);
+        return new LayaResult(
+            answers,
+            raw.RunDuration,
+            batch.SequenceLength,
+            batch.Questions.Any(question => question.SequenceLength == session.Bundle.Config.MaxLength));
     }
 
     /// <summary>釋放 tokenizer 與 ONNX session；重複呼叫不會重複釋放。</summary>

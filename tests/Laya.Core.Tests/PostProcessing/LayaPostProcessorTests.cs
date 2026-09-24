@@ -7,6 +7,7 @@ using Laya.Core.Tokenization;
 
 namespace Laya.Core.Tests.PostProcessing;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaPostProcessorTests
 {
     /// <summary>驗證 synthetic logits 會依 option 順序映射成 Choice answer。</summary>

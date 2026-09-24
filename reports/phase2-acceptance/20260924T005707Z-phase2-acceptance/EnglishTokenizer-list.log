@@ -1,0 +1,12 @@
+/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll 的測試回合 (.NETCoreApp,Version=v8.0)
+VSTest 版本 18.0.2 (x64)
+
+可使用下列測試:
+    Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_ResolvesSpecialTokensAndEncodesWithoutSpecialTokens
+    Laya.Core.Tests.Tokenization.LayaTokenizerTests.Encode_MatchesGoldenIds
+    Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_RejectsMissingSpecialTokenConfig
+    Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MixesChoiceAndNoulWithRightPadding
+    Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesChoiceGoldenTrace
+    Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesNoulGoldenTrace
+    Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_TruncatesStateToMaxLength
+    Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_RejectsOptionsThatExceedModelContext

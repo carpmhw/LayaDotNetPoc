@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "status": "development-and-held-out-evidence",
+  "split": "development",
+  "promptVariant": "A",
+  "selectionMethod": "Conservative and Balanced require the stated POC accuracy target; Aggressive selects maximum coverage among non-empty cells, then fewer wrong AUTO, higher probability threshold, and higher margin threshold.",
+  "suggestDefaults": {
+    "probabilityThreshold": 0.6,
+    "marginThreshold": 0.1,
+    "status": "exploratory-only"
+  },
+  "runs": {
+    "multilingual": {
+      "runId": "20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f",
+      "manifest": "reports/phase2-runs/20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f/manifest.json",
+      "metrics": "reports/phase2-runs/20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f/metrics.json"
+    },
+    "english": {
+      "runId": "20260924T055011652Z-72d14048b85c4d2396dc899832d41343",
+      "manifest": "reports/phase2-runs/20260924T055011652Z-72d14048b85c4d2396dc899832d41343/manifest.json",
+      "metrics": "reports/phase2-runs/20260924T055011652Z-72d14048b85c4d2396dc899832d41343/metrics.json"
+    }
+  },
+  "scenarios": {
+    "multilingual": {
+      "Conservative": {
+        "targetAccuracy": 0.98,
+        "autoEnabled": false,
+        "selectedCell": null,
+        "reason": "No non-empty development grid cell reached the POC target.",
+        "policy": {
+          "name": "Conservative",
+          "autoEnabled": false,
+          "autoProbabilityThreshold": 1,
+          "autoMarginThreshold": 1,
+          "suggestProbabilityThreshold": 0.6,
+          "suggestMarginThreshold": 0.1,
+          "policyHash": "bb1b446e6c62b9b041c776a39486e2579b576e38f0a1038a4122415431a19724"
+        }
+      },
+      "Balanced": {
+        "targetAccuracy": 0.95,
+        "autoEnabled": false,
+        "selectedCell": null,
+        "reason": "No non-empty development grid cell reached the POC target.",
+        "policy": {
+          "name": "Balanced",
+          "autoEnabled": false,
+          "autoProbabilityThreshold": 1,
+          "autoMarginThreshold": 1,
+          "suggestProbabilityThreshold": 0.6,
+          "suggestMarginThreshold": 0.1,
+          "policyHash": "d3f117e0689951465412f49b31fdce3bbb8e8be4f3f94d75880b2031caecac94"
+        }
+      },
+      "Aggressive": {
+        "targetAccuracy": null,
+        "autoEnabled": true,
+        "selectedCell": {
+          "probabilityThreshold": 0.6,
+          "marginThreshold": 0.2,
+          "qualifiedCount": 136,
+          "accuracy": 0.7941176470588235,
+          "coverage": 0.8242424242424242,
+          "wrongCount": 28
+        },
+        "policy": {
+          "name": "Aggressive",
+          "autoEnabled": true,
+          "autoProbabilityThreshold": 0.6,
+          "autoMarginThreshold": 0.2,
+          "suggestProbabilityThreshold": 0.6,
+          "suggestMarginThreshold": 0.1,
+          "policyHash": "01069fe3338e2ba3b93e1740b2c29acff65b267b9cb7316298ee455b209ec864"
+        }
+      }
+    },
+    "english": {
+      "Conservative": {
+        "targetAccuracy": 0.98,
+        "autoEnabled": false,
+        "selectedCell": null,
+        "reason": "No non-empty development grid cell reached the POC target."
+      },
+      "Balanced": {
+        "targetAccuracy": 0.95,
+        "autoEnabled": false,
+        "selectedCell": null,
+        "reason": "No non-empty development grid cell reached the POC target."
+      },
+      "Aggressive": {
+        "targetAccuracy": null,
+        "autoEnabled": true,
+        "selectedCell": {
+          "probabilityThreshold": 0.75,
+          "marginThreshold": 0.5,
+          "qualifiedCount": 165,
+          "accuracy": 0.3696969696969697,
+          "coverage": 1,
+          "wrongCount": 104
+        },
+        "policy": {
+          "name": "Aggressive",
+          "autoEnabled": true,
+          "autoProbabilityThreshold": 0.75,
+          "autoMarginThreshold": 0.5,
+          "suggestProbabilityThreshold": 0.6,
+          "suggestMarginThreshold": 0.1,
+          "policyHash": "9a98599fc473e161a1f283cd176038072549507bb399dab01214779d8b3bccdd"
+        }
+      }
+    }
+  },
+  "frozenCandidate": {
+    "path": "reports/phase2-frozen-candidate.json",
+    "profile": "multilingual",
+    "promptVariant": "C",
+    "policyName": "Balanced",
+    "policyHash": "8cacd8c9242562eed66a0dcab16b06d95fe9e9feda69227881867b8027e16e0b",
+    "developmentRunId": "20260924T054908845Z-eaeb23f26ffb44658cd3350ba7a6dea4"
+  },
+  "heldOut": {
+    "status": "complete",
+    "runId": "20260924T103842588Z-654915347f184bd8bdf41773971d1dac",
+    "inputCount": 55,
+    "successCount": 55,
+    "fullInputAccuracy": 0.7272727272727273,
+    "macroF1": 0.7221628045157457,
+    "topK": {
+      "top1": 0.7272727272727273,
+      "top2": 0.8363636363636363,
+      "top3": 0.8727272727272727
+    },
+    "ece": 0.14801062564752404,
+    "policyDecisions": {
+      "auto": 32,
+      "suggest": 15,
+      "review": 8,
+      "autoAccuracy": 0.9375,
+      "autoWrongCount": 2,
+      "autoCoverage": 0.5818181818181818
+    },
+    "languageLimitation": "All 55 held-out rows are mixed-language groups under the fixed group-aware split."
+  }
+}

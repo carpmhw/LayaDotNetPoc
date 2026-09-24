@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Laya.Core\Laya.Core.csproj" />
+    <Compile Include="..\Shared\Configuration\LayaProfileResolver.cs" Link="Shared\Configuration\LayaProfileResolver.cs" />
   </ItemGroup>
 
 </Project>

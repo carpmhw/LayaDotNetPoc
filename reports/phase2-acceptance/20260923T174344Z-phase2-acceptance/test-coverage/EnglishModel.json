@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "category": "EnglishModel",
+  "expectedCount": 8,
+  "executedCount": 8,
+  "passedCount": 8,
+  "failedCount": 0,
+  "skippedCount": 0,
+  "expectedTests": [
+    "Laya.Core.Tests.Parity.LayaParityFixtureTests.ReferenceFixtures_MatchDotNetImplementation",
+    "Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema",
+    "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_ReturnsOrderedChoiceAndNoulAnswers",
+    "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsEmptyQuestions",
+    "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsDuplicateQuestionNames",
+    "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsUnsupportedScore",
+    "Laya.Core.Tests.Inference.LayaInferenceRunnerTests.Run_ReturnsExpectedOutputShapesAndFiniteValues",
+    "Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests.CsvTransactions_ReturnLegalAnswersAndLatency"
+  ],
+  "status": "complete"
+}

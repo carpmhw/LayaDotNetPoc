@@ -17,6 +17,7 @@
   <ItemGroup>
     <Using Include="Xunit" />
     <ProjectReference Include="..\..\src\Laya.Core\Laya.Core.csproj" />
+    <ProjectReference Include="..\..\src\Laya.Console\Laya.Console.csproj" />
   </ItemGroup>
 
 </Project>

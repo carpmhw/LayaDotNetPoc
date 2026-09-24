@@ -5,6 +5,7 @@ using Laya.Core.Encoding;
 
 namespace Laya.Core.Tests.Encoding;
 
+[Trait("Category", "EnglishTokenizer")]
 public sealed class LayaSequenceBuilderTests
 {
     /// <summary>驗證 Choice／Noul 會以一次 batch 建立 marker 與 qtype tensors。</summary>

@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "generatedUtc": "2026-09-24T03:19:20.169154+00:00",
+  "reference": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "sourceManifestFiles": {
+      "model.safetensors": {
+        "sizeBytes": 643835514,
+        "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "status": "verified"
+      },
+      "encoder/config.json": {
+        "sizeBytes": 1938,
+        "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+        "status": "verified"
+      },
+      "rl_agent_config.json": {
+        "sizeBytes": 472,
+        "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+        "status": "verified"
+      },
+      "tokenizer/tokenizer.json": {
+        "sizeBytes": 34363188,
+        "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+        "status": "verified"
+      },
+      "tokenizer/tokenizer_config.json": {
+        "sizeBytes": 502,
+        "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+        "status": "verified"
+      }
+    },
+    "toolchainLockSha256": "f7154044e0dacb4f7eaceee7683c8f690f309703ba8979578df9da3edb027ec2",
+    "package": "laya",
+    "packageVersion": "0.3.7",
+    "torchVersion": "2.14.0+cpu",
+    "transformersVersion": "5.0.0",
+    "runtimePackages": {
+      "torch": {
+        "version": "2.14.0+cpu",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/torch-2.14.0+cpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "a09987c95ec4cffdb6df798d3d641558110a334cfccce22f2f046d83142bc260"
+      },
+      "laya": {
+        "version": "0.3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/laya-0.3.7-py3-none-any.whl",
+        "sha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a"
+      },
+      "transformers": {
+        "version": "5.0.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/transformers-5.0.0-py3-none-any.whl",
+        "sha256": "587086f249ce64c817213cf36afdb318d087f790723e9b3d4500b97832afd52d"
+      },
+      "safetensors": {
+        "version": "0.8.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+      },
+      "huggingface_hub": {
+        "version": "1.32.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/huggingface_hub-1.32.0-py3-none-any.whl",
+        "sha256": "b0c7c80561969d9cdacdd55fce67ba9584cca0b9d4ea80957a3a5c1445fac5c8"
+      },
+      "numpy": {
+        "version": "2.5.3",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3"
+      },
+      "onnx": {
+        "version": "1.20.1",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnx-1.20.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "9336b6b8e6efcf5c490a845f6afd7e041c89a56199aeda384ed7d58fb953b080"
+      },
+      "onnxruntime": {
+        "version": "1.30.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnxruntime-1.30.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "fa688e7891a6aa206636fe7372e27ee75fd17713289f6b4fc7b190e0a7de9328"
+      },
+      "tokenizers": {
+        "version": "0.22.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67"
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "networkx": {
+        "version": "3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "fsspec": {
+        "version": "2026.9.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "protobuf": {
+        "version": "7.36.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "ml-dtypes": {
+        "version": "0.6.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "onnxscript": {
+        "version": "0.7.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnxscript-0.7.2-py3-none-any.whl",
+        "sha256": "d0e7121c6a1eefd608058928e111cbdb76709f70d269ff0d07aee493bd1d13c9"
+      },
+      "onnx-ir": {
+        "version": "0.1.16",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnx_ir-0.1.16-py3-none-any.whl",
+        "sha256": "a8182f2ba716640aafdd10c5c973a02e2a4f7c10ed57b6b000a3be90e9ea6d38"
+      }
+    }
+  },
+  "tokenizer": {
+    "specialTokens": {
+      "bos": {
+        "token": "<bos>",
+        "id": 2
+      },
+      "eos": {
+        "token": "<eos>",
+        "id": 1
+      },
+      "cls": {
+        "token": "<bos>",
+        "id": 2
+      },
+      "sep": {
+        "token": "<eos>",
+        "id": 1
+      },
+      "mask": {
+        "token": "<mask>",
+        "id": 4
+      },
+      "pad": {
+        "token": "<pad>",
+        "id": 0
+      },
+      "unk": {
+        "token": "<unk>",
+        "id": 3
+      }
+    },
+    "modelMaxLength": 8192,
+    "fixtures": [
+      {
+        "text": "全家便利商店",
+        "textSha256": "e4db395b4f3c736a04423967d157bb6417e28cc2479590a0c92c2acb8ef0a831",
+        "contentTokenIds": [
+          21748,
+          235618,
+          46403,
+          76684
+        ],
+        "contentTokenCount": 4
+      },
+      {
+        "text": "統一超商",
+        "textSha256": "031b08c8605f4e518f234a161626c8b531a20008b7d06612189f253983bfc2f4",
+        "contentTokenIds": [
+          235248,
+          115627,
+          236304,
+          236022
+        ],
+        "contentTokenCount": 4
+      },
+      {
+        "text": "台灣大車隊",
+        "textSha256": "022dd01e28212706a303f82138fc37d2f885141333552b3385a42b315e7dbe9f",
+        "contentTokenIds": [
+          130021,
+          235469,
+          236089,
+          237481
+        ],
+        "contentTokenCount": 4
+      },
+      {
+        "text": "國泰信用卡繳款",
+        "textSha256": "827dcf2800e78a9c6e5961702eb68db6c04b89a93c05cf5211ce88a8cf07a036",
+        "contentTokenIds": [
+          65635,
+          237690,
+          177350,
+          243118,
+          236604
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "薪資轉帳",
+        "textSha256": "8b280ab0155f0ba8dffd677b82ed321729e268be60f93c988dd66cda3c4d28d6",
+        "contentTokenIds": [
+          235248,
+          239629,
+          236674,
+          238000,
+          238518
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "銀行手續費",
+        "textSha256": "6cc2ae155f97f01ba24a37f0679e86dd3bd44f9a7c62d477430048db1b2ff5ef",
+        "contentTokenIds": [
+          235248,
+          64468,
+          235616,
+          238160,
+          237201
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "醫療院所",
+        "textSha256": "4204e751a39bbfc6a1e4b4983e23367140e2ece95cf464ed7d1c503b50c49552",
+        "contentTokenIds": [
+          235248,
+          208172,
+          236276,
+          235709
+        ],
+        "contentTokenCount": 4
+      },
+      {
+        "text": "高鐵",
+        "textSha256": "be44c5260437db09c48c0aec07cf25c89b1bf53b43adc58e45d24a239075bca0",
+        "contentTokenIds": [
+          13507,
+          238578
+        ],
+        "contentTokenCount": 2
+      },
+      {
+        "text": "Uber Eats Taiwan",
+        "textSha256": "37041c68c77b49225338b5c244f0b516735807202ebc88badf967228ee8d6be6",
+        "contentTokenIds": [
+          46444,
+          128697,
+          26872
+        ],
+        "contentTokenCount": 3
+      },
+      {
+        "text": "APPLE.COM/BILL",
+        "textSha256": "3f1c45e63e760ac35e79c426a845de4dbb9d473e9595455d4962b4601dfbe443",
+        "contentTokenIds": [
+          140067,
+          235265,
+          5518,
+          235283,
+          85538
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "AMAZON JP",
+        "textSha256": "f03b61ee97228b03c5eb12535366fe94f8df2c0a52e6dacd0c6a12cb4c916cf0",
+        "contentTokenIds": [
+          147624,
+          44521
+        ],
+        "contentTokenCount": 2
+      },
+      {
+        "text": "NETFLIX.COM",
+        "textSha256": "730016fff4916f096148483282f867a6cfab7e4cd544e09fc9683a6798dde461",
+        "contentTokenIds": [
+          36512,
+          6282,
+          6594,
+          235265,
+          5518
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "FamilyMart Taipei",
+        "textSha256": "cbd7add69952d3138f5cfe374769981dacb6012cbff807407058545f99718857",
+        "contentTokenIds": [
+          9400,
+          15260,
+          84903
+        ],
+        "contentTokenCount": 3
+      },
+      {
+        "text": "7-ELEVEN 信義店",
+        "textSha256": "cc6cc43990fae9624734c15a17ddd57e8fa82d9e1d3136197e5a2ceb861a401e",
+        "contentTokenIds": [
+          235248,
+          235324,
+          235290,
+          34399,
+          31485,
+          73817,
+          236919,
+          235912
+        ],
+        "contentTokenCount": 8
+      },
+      {
+        "text": "UBER *EATS TW",
+        "textSha256": "df12d62eaed5e79731504ff165132b7362942260571ebbd66f31c6f69ef0e6b1",
+        "contentTokenIds": [
+          752,
+          6362,
+          649,
+          235291,
+          31536,
+          36158
+        ],
+        "contentTokenCount": 6
+      },
+      {
+        "text": "GOOGLE *YOUTUBE",
+        "textSha256": "8849401afe27f2d117e465e21db6ba890645d817dc10d34eec6c71f37768d735",
+        "contentTokenIds": [
+          137099,
+          649,
+          183205
+        ],
+        "contentTokenCount": 3
+      },
+      {
+        "text": "台鐵 TAIPEI",
+        "textSha256": "44938b249b720a060b9ababa2b5bbb5e6b6d322c7d0c53fdd00a1129050e674a",
+        "contentTokenIds": [
+          25345,
+          238578,
+          23752,
+          38523,
+          235285
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "街口支付 JKO",
+        "textSha256": "bc5a2dc45e2a65f1dbede811f6aa4792a6bb364bf5eefe5cdf0d6888aa341a7c",
+        "contentTokenIds": [
+          49114,
+          235876,
+          46753,
+          713,
+          23987
+        ],
+        "contentTokenCount": 5
+      },
+      {
+        "text": "LINE PAY",
+        "textSha256": "8202c56c08852841a094cd47053b39a7480c7238a1b800b0fda789f0d2d9db56",
+        "contentTokenIds": [
+          33656,
+          44347
+        ],
+        "contentTokenCount": 2
+      }
+    ],
+    "nonWholeUnknownFixture": {
+      "text": "全家 <unk> 便利商店",
+      "textSha256": "f5c8cfa2367fe18222a1f6cee424c35982bc86ea486ba5fd1299766dcb70fbad",
+      "contentTokenIds": [
+        21748,
+        235618,
+        235248,
+        3,
+        202306,
+        76684
+      ],
+      "contentTokenCount": 6
+    }
+  }
+}

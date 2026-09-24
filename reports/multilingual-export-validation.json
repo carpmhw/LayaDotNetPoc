@@ -1,0 +1,1966 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "generatedUtc": "2026-09-24T00:24:44.402869+00:00",
+  "bundle": {
+    "root": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+    "manifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "modelSha256": "7b8aec9fd45882c1591ee83edd84d00b7dc7f0b342a07011ac177e22b93611e2",
+    "files": {
+      "laya.onnx": {
+        "size": 2826231,
+        "sha256": "7b8aec9fd45882c1591ee83edd84d00b7dc7f0b342a07011ac177e22b93611e2"
+      },
+      "laya_config.json": {
+        "size": 127,
+        "sha256": "d9f54bcdd1993f9d5e6c5839516de423599759a635a1d53b172c154b3f717880"
+      },
+      "tokenizer/tokenizer.json": {
+        "size": 34363188,
+        "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+      },
+      "tokenizer/tokenizer_config.json": {
+        "size": 502,
+        "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+      },
+      "laya.onnx.data": {
+        "size": 1287651328,
+        "sha256": "6ef993ee707fe1d6a75529f4a1f8347ff89966ff955d332ea3ebe4e5171a9ac1"
+      }
+    }
+  },
+  "fixturePath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/test-data/multilingual-parity-fixtures.json",
+  "fixtureSha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f",
+  "reference": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "sourceManifestFiles": {
+      "model.safetensors": {
+        "sizeBytes": 643835514,
+        "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "status": "verified"
+      },
+      "encoder/config.json": {
+        "sizeBytes": 1938,
+        "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+        "status": "verified"
+      },
+      "rl_agent_config.json": {
+        "sizeBytes": 472,
+        "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+        "status": "verified"
+      },
+      "tokenizer/tokenizer.json": {
+        "sizeBytes": 34363188,
+        "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+        "status": "verified"
+      },
+      "tokenizer/tokenizer_config.json": {
+        "sizeBytes": 502,
+        "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+        "status": "verified"
+      }
+    },
+    "toolchainLockSha256": "f7154044e0dacb4f7eaceee7683c8f690f309703ba8979578df9da3edb027ec2",
+    "package": "laya",
+    "packageVersion": "0.3.7",
+    "torchVersion": "2.14.0+cpu",
+    "transformersVersion": "5.0.0",
+    "runtimePackages": {
+      "torch": {
+        "version": "2.14.0+cpu",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/torch-2.14.0+cpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "a09987c95ec4cffdb6df798d3d641558110a334cfccce22f2f046d83142bc260"
+      },
+      "laya": {
+        "version": "0.3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/laya-0.3.7-py3-none-any.whl",
+        "sha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a"
+      },
+      "transformers": {
+        "version": "5.0.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/transformers-5.0.0-py3-none-any.whl",
+        "sha256": "587086f249ce64c817213cf36afdb318d087f790723e9b3d4500b97832afd52d"
+      },
+      "safetensors": {
+        "version": "0.8.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+      },
+      "huggingface_hub": {
+        "version": "1.32.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/huggingface_hub-1.32.0-py3-none-any.whl",
+        "sha256": "b0c7c80561969d9cdacdd55fce67ba9584cca0b9d4ea80957a3a5c1445fac5c8"
+      },
+      "numpy": {
+        "version": "2.5.3",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3"
+      },
+      "onnx": {
+        "version": "1.20.1",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnx-1.20.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "9336b6b8e6efcf5c490a845f6afd7e041c89a56199aeda384ed7d58fb953b080"
+      },
+      "onnxruntime": {
+        "version": "1.30.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnxruntime-1.30.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "fa688e7891a6aa206636fe7372e27ee75fd17713289f6b4fc7b190e0a7de9328"
+      },
+      "tokenizers": {
+        "version": "0.22.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67"
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "networkx": {
+        "version": "3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "fsspec": {
+        "version": "2026.9.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "protobuf": {
+        "version": "7.36.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "ml-dtypes": {
+        "version": "0.6.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "onnxscript": {
+        "version": "0.7.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnxscript-0.7.2-py3-none-any.whl",
+        "sha256": "d0e7121c6a1eefd608058928e111cbdb76709f70d269ff0d07aee493bd1d13c9"
+      },
+      "onnx-ir": {
+        "version": "0.1.16",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnx_ir-0.1.16-py3-none-any.whl",
+        "sha256": "a8182f2ba716640aafdd10c5c973a02e2a4f7c10ed57b6b000a3be90e9ea6d38"
+      }
+    }
+  },
+  "tolerance": {
+    "absolute": 0.0001,
+    "relative": 0.0,
+    "maximumAllowed": 0.0005,
+    "acceptanceRule": "absolute-only; relaxation requires investigation and is currently rejected"
+  },
+  "coverage": {
+    "fixtureCount": 20,
+    "executedCount": 20,
+    "batchValues": [
+      1,
+      2
+    ],
+    "sequenceValues": [
+      19,
+      24,
+      25,
+      26,
+      30,
+      35,
+      37,
+      40,
+      41,
+      42,
+      48,
+      49,
+      56,
+      60,
+      72,
+      87,
+      620,
+      942,
+      1024
+    ],
+    "markerValues": [
+      2,
+      3,
+      11
+    ],
+    "optionCounts": [
+      2,
+      3,
+      11
+    ],
+    "hasBatchGreaterThanOne": true,
+    "hasMaxLength1024": true
+  },
+  "coverageRequirements": {
+    "fixtureCountAtLeast20": true,
+    "optionsInclude2_3_11": true,
+    "batchGreaterThanOne": true,
+    "maxLength1024": true
+  },
+  "fixtures": [
+    {
+      "id": "choice-english-two",
+      "shapes": {
+        "input_ids": [
+          1,
+          19
+        ],
+        "attention_mask": [
+          1,
+          19
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 7.152557373046875e-07,
+        "maxRelativeError": 3.435087495113588e-07,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 3.507774377076167e-07,
+          "maxRelativeError": 8.142484364940452e-07,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-english-three",
+      "shapes": {
+        "input_ids": [
+          1,
+          25
+        ],
+        "attention_mask": [
+          1,
+          25
+        ],
+        "marker_pos": [
+          1,
+          3
+        ],
+        "marker_mask": [
+          1,
+          3
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        3
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          3
+        ],
+        "actualShape": [
+          1,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 3,
+        "maskedCount": 0,
+        "maxAbsoluteError": 7.62939453125e-06,
+        "maxRelativeError": 4.830540213113576e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.182206334522263e-06,
+          "maxRelativeError": 1.072987916703183e-05,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-english-eleven",
+      "shapes": {
+        "input_ids": [
+          1,
+          56
+        ],
+        "attention_mask": [
+          1,
+          56
+        ],
+        "marker_pos": [
+          1,
+          11
+        ],
+        "marker_mask": [
+          1,
+          11
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        11
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          11
+        ],
+        "actualShape": [
+          1,
+          11
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 11,
+        "maskedCount": 0,
+        "maxAbsoluteError": 7.62939453125e-06,
+        "maxRelativeError": 5.78638092071085e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            11
+          ],
+          "actualShape": [
+            11
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 11,
+          "maskedCount": 0,
+          "maxAbsoluteError": 5.634368188678351e-07,
+          "maxRelativeError": 1.009391283472126e-05,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "noul-english",
+      "shapes": {
+        "input_ids": [
+          1,
+          35
+        ],
+        "attention_mask": [
+          1,
+          35
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 4.0531158447265625e-06,
+        "maxRelativeError": 1.678999503718984e-05,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 9.093857566422336e-07,
+          "maxRelativeError": 3.4602818762540887e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "mixed-english",
+      "shapes": {
+        "input_ids": [
+          2,
+          49
+        ],
+        "attention_mask": [
+          2,
+          49
+        ],
+        "marker_pos": [
+          2,
+          2
+        ],
+        "marker_mask": [
+          2,
+          2
+        ],
+        "qtype": [
+          2
+        ]
+      },
+      "optionCounts": [
+        2,
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          2,
+          2
+        ],
+        "actualShape": [
+          2,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 4,
+        "maskedCount": 0,
+        "maxAbsoluteError": 2.7418136596679688e-06,
+        "maxRelativeError": 5.89979203233086e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          2,
+          2
+        ],
+        "actualShape": [
+          2,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 4,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.7809608511841777e-08,
+          "maxRelativeError": 1.759881684199405e-06,
+          "passed": true
+        },
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 7.223716195353669e-08,
+          "maxRelativeError": 1.3243051934192282e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-chinese-two",
+      "shapes": {
+        "input_ids": [
+          1,
+          24
+        ],
+        "attention_mask": [
+          1,
+          24
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 1.7881393432617188e-06,
+        "maxRelativeError": 2.460938144073655e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.579427535731593e-07,
+          "maxRelativeError": 3.1763333072531186e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-chinese-three",
+      "shapes": {
+        "input_ids": [
+          1,
+          30
+        ],
+        "attention_mask": [
+          1,
+          30
+        ],
+        "marker_pos": [
+          1,
+          3
+        ],
+        "marker_mask": [
+          1,
+          3
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        3
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          3
+        ],
+        "actualShape": [
+          1,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 3,
+        "maskedCount": 0,
+        "maxAbsoluteError": 2.2649765014648438e-06,
+        "maxRelativeError": 1.3301539387153276e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 1.4278784343790818e-07,
+          "maxRelativeError": 4.3821686462371465e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-chinese-eleven",
+      "shapes": {
+        "input_ids": [
+          1,
+          87
+        ],
+        "attention_mask": [
+          1,
+          87
+        ],
+        "marker_pos": [
+          1,
+          11
+        ],
+        "marker_mask": [
+          1,
+          11
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        11
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          11
+        ],
+        "actualShape": [
+          1,
+          11
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 11,
+        "maskedCount": 0,
+        "maxAbsoluteError": 1.239776611328125e-05,
+        "maxRelativeError": 1.1457115005022182e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            11
+          ],
+          "actualShape": [
+            11
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 11,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.6840418776430397e-11,
+          "maxRelativeError": 1.3828346358191231e-05,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "noul-chinese",
+      "shapes": {
+        "input_ids": [
+          1,
+          42
+        ],
+        "attention_mask": [
+          1,
+          42
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 7.033348083496094e-06,
+        "maxRelativeError": 4.5955767807159e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 3.3111143094011197e-07,
+          "maxRelativeError": 5.967547577863413e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "mixed-chinese",
+      "shapes": {
+        "input_ids": [
+          2,
+          48
+        ],
+        "attention_mask": [
+          2,
+          48
+        ],
+        "marker_pos": [
+          2,
+          3
+        ],
+        "marker_mask": [
+          2,
+          3
+        ],
+        "qtype": [
+          2
+        ]
+      },
+      "optionCounts": [
+        3,
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          2,
+          3
+        ],
+        "actualShape": [
+          2,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 5,
+        "maskedCount": 1,
+        "maxAbsoluteError": 6.079673767089844e-06,
+        "maxRelativeError": 4.1578631387986025e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          2,
+          2
+        ],
+        "actualShape": [
+          2,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 4,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 9.823855633417367e-07,
+          "maxRelativeError": 4.037977453098508e-06,
+          "passed": true
+        },
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 1.660809883161085e-07,
+          "maxRelativeError": 2.6839908681763874e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-mixed-two",
+      "shapes": {
+        "input_ids": [
+          1,
+          26
+        ],
+        "attention_mask": [
+          1,
+          26
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 9.417533874511719e-06,
+        "maxRelativeError": 7.1071037841369265e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.990863621210593e-07,
+          "maxRelativeError": 3.3672408000870105e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-mixed-three",
+      "shapes": {
+        "input_ids": [
+          1,
+          40
+        ],
+        "attention_mask": [
+          1,
+          40
+        ],
+        "marker_pos": [
+          1,
+          3
+        ],
+        "marker_mask": [
+          1,
+          3
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        3
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          3
+        ],
+        "actualShape": [
+          1,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 3,
+        "maskedCount": 0,
+        "maxAbsoluteError": 5.0067901611328125e-06,
+        "maxRelativeError": 4.993531666378455e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.112190804925973e-06,
+          "maxRelativeError": 6.056375463404733e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "choice-mixed-eleven",
+      "shapes": {
+        "input_ids": [
+          1,
+          60
+        ],
+        "attention_mask": [
+          1,
+          60
+        ],
+        "marker_pos": [
+          1,
+          11
+        ],
+        "marker_mask": [
+          1,
+          11
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        11
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          11
+        ],
+        "actualShape": [
+          1,
+          11
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 11,
+        "maskedCount": 0,
+        "maxAbsoluteError": 1.2040138244628906e-05,
+        "maxRelativeError": 3.375585137956219e-05,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            11
+          ],
+          "actualShape": [
+            11
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 11,
+          "maskedCount": 0,
+          "maxAbsoluteError": 1.1222030638774472e-07,
+          "maxRelativeError": 1.3167342875783024e-05,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "noul-mixed",
+      "shapes": {
+        "input_ids": [
+          1,
+          37
+        ],
+        "attention_mask": [
+          1,
+          37
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 1.9073486328125e-06,
+        "maxRelativeError": 3.599070194805997e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 7.044501378339341e-07,
+          "maxRelativeError": 1.8853545014524962e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "mixed-batch",
+      "shapes": {
+        "input_ids": [
+          2,
+          56
+        ],
+        "attention_mask": [
+          2,
+          56
+        ],
+        "marker_pos": [
+          2,
+          3
+        ],
+        "marker_mask": [
+          2,
+          3
+        ],
+        "qtype": [
+          2
+        ]
+      },
+      "optionCounts": [
+        3,
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          2,
+          3
+        ],
+        "actualShape": [
+          2,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 5,
+        "maskedCount": 1,
+        "maxAbsoluteError": 2.86102294921875e-06,
+        "maxRelativeError": 2.3022174574847585e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          2,
+          2
+        ],
+        "actualShape": [
+          2,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 4,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 4.4297701207174356e-07,
+          "maxRelativeError": 3.244763434581127e-06,
+          "passed": true
+        },
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 5.233508190705116e-08,
+          "maxRelativeError": 2.3029744319259433e-07,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "long-truncation-two",
+      "shapes": {
+        "input_ids": [
+          1,
+          620
+        ],
+        "attention_mask": [
+          1,
+          620
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 2.384185791015625e-06,
+        "maxRelativeError": 3.761402220656643e-07,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 3.5271698051175804e-07,
+          "maxRelativeError": 2.4489542049855005e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "long-truncation-three",
+      "shapes": {
+        "input_ids": [
+          1,
+          1024
+        ],
+        "attention_mask": [
+          1,
+          1024
+        ],
+        "marker_pos": [
+          1,
+          3
+        ],
+        "marker_mask": [
+          1,
+          3
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        3
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          3
+        ],
+        "actualShape": [
+          1,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 3,
+        "maskedCount": 0,
+        "maxAbsoluteError": 4.76837158203125e-06,
+        "maxRelativeError": 8.926297613652523e-07,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 7.968537000246911e-07,
+          "maxRelativeError": 5.967206990518825e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "abbreviation-eleven",
+      "shapes": {
+        "input_ids": [
+          1,
+          72
+        ],
+        "attention_mask": [
+          1,
+          72
+        ],
+        "marker_pos": [
+          1,
+          11
+        ],
+        "marker_mask": [
+          1,
+          11
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        11
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          11
+        ],
+        "actualShape": [
+          1,
+          11
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 11,
+        "maskedCount": 0,
+        "maxAbsoluteError": 1.2874603271484375e-05,
+        "maxRelativeError": 1.1335907994386865e-05,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            11
+          ],
+          "actualShape": [
+            11
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 11,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.058310211716652e-06,
+          "maxRelativeError": 1.834033963794136e-05,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "noul-abbreviation",
+      "shapes": {
+        "input_ids": [
+          1,
+          41
+        ],
+        "attention_mask": [
+          1,
+          41
+        ],
+        "marker_pos": [
+          1,
+          2
+        ],
+        "marker_mask": [
+          1,
+          2
+        ],
+        "qtype": [
+          1
+        ]
+      },
+      "optionCounts": [
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 6.198883056640625e-06,
+        "maxRelativeError": 3.90286958486227e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          1,
+          2
+        ],
+        "actualShape": [
+          1,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 2,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 2.0436672985013615e-06,
+          "maxRelativeError": 5.778844151031734e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    },
+    {
+      "id": "long-mixed-batch",
+      "shapes": {
+        "input_ids": [
+          2,
+          942
+        ],
+        "attention_mask": [
+          2,
+          942
+        ],
+        "marker_pos": [
+          2,
+          3
+        ],
+        "marker_mask": [
+          2,
+          3
+        ],
+        "qtype": [
+          2
+        ]
+      },
+      "optionCounts": [
+        3,
+        2
+      ],
+      "raw": {
+        "name": "logits",
+        "expectedShape": [
+          2,
+          3
+        ],
+        "actualShape": [
+          2,
+          3
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 5,
+        "maskedCount": 1,
+        "maxAbsoluteError": 7.62939453125e-06,
+        "maxRelativeError": 1.0287244103884413e-06,
+        "passed": true
+      },
+      "activation": {
+        "name": "act_probs",
+        "expectedShape": [
+          2,
+          2
+        ],
+        "actualShape": [
+          2,
+          2
+        ],
+        "absoluteTolerance": 0.0001,
+        "relativeTolerance": 0.0,
+        "validCount": 4,
+        "maskedCount": 0,
+        "maxAbsoluteError": 0.0,
+        "maxRelativeError": 0.0,
+        "passed": true
+      },
+      "probabilities": [
+        {
+          "name": "probabilities:category",
+          "expectedShape": [
+            3
+          ],
+          "actualShape": [
+            3
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 3,
+          "maskedCount": 0,
+          "maxAbsoluteError": 5.619510348373047e-09,
+          "maxRelativeError": 7.165012355788114e-07,
+          "passed": true
+        },
+        {
+          "name": "probabilities:needs_review",
+          "expectedShape": [
+            2
+          ],
+          "actualShape": [
+            2
+          ],
+          "absoluteTolerance": 0.0001,
+          "relativeTolerance": 0.0,
+          "validCount": 2,
+          "maskedCount": 0,
+          "maxAbsoluteError": 4.430707073596449e-18,
+          "maxRelativeError": 3.8147045415444765e-06,
+          "passed": true
+        }
+      ],
+      "selectedAnswerMatches": true,
+      "passed": true,
+      "firstFailure": null
+    }
+  ],
+  "failedFixtures": []
+}

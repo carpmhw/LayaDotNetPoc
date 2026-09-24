@@ -70,6 +70,7 @@ models/**/*.onnx
 models/**/*.onnx.data
 models/**/*.safetensors
 models/**/model.*
+/models/laya-multilingual/source/
 
 # Benchmark output is generated from the local machine and model bundle.
 BenchmarkDotNet.Artifacts/

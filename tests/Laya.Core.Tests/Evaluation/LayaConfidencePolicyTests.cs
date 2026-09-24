@@ -2,6 +2,7 @@ using Laya.Core.Evaluation;
 
 namespace Laya.Core.Tests.Evaluation;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaConfidencePolicyTests
 {
     /// <summary>驗證 AUTO 需要同時滿足 probability 與 margin 門檻。</summary>

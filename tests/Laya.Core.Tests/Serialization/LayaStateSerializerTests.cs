@@ -4,6 +4,7 @@ using Laya.Core.Serialization;
 
 namespace Laya.Core.Tests.Serialization;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaStateSerializerTests
 {
     /// <summary>驗證 string state 直接作為文字，不被再次包成 JSON 字串。</summary>

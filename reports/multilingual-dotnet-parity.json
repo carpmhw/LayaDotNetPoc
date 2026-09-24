@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "profile": "multilingual",
+  "checkpointRevision": "052592a15d198d9ad47da779604259b10b47b7aa",
+  "modelRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "fixturePath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/test-data/multilingual-parity-fixtures.json",
+  "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+  "fixtureSha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f",
+  "expectedCount": 20,
+  "fixtureCount": 20,
+  "executedCount": 20,
+  "passedCount": 20,
+  "skippedCount": 0,
+  "absoluteTolerance": 0.0001,
+  "fixtures": [
+    {
+      "id": "choice-english-two",
+      "primaryGroup": "english",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 19,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 7.152557373046875E-07,
+      "maxRawRelativeError": 3.435087495113588E-07,
+      "maxProbabilityAbsoluteError": 3.507774377076167E-07,
+      "maxProbabilityRelativeError": 8.142484364940452E-07,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-english-three",
+      "primaryGroup": "english",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 25,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 7.62939453125E-06,
+      "maxRawRelativeError": 4.830540213113576E-06,
+      "maxProbabilityAbsoluteError": 2.182206334522263E-06,
+      "maxProbabilityRelativeError": 1.072987916703183E-05,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-english-eleven",
+      "primaryGroup": "english",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 56,
+        "markers": 11
+      },
+      "maxRawAbsoluteError": 7.62939453125E-06,
+      "maxRawRelativeError": 5.78638092071085E-06,
+      "maxProbabilityAbsoluteError": 5.634368188678351E-07,
+      "maxProbabilityRelativeError": 1.009391283472126E-05,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "noul-english",
+      "primaryGroup": "english",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 35,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 4.0531158447265625E-06,
+      "maxRawRelativeError": 1.678999503718984E-05,
+      "maxProbabilityAbsoluteError": 9.093857566422336E-07,
+      "maxProbabilityRelativeError": 3.4602818762540887E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "mixed-english",
+      "primaryGroup": "english",
+      "status": "complete",
+      "shapes": {
+        "batch": 2,
+        "sequence": 49,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 2.7418136596679688E-06,
+      "maxRawRelativeError": 5.89979203233086E-06,
+      "maxProbabilityAbsoluteError": 7.223716195353669E-08,
+      "maxProbabilityRelativeError": 1.759881684199405E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-chinese-two",
+      "primaryGroup": "chinese",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 24,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 1.7881393432617188E-06,
+      "maxRawRelativeError": 2.460938144073655E-06,
+      "maxProbabilityAbsoluteError": 2.579427535731593E-07,
+      "maxProbabilityRelativeError": 3.1763333072531186E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-chinese-three",
+      "primaryGroup": "chinese",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 30,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 2.2649765014648438E-06,
+      "maxRawRelativeError": 1.3301539387153276E-06,
+      "maxProbabilityAbsoluteError": 1.4278784343790818E-07,
+      "maxProbabilityRelativeError": 4.3821686462371465E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-chinese-eleven",
+      "primaryGroup": "chinese",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 87,
+        "markers": 11
+      },
+      "maxRawAbsoluteError": 1.239776611328125E-05,
+      "maxRawRelativeError": 1.1457115005022182E-06,
+      "maxProbabilityAbsoluteError": 2.6840418776430397E-11,
+      "maxProbabilityRelativeError": 1.3828346358191231E-05,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "noul-chinese",
+      "primaryGroup": "chinese",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 42,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 7.033348083496094E-06,
+      "maxRawRelativeError": 4.5955767807159E-06,
+      "maxProbabilityAbsoluteError": 3.3111143094011197E-07,
+      "maxProbabilityRelativeError": 5.967547577863413E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "mixed-chinese",
+      "primaryGroup": "chinese",
+      "status": "complete",
+      "shapes": {
+        "batch": 2,
+        "sequence": 48,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 6.079673767089844E-06,
+      "maxRawRelativeError": 4.1578631387986025E-06,
+      "maxProbabilityAbsoluteError": 9.823855633417367E-07,
+      "maxProbabilityRelativeError": 4.037977453350335E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-mixed-two",
+      "primaryGroup": "mixed",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 26,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 9.417533874511719E-06,
+      "maxRawRelativeError": 7.1071037841369265E-06,
+      "maxProbabilityAbsoluteError": 2.990863621210593E-07,
+      "maxProbabilityRelativeError": 3.3672408000870105E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-mixed-three",
+      "primaryGroup": "mixed",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 40,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 5.0067901611328125E-06,
+      "maxRawRelativeError": 4.993531666378455E-06,
+      "maxProbabilityAbsoluteError": 2.112190804925973E-06,
+      "maxProbabilityRelativeError": 6.056375463404733E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "choice-mixed-eleven",
+      "primaryGroup": "mixed",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 60,
+        "markers": 11
+      },
+      "maxRawAbsoluteError": 1.2040138244628906E-05,
+      "maxRawRelativeError": 3.375585137956219E-05,
+      "maxProbabilityAbsoluteError": 1.1222030638774472E-07,
+      "maxProbabilityRelativeError": 1.3167342875783024E-05,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "noul-mixed",
+      "primaryGroup": "mixed",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 37,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 1.9073486328125E-06,
+      "maxRawRelativeError": 3.599070194805997E-06,
+      "maxProbabilityAbsoluteError": 7.044501378339341E-07,
+      "maxProbabilityRelativeError": 1.8853545014524962E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "mixed-batch",
+      "primaryGroup": "mixed",
+      "status": "complete",
+      "shapes": {
+        "batch": 2,
+        "sequence": 56,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 2.86102294921875E-06,
+      "maxRawRelativeError": 2.3022174574847585E-06,
+      "maxProbabilityAbsoluteError": 4.4297701207174356E-07,
+      "maxProbabilityRelativeError": 3.244763434581127E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "long-truncation-two",
+      "primaryGroup": "long-fuzzy-abbreviation",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 620,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 2.384185791015625E-06,
+      "maxRawRelativeError": 3.761402220656643E-07,
+      "maxProbabilityAbsoluteError": 3.5271698051175804E-07,
+      "maxProbabilityRelativeError": 2.4489542049855005E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "long-truncation-three",
+      "primaryGroup": "long-fuzzy-abbreviation",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 1024,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 4.76837158203125E-06,
+      "maxRawRelativeError": 8.926297613652523E-07,
+      "maxProbabilityAbsoluteError": 7.968537000246911E-07,
+      "maxProbabilityRelativeError": 5.967206990518825E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "abbreviation-eleven",
+      "primaryGroup": "long-fuzzy-abbreviation",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 72,
+        "markers": 11
+      },
+      "maxRawAbsoluteError": 1.2874603271484375E-05,
+      "maxRawRelativeError": 1.1335907994386865E-05,
+      "maxProbabilityAbsoluteError": 2.0583102119386965E-06,
+      "maxProbabilityRelativeError": 1.8340339637739513E-05,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "noul-abbreviation",
+      "primaryGroup": "long-fuzzy-abbreviation",
+      "status": "complete",
+      "shapes": {
+        "batch": 1,
+        "sequence": 41,
+        "markers": 2
+      },
+      "maxRawAbsoluteError": 6.198883056640625E-06,
+      "maxRawRelativeError": 3.90286958486227E-06,
+      "maxProbabilityAbsoluteError": 2.0436672985013615E-06,
+      "maxProbabilityRelativeError": 5.778844151031734E-06,
+      "firstFailureLayer": null
+    },
+    {
+      "id": "long-mixed-batch",
+      "primaryGroup": "long-fuzzy-abbreviation",
+      "status": "complete",
+      "shapes": {
+        "batch": 2,
+        "sequence": 942,
+        "markers": 3
+      },
+      "maxRawAbsoluteError": 7.62939453125E-06,
+      "maxRawRelativeError": 1.0287244103884413E-06,
+      "maxProbabilityAbsoluteError": 5.619510348373047E-09,
+      "maxProbabilityRelativeError": 3.8147045415444765E-06,
+      "firstFailureLayer": null
+    }
+  ]
+}

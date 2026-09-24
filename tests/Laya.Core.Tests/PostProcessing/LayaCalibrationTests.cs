@@ -3,6 +3,7 @@ using Laya.Core.PostProcessing;
 
 namespace Laya.Core.Tests.PostProcessing;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaCalibrationTests
 {
     /// <summary>驗證 stable softmax 的分布總和與基本大小關係。</summary>

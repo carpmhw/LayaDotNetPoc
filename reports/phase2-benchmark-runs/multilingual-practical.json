@@ -1,0 +1,1481 @@
+{
+  "schemaVersion": 1,
+  "mode": "practical-collection",
+  "runId": "20260924T043453350Z-64df3df225de466f9a9778958ffdc26c",
+  "profile": "multilingual",
+  "modelRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "checkpointRevision": "052592a15d198d9ad47da779604259b10b47b7aa",
+  "environment": {
+    "os": "Linux Mint 22.3",
+    "architecture": "X64",
+    "framework": ".NET 10.0.12",
+    "processorCount": 10,
+    "ortThreads": "default"
+  },
+  "warmupCount": 5,
+  "sampleCount": 200,
+  "processWorkingSetBeforeBytes": 926842880,
+  "processWorkingSetAfterBytes": 955813888,
+  "peakWorkingSetBytes": 954630144,
+  "managedBeforeBytes": 352960,
+  "managedAfterBytes": 377024,
+  "percentileAlgorithm": "linear interpolation on sorted samples at (n-1)*p",
+  "memorySamples": [
+    {
+      "Iteration": 0,
+      "WorkingSetBytes": 936263680,
+      "ManagedBytes": 426904
+    },
+    {
+      "Iteration": 1,
+      "WorkingSetBytes": 936394752,
+      "ManagedBytes": 492696
+    },
+    {
+      "Iteration": 2,
+      "WorkingSetBytes": 936648704,
+      "ManagedBytes": 550264
+    },
+    {
+      "Iteration": 3,
+      "WorkingSetBytes": 936722432,
+      "ManagedBytes": 616056
+    },
+    {
+      "Iteration": 4,
+      "WorkingSetBytes": 936779776,
+      "ManagedBytes": 673624
+    },
+    {
+      "Iteration": 5,
+      "WorkingSetBytes": 937086976,
+      "ManagedBytes": 733944
+    },
+    {
+      "Iteration": 6,
+      "WorkingSetBytes": 937156608,
+      "ManagedBytes": 799480
+    },
+    {
+      "Iteration": 7,
+      "WorkingSetBytes": 937213952,
+      "ManagedBytes": 856792
+    },
+    {
+      "Iteration": 8,
+      "WorkingSetBytes": 937906176,
+      "ManagedBytes": 922328
+    },
+    {
+      "Iteration": 9,
+      "WorkingSetBytes": 938102784,
+      "ManagedBytes": 979640
+    },
+    {
+      "Iteration": 10,
+      "WorkingSetBytes": 938356736,
+      "ManagedBytes": 1045176
+    },
+    {
+      "Iteration": 11,
+      "WorkingSetBytes": 938422272,
+      "ManagedBytes": 1102488
+    },
+    {
+      "Iteration": 12,
+      "WorkingSetBytes": 938483712,
+      "ManagedBytes": 1168024
+    },
+    {
+      "Iteration": 13,
+      "WorkingSetBytes": 939073536,
+      "ManagedBytes": 1225336
+    },
+    {
+      "Iteration": 14,
+      "WorkingSetBytes": 942772224,
+      "ManagedBytes": 1290872
+    },
+    {
+      "Iteration": 15,
+      "WorkingSetBytes": 942968832,
+      "ManagedBytes": 1348184
+    },
+    {
+      "Iteration": 16,
+      "WorkingSetBytes": 943108096,
+      "ManagedBytes": 1413720
+    },
+    {
+      "Iteration": 17,
+      "WorkingSetBytes": 943173632,
+      "ManagedBytes": 1471032
+    },
+    {
+      "Iteration": 18,
+      "WorkingSetBytes": 943280128,
+      "ManagedBytes": 1536568
+    },
+    {
+      "Iteration": 19,
+      "WorkingSetBytes": 943398912,
+      "ManagedBytes": 1594136
+    },
+    {
+      "Iteration": 20,
+      "WorkingSetBytes": 943464448,
+      "ManagedBytes": 1659672
+    },
+    {
+      "Iteration": 21,
+      "WorkingSetBytes": 943525888,
+      "ManagedBytes": 1716984
+    },
+    {
+      "Iteration": 22,
+      "WorkingSetBytes": 943599616,
+      "ManagedBytes": 1774296
+    },
+    {
+      "Iteration": 23,
+      "WorkingSetBytes": 943767552,
+      "ManagedBytes": 1839832
+    },
+    {
+      "Iteration": 24,
+      "WorkingSetBytes": 943812608,
+      "ManagedBytes": 1897144
+    },
+    {
+      "Iteration": 25,
+      "WorkingSetBytes": 943886336,
+      "ManagedBytes": 1962680
+    },
+    {
+      "Iteration": 26,
+      "WorkingSetBytes": 943947776,
+      "ManagedBytes": 2019992
+    },
+    {
+      "Iteration": 27,
+      "WorkingSetBytes": 944009216,
+      "ManagedBytes": 2085528
+    },
+    {
+      "Iteration": 28,
+      "WorkingSetBytes": 944087040,
+      "ManagedBytes": 2142840
+    },
+    {
+      "Iteration": 29,
+      "WorkingSetBytes": 944144384,
+      "ManagedBytes": 2208376
+    },
+    {
+      "Iteration": 30,
+      "WorkingSetBytes": 944214016,
+      "ManagedBytes": 2265688
+    },
+    {
+      "Iteration": 31,
+      "WorkingSetBytes": 944267264,
+      "ManagedBytes": 2331224
+    },
+    {
+      "Iteration": 32,
+      "WorkingSetBytes": 944791552,
+      "ManagedBytes": 2388536
+    },
+    {
+      "Iteration": 33,
+      "WorkingSetBytes": 944844800,
+      "ManagedBytes": 2454072
+    },
+    {
+      "Iteration": 34,
+      "WorkingSetBytes": 944922624,
+      "ManagedBytes": 2511640
+    },
+    {
+      "Iteration": 35,
+      "WorkingSetBytes": 945848320,
+      "ManagedBytes": 2568952
+    },
+    {
+      "Iteration": 36,
+      "WorkingSetBytes": 945913856,
+      "ManagedBytes": 2634488
+    },
+    {
+      "Iteration": 37,
+      "WorkingSetBytes": 945971200,
+      "ManagedBytes": 2691800
+    },
+    {
+      "Iteration": 38,
+      "WorkingSetBytes": 946036736,
+      "ManagedBytes": 2757336
+    },
+    {
+      "Iteration": 39,
+      "WorkingSetBytes": 946106368,
+      "ManagedBytes": 2814648
+    },
+    {
+      "Iteration": 40,
+      "WorkingSetBytes": 946163712,
+      "ManagedBytes": 2880184
+    },
+    {
+      "Iteration": 41,
+      "WorkingSetBytes": 946229248,
+      "ManagedBytes": 2937496
+    },
+    {
+      "Iteration": 42,
+      "WorkingSetBytes": 946290688,
+      "ManagedBytes": 3003032
+    },
+    {
+      "Iteration": 43,
+      "WorkingSetBytes": 946356224,
+      "ManagedBytes": 3060344
+    },
+    {
+      "Iteration": 44,
+      "WorkingSetBytes": 946413568,
+      "ManagedBytes": 3117656
+    },
+    {
+      "Iteration": 45,
+      "WorkingSetBytes": 946479104,
+      "ManagedBytes": 3183192
+    },
+    {
+      "Iteration": 46,
+      "WorkingSetBytes": 946540544,
+      "ManagedBytes": 3240504
+    },
+    {
+      "Iteration": 47,
+      "WorkingSetBytes": 946610176,
+      "ManagedBytes": 3306040
+    },
+    {
+      "Iteration": 48,
+      "WorkingSetBytes": 946667520,
+      "ManagedBytes": 3363608
+    },
+    {
+      "Iteration": 49,
+      "WorkingSetBytes": 946724864,
+      "ManagedBytes": 3429144
+    },
+    {
+      "Iteration": 50,
+      "WorkingSetBytes": 946790400,
+      "ManagedBytes": 3486456
+    },
+    {
+      "Iteration": 51,
+      "WorkingSetBytes": 946847744,
+      "ManagedBytes": 3551992
+    },
+    {
+      "Iteration": 52,
+      "WorkingSetBytes": 946913280,
+      "ManagedBytes": 3609304
+    },
+    {
+      "Iteration": 53,
+      "WorkingSetBytes": 946962432,
+      "ManagedBytes": 3674840
+    },
+    {
+      "Iteration": 54,
+      "WorkingSetBytes": 947019776,
+      "ManagedBytes": 3732152
+    },
+    {
+      "Iteration": 55,
+      "WorkingSetBytes": 947085312,
+      "ManagedBytes": 3789464
+    },
+    {
+      "Iteration": 56,
+      "WorkingSetBytes": 947154944,
+      "ManagedBytes": 3855000
+    },
+    {
+      "Iteration": 57,
+      "WorkingSetBytes": 947216384,
+      "ManagedBytes": 3912312
+    },
+    {
+      "Iteration": 58,
+      "WorkingSetBytes": 947290112,
+      "ManagedBytes": 3977848
+    },
+    {
+      "Iteration": 59,
+      "WorkingSetBytes": 947351552,
+      "ManagedBytes": 4035160
+    },
+    {
+      "Iteration": 60,
+      "WorkingSetBytes": 947408896,
+      "ManagedBytes": 4100696
+    },
+    {
+      "Iteration": 61,
+      "WorkingSetBytes": 947474432,
+      "ManagedBytes": 4158008
+    },
+    {
+      "Iteration": 62,
+      "WorkingSetBytes": 947593216,
+      "ManagedBytes": 4223544
+    },
+    {
+      "Iteration": 63,
+      "WorkingSetBytes": 949252096,
+      "ManagedBytes": 4281112
+    },
+    {
+      "Iteration": 64,
+      "WorkingSetBytes": 949313536,
+      "ManagedBytes": 4338424
+    },
+    {
+      "Iteration": 65,
+      "WorkingSetBytes": 949379072,
+      "ManagedBytes": 4403960
+    },
+    {
+      "Iteration": 66,
+      "WorkingSetBytes": 949436416,
+      "ManagedBytes": 4461272
+    },
+    {
+      "Iteration": 67,
+      "WorkingSetBytes": 949501952,
+      "ManagedBytes": 4526808
+    },
+    {
+      "Iteration": 68,
+      "WorkingSetBytes": 949555200,
+      "ManagedBytes": 4583808
+    },
+    {
+      "Iteration": 69,
+      "WorkingSetBytes": 949620736,
+      "ManagedBytes": 4649344
+    },
+    {
+      "Iteration": 70,
+      "WorkingSetBytes": 949678080,
+      "ManagedBytes": 4706656
+    },
+    {
+      "Iteration": 71,
+      "WorkingSetBytes": 950509568,
+      "ManagedBytes": 4772192
+    },
+    {
+      "Iteration": 72,
+      "WorkingSetBytes": 950575104,
+      "ManagedBytes": 4829504
+    },
+    {
+      "Iteration": 73,
+      "WorkingSetBytes": 950632448,
+      "ManagedBytes": 4895040
+    },
+    {
+      "Iteration": 74,
+      "WorkingSetBytes": 950697984,
+      "ManagedBytes": 4952352
+    },
+    {
+      "Iteration": 75,
+      "WorkingSetBytes": 950755328,
+      "ManagedBytes": 5009664
+    },
+    {
+      "Iteration": 76,
+      "WorkingSetBytes": 950820864,
+      "ManagedBytes": 5075200
+    },
+    {
+      "Iteration": 77,
+      "WorkingSetBytes": 950878208,
+      "ManagedBytes": 5132768
+    },
+    {
+      "Iteration": 78,
+      "WorkingSetBytes": 950935552,
+      "ManagedBytes": 5198304
+    },
+    {
+      "Iteration": 79,
+      "WorkingSetBytes": 951001088,
+      "ManagedBytes": 5255616
+    },
+    {
+      "Iteration": 80,
+      "WorkingSetBytes": 951058432,
+      "ManagedBytes": 5321152
+    },
+    {
+      "Iteration": 81,
+      "WorkingSetBytes": 951123968,
+      "ManagedBytes": 5378464
+    },
+    {
+      "Iteration": 82,
+      "WorkingSetBytes": 951177216,
+      "ManagedBytes": 5435776
+    },
+    {
+      "Iteration": 83,
+      "WorkingSetBytes": 951242752,
+      "ManagedBytes": 5501312
+    },
+    {
+      "Iteration": 84,
+      "WorkingSetBytes": 951300096,
+      "ManagedBytes": 5558624
+    },
+    {
+      "Iteration": 85,
+      "WorkingSetBytes": 951361536,
+      "ManagedBytes": 5624160
+    },
+    {
+      "Iteration": 86,
+      "WorkingSetBytes": 951427072,
+      "ManagedBytes": 5681472
+    },
+    {
+      "Iteration": 87,
+      "WorkingSetBytes": 951484416,
+      "ManagedBytes": 5747008
+    },
+    {
+      "Iteration": 88,
+      "WorkingSetBytes": 951549952,
+      "ManagedBytes": 5804320
+    },
+    {
+      "Iteration": 89,
+      "WorkingSetBytes": 951607296,
+      "ManagedBytes": 5861632
+    },
+    {
+      "Iteration": 90,
+      "WorkingSetBytes": 951672832,
+      "ManagedBytes": 5927168
+    },
+    {
+      "Iteration": 91,
+      "WorkingSetBytes": 951730176,
+      "ManagedBytes": 5984736
+    },
+    {
+      "Iteration": 92,
+      "WorkingSetBytes": 951787520,
+      "ManagedBytes": 6050272
+    },
+    {
+      "Iteration": 93,
+      "WorkingSetBytes": 951853056,
+      "ManagedBytes": 6107584
+    },
+    {
+      "Iteration": 94,
+      "WorkingSetBytes": 951910400,
+      "ManagedBytes": 6173120
+    },
+    {
+      "Iteration": 95,
+      "WorkingSetBytes": 951975936,
+      "ManagedBytes": 6230432
+    },
+    {
+      "Iteration": 96,
+      "WorkingSetBytes": 952029184,
+      "ManagedBytes": 6287744
+    },
+    {
+      "Iteration": 97,
+      "WorkingSetBytes": 952094720,
+      "ManagedBytes": 6353280
+    },
+    {
+      "Iteration": 98,
+      "WorkingSetBytes": 952152064,
+      "ManagedBytes": 6410592
+    },
+    {
+      "Iteration": 99,
+      "WorkingSetBytes": 952213504,
+      "ManagedBytes": 6476128
+    },
+    {
+      "Iteration": 100,
+      "WorkingSetBytes": 952279040,
+      "ManagedBytes": 6533440
+    },
+    {
+      "Iteration": 101,
+      "WorkingSetBytes": 952336384,
+      "ManagedBytes": 6598976
+    },
+    {
+      "Iteration": 102,
+      "WorkingSetBytes": 952401920,
+      "ManagedBytes": 6656288
+    },
+    {
+      "Iteration": 103,
+      "WorkingSetBytes": 952459264,
+      "ManagedBytes": 6713600
+    },
+    {
+      "Iteration": 104,
+      "WorkingSetBytes": 952524800,
+      "ManagedBytes": 6779136
+    },
+    {
+      "Iteration": 105,
+      "WorkingSetBytes": 952582144,
+      "ManagedBytes": 6836704
+    },
+    {
+      "Iteration": 106,
+      "WorkingSetBytes": 952639488,
+      "ManagedBytes": 6902240
+    },
+    {
+      "Iteration": 107,
+      "WorkingSetBytes": 952705024,
+      "ManagedBytes": 6959552
+    },
+    {
+      "Iteration": 108,
+      "WorkingSetBytes": 952885248,
+      "ManagedBytes": 7025088
+    },
+    {
+      "Iteration": 109,
+      "WorkingSetBytes": 952918016,
+      "ManagedBytes": 7082400
+    },
+    {
+      "Iteration": 110,
+      "WorkingSetBytes": 952971264,
+      "ManagedBytes": 7139712
+    },
+    {
+      "Iteration": 111,
+      "WorkingSetBytes": 953028608,
+      "ManagedBytes": 7197024
+    },
+    {
+      "Iteration": 112,
+      "WorkingSetBytes": 953094144,
+      "ManagedBytes": 7262560
+    },
+    {
+      "Iteration": 113,
+      "WorkingSetBytes": 953155584,
+      "ManagedBytes": 7319872
+    },
+    {
+      "Iteration": 114,
+      "WorkingSetBytes": 953212928,
+      "ManagedBytes": 7377184
+    },
+    {
+      "Iteration": 115,
+      "WorkingSetBytes": 953270272,
+      "ManagedBytes": 7442720
+    },
+    {
+      "Iteration": 116,
+      "WorkingSetBytes": 953335808,
+      "ManagedBytes": 7500032
+    },
+    {
+      "Iteration": 117,
+      "WorkingSetBytes": 953393152,
+      "ManagedBytes": 7557600
+    },
+    {
+      "Iteration": 118,
+      "WorkingSetBytes": 953450496,
+      "ManagedBytes": 7614912
+    },
+    {
+      "Iteration": 119,
+      "WorkingSetBytes": 953516032,
+      "ManagedBytes": 7680448
+    },
+    {
+      "Iteration": 120,
+      "WorkingSetBytes": 953573376,
+      "ManagedBytes": 7737760
+    },
+    {
+      "Iteration": 121,
+      "WorkingSetBytes": 953626624,
+      "ManagedBytes": 7795072
+    },
+    {
+      "Iteration": 122,
+      "WorkingSetBytes": 953683968,
+      "ManagedBytes": 7860608
+    },
+    {
+      "Iteration": 123,
+      "WorkingSetBytes": 953749504,
+      "ManagedBytes": 7917920
+    },
+    {
+      "Iteration": 124,
+      "WorkingSetBytes": 953810944,
+      "ManagedBytes": 7975232
+    },
+    {
+      "Iteration": 125,
+      "WorkingSetBytes": 953868288,
+      "ManagedBytes": 8032544
+    },
+    {
+      "Iteration": 126,
+      "WorkingSetBytes": 953933824,
+      "ManagedBytes": 8098080
+    },
+    {
+      "Iteration": 127,
+      "WorkingSetBytes": 953991168,
+      "ManagedBytes": 8155392
+    },
+    {
+      "Iteration": 128,
+      "WorkingSetBytes": 954048512,
+      "ManagedBytes": 8212960
+    },
+    {
+      "Iteration": 129,
+      "WorkingSetBytes": 954114048,
+      "ManagedBytes": 8278496
+    },
+    {
+      "Iteration": 130,
+      "WorkingSetBytes": 954171392,
+      "ManagedBytes": 8335808
+    },
+    {
+      "Iteration": 131,
+      "WorkingSetBytes": 954228736,
+      "ManagedBytes": 8393120
+    },
+    {
+      "Iteration": 132,
+      "WorkingSetBytes": 954294272,
+      "ManagedBytes": 8458656
+    },
+    {
+      "Iteration": 133,
+      "WorkingSetBytes": 954347520,
+      "ManagedBytes": 8515968
+    },
+    {
+      "Iteration": 134,
+      "WorkingSetBytes": 954404864,
+      "ManagedBytes": 8573280
+    },
+    {
+      "Iteration": 135,
+      "WorkingSetBytes": 954466304,
+      "ManagedBytes": 8638816
+    },
+    {
+      "Iteration": 136,
+      "WorkingSetBytes": 954531840,
+      "ManagedBytes": 8696128
+    },
+    {
+      "Iteration": 137,
+      "WorkingSetBytes": 954589184,
+      "ManagedBytes": 384944
+    },
+    {
+      "Iteration": 138,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 442512
+    },
+    {
+      "Iteration": 139,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 500080
+    },
+    {
+      "Iteration": 140,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 557648
+    },
+    {
+      "Iteration": 141,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 623440
+    },
+    {
+      "Iteration": 142,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 681008
+    },
+    {
+      "Iteration": 143,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 738576
+    },
+    {
+      "Iteration": 144,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 804368
+    },
+    {
+      "Iteration": 145,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 861936
+    },
+    {
+      "Iteration": 146,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 919504
+    },
+    {
+      "Iteration": 147,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 977072
+    },
+    {
+      "Iteration": 148,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1042864
+    },
+    {
+      "Iteration": 149,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1100432
+    },
+    {
+      "Iteration": 150,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1158000
+    },
+    {
+      "Iteration": 151,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1215568
+    },
+    {
+      "Iteration": 152,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1281360
+    },
+    {
+      "Iteration": 153,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1338928
+    },
+    {
+      "Iteration": 154,
+      "WorkingSetBytes": 954609664,
+      "ManagedBytes": 1396496
+    },
+    {
+      "Iteration": 155,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1454064
+    },
+    {
+      "Iteration": 156,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1519856
+    },
+    {
+      "Iteration": 157,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1577424
+    },
+    {
+      "Iteration": 158,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1634992
+    },
+    {
+      "Iteration": 159,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1692560
+    },
+    {
+      "Iteration": 160,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1758352
+    },
+    {
+      "Iteration": 161,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1815920
+    },
+    {
+      "Iteration": 162,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1873488
+    },
+    {
+      "Iteration": 163,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1931056
+    },
+    {
+      "Iteration": 164,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 1996848
+    },
+    {
+      "Iteration": 165,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2054416
+    },
+    {
+      "Iteration": 166,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2111984
+    },
+    {
+      "Iteration": 167,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2169552
+    },
+    {
+      "Iteration": 168,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2235344
+    },
+    {
+      "Iteration": 169,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2292912
+    },
+    {
+      "Iteration": 170,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2350480
+    },
+    {
+      "Iteration": 171,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2416272
+    },
+    {
+      "Iteration": 172,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2473840
+    },
+    {
+      "Iteration": 173,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2531408
+    },
+    {
+      "Iteration": 174,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2588976
+    },
+    {
+      "Iteration": 175,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2654768
+    },
+    {
+      "Iteration": 176,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2712336
+    },
+    {
+      "Iteration": 177,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2769904
+    },
+    {
+      "Iteration": 178,
+      "WorkingSetBytes": 954613760,
+      "ManagedBytes": 2827472
+    },
+    {
+      "Iteration": 179,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 2893264
+    },
+    {
+      "Iteration": 180,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 2950832
+    },
+    {
+      "Iteration": 181,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3008400
+    },
+    {
+      "Iteration": 182,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3065968
+    },
+    {
+      "Iteration": 183,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3131760
+    },
+    {
+      "Iteration": 184,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3189328
+    },
+    {
+      "Iteration": 185,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3246896
+    },
+    {
+      "Iteration": 186,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3304464
+    },
+    {
+      "Iteration": 187,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3370256
+    },
+    {
+      "Iteration": 188,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3427824
+    },
+    {
+      "Iteration": 189,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3485392
+    },
+    {
+      "Iteration": 190,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3542960
+    },
+    {
+      "Iteration": 191,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3608752
+    },
+    {
+      "Iteration": 192,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3666320
+    },
+    {
+      "Iteration": 193,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3723888
+    },
+    {
+      "Iteration": 194,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3781456
+    },
+    {
+      "Iteration": 195,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3847248
+    },
+    {
+      "Iteration": 196,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3904816
+    },
+    {
+      "Iteration": 197,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 3962384
+    },
+    {
+      "Iteration": 198,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4028176
+    },
+    {
+      "Iteration": 199,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4085744
+    },
+    {
+      "Iteration": 200,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4143312
+    },
+    {
+      "Iteration": 201,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4200880
+    },
+    {
+      "Iteration": 202,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4266672
+    },
+    {
+      "Iteration": 203,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4324240
+    },
+    {
+      "Iteration": 204,
+      "WorkingSetBytes": 954630144,
+      "ManagedBytes": 4381808
+    }
+  ],
+  "scenario": {
+    "questionCount": 2,
+    "stateTokenCount": 28,
+    "sequenceLength": 62,
+    "markerCount": 11,
+    "wasTruncated": false,
+    "runOnly": {
+      "WarmupCount": 5,
+      "SampleCount": 200,
+      "MeanMs": 97.73103700000003,
+      "P50Ms": 91.4127,
+      "P95Ms": 143.29543499999997,
+      "P99Ms": 153.296673,
+      "MinMs": 73.9078,
+      "MaxMs": 226.4742
+    },
+    "endToEnd": {
+      "WarmupCount": 5,
+      "SampleCount": 200,
+      "MeanMs": 98.06208849999999,
+      "P50Ms": 91.93385,
+      "P95Ms": 143.85805,
+      "P99Ms": 153.611138,
+      "MinMs": 74.1956,
+      "MaxMs": 226.746
+    },
+    "runOnlySamples": [
+      149.5814,
+      90.6745,
+      92.2058,
+      143.2111,
+      137.4293,
+      118.0832,
+      94.1722,
+      85.4336,
+      117.3347,
+      150.2701,
+      105.5545,
+      115.8714,
+      116.5552,
+      107.8166,
+      150.7681,
+      107.4024,
+      105.0407,
+      98.9102,
+      88.942,
+      117.9477,
+      92.249,
+      86.5426,
+      101.1672,
+      94.3522,
+      77.7769,
+      150.8408,
+      90.5088,
+      121.6728,
+      102.0851,
+      116.4552,
+      147.9166,
+      98.3797,
+      104.69,
+      98.7456,
+      94.9249,
+      131.0235,
+      86.0476,
+      100.5372,
+      91.1054,
+      86.0592,
+      89.4483,
+      91.7941,
+      81.7045,
+      88.1125,
+      89.7287,
+      83.4557,
+      80.8735,
+      99.9953,
+      89.3235,
+      101.7389,
+      96.3115,
+      97.6297,
+      103.2664,
+      114.1999,
+      100.8268,
+      83.6497,
+      96.838,
+      144.8978,
+      153.2915,
+      103.8417,
+      89.898,
+      96.5405,
+      137.55,
+      101.4743,
+      90.5648,
+      92.7131,
+      97.3172,
+      88.8062,
+      126.2683,
+      81.5746,
+      87.5016,
+      79.0157,
+      84.7779,
+      82.2895,
+      117.0153,
+      85.917,
+      97.9904,
+      83.3452,
+      88.3141,
+      88.0485,
+      114.9307,
+      79.2411,
+      103.5201,
+      115.3815,
+      95.0255,
+      99.787,
+      110.549,
+      85.4922,
+      86.6364,
+      90.721,
+      92.8571,
+      126.4399,
+      90.8813,
+      84.1616,
+      88.6916,
+      81.5607,
+      76.1631,
+      80.4614,
+      153.8088,
+      90.2741,
+      73.9078,
+      83.1488,
+      83.7339,
+      226.4742,
+      93.2952,
+      96.5029,
+      91.72,
+      111.0726,
+      98.8422,
+      79.4751,
+      86.6725,
+      80.7153,
+      75.001,
+      88.2382,
+      98.9902,
+      75.3577,
+      76.0023,
+      82.1748,
+      78.5209,
+      74.143,
+      79.4922,
+      128.2076,
+      80.9534,
+      78.0077,
+      80.5239,
+      82.7525,
+      87.2426,
+      120.2787,
+      89.7192,
+      97.8844,
+      92.9378,
+      79.7598,
+      84.2639,
+      111.4315,
+      97.475,
+      96.5007,
+      90.1001,
+      132.0438,
+      150.6494,
+      110.7721,
+      85.5543,
+      85.4437,
+      86.2273,
+      140.8459,
+      81.8295,
+      85.7251,
+      88.7636,
+      80.7889,
+      86.1974,
+      80.3986,
+      83.8471,
+      79.0502,
+      86.8697,
+      76.0837,
+      87.6065,
+      77.5037,
+      98.189,
+      89.0533,
+      77.9388,
+      81.8347,
+      101.4896,
+      107.2854,
+      93.1608,
+      88.8841,
+      79.515,
+      74.4798,
+      79.3511,
+      81.2831,
+      84.1902,
+      127.2252,
+      85.9391,
+      83.9859,
+      81.1409,
+      79.6106,
+      84.727,
+      122.2544,
+      92.3122,
+      88.4745,
+      95.3688,
+      89.3118,
+      106.2798,
+      82.3353,
+      111.5123,
+      84.2107,
+      87.7144,
+      85.5458,
+      101.853,
+      99.2023,
+      101.1231,
+      96.1747,
+      97.5647,
+      92.0714,
+      125.3557,
+      102.4821,
+      100.1825,
+      103.4779,
+      100.3381,
+      119.2716,
+      86.8976,
+      77.1697
+    ],
+    "endToEndSamples": [
+      150.1709,
+      91.906,
+      92.7667,
+      143.7861,
+      137.9955,
+      118.6545,
+      94.9183,
+      86.0052,
+      117.9053,
+      150.8313,
+      106.0617,
+      116.5418,
+      117.4238,
+      108.2828,
+      151.2803,
+      107.8708,
+      105.5361,
+      99.9423,
+      89.4068,
+      118.3975,
+      92.5735,
+      86.9031,
+      101.6523,
+      94.8417,
+      78.1321,
+      151.2612,
+      90.8484,
+      122.0952,
+      102.4558,
+      116.8233,
+      148.2247,
+      98.6795,
+      104.9935,
+      99.0324,
+      95.2203,
+      131.3117,
+      86.3309,
+      100.8188,
+      91.4328,
+      86.3373,
+      89.7509,
+      92.1157,
+      82.0308,
+      88.4425,
+      90.0658,
+      83.7834,
+      81.1768,
+      100.3332,
+      89.6165,
+      102.0493,
+      96.5937,
+      97.9478,
+      103.5873,
+      114.5153,
+      101.1417,
+      83.9637,
+      97.2297,
+      145.2251,
+      153.6065,
+      107.187,
+      90.1868,
+      96.8277,
+      137.8239,
+      101.7276,
+      90.8667,
+      92.9833,
+      97.5732,
+      89.0682,
+      126.5325,
+      81.8264,
+      87.759,
+      79.2792,
+      85.0676,
+      82.5517,
+      117.3009,
+      86.1769,
+      98.2754,
+      83.6004,
+      88.5549,
+      88.3067,
+      115.1822,
+      79.5094,
+      103.77,
+      115.6691,
+      95.2751,
+      100.0677,
+      110.8423,
+      85.7983,
+      86.9279,
+      90.9943,
+      93.17,
+      126.7182,
+      91.1307,
+      84.4271,
+      88.9424,
+      81.8411,
+      76.413,
+      80.8509,
+      154.0703,
+      90.5468,
+      74.1956,
+      83.432,
+      84.0103,
+      226.746,
+      93.6522,
+      96.7896,
+      91.9617,
+      111.3189,
+      99.1063,
+      79.73,
+      86.9422,
+      82.031,
+      75.3004,
+      88.5093,
+      99.263,
+      75.6401,
+      76.2636,
+      82.4284,
+      78.8093,
+      74.4264,
+      79.766,
+      128.4793,
+      81.2265,
+      78.3045,
+      80.8193,
+      83.0458,
+      87.5079,
+      120.5538,
+      90.0008,
+      98.1418,
+      93.1889,
+      80.0262,
+      84.5264,
+      111.6671,
+      97.7234,
+      96.7423,
+      90.3344,
+      132.2968,
+      150.8981,
+      111.0296,
+      85.8019,
+      85.6971,
+      86.4862,
+      141.0896,
+      82.0746,
+      85.9651,
+      88.9968,
+      81.023,
+      86.4471,
+      80.6578,
+      84.1179,
+      79.2928,
+      87.1061,
+      76.3155,
+      87.844,
+      77.7418,
+      98.4286,
+      89.284,
+      78.1686,
+      82.0667,
+      101.7458,
+      107.5191,
+      93.4185,
+      89.1851,
+      79.7714,
+      74.7146,
+      79.5776,
+      81.5269,
+      84.4303,
+      127.456,
+      86.1828,
+      84.222,
+      81.3872,
+      79.8356,
+      84.9655,
+      122.4924,
+      92.5492,
+      88.7397,
+      95.6033,
+      89.5492,
+      106.5168,
+      82.568,
+      111.7488,
+      84.5063,
+      87.9569,
+      85.7969,
+      102.0887,
+      99.4554,
+      101.3578,
+      96.4179,
+      97.8097,
+      92.3192,
+      125.6139,
+      102.7168,
+      100.4365,
+      103.7118,
+      100.5747,
+      119.5074,
+      87.1347,
+      77.4162
+    ]
+  }
+}

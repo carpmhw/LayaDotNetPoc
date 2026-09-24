@@ -24,13 +24,55 @@ public sealed class LayaQuestion
         LayaQuestionType type,
         object? instructions,
         IEnumerable<string>? options = null)
+        : this(name, type, instructions, options ?? Array.Empty<string>(), options ?? Array.Empty<string>())
+    {
+    }
+
+    /// <summary>以官方 criteria key/value 建立答案 labels 與 prompt labels 的雙層映射。</summary>
+    public static LayaQuestion FromCriteria(
+        string name,
+        LayaQuestionType type,
+        object? instructions,
+        IEnumerable<KeyValuePair<string, string>> criteria)
+    {
+        ArgumentNullException.ThrowIfNull(criteria);
+        var entries = criteria.ToArray();
+        if (entries.Length == 0 || entries.Any(entry =>
+                string.IsNullOrWhiteSpace(entry.Key) || string.IsNullOrWhiteSpace(entry.Value)) ||
+            entries.Select(entry => entry.Key).Distinct(StringComparer.Ordinal).Count() != entries.Length)
+        {
+            throw new ArgumentException("Criteria must contain non-empty unique keys and values.", nameof(criteria));
+        }
+
+        return new LayaQuestion(
+            name,
+            type,
+            instructions,
+            entries.Select(entry => entry.Key),
+            entries.Select(entry => $"{entry.Key}: {entry.Value}"));
+    }
+
+    /// <summary>建立保存答案 option 與 prompt option 的 question 物件。</summary>
+    private LayaQuestion(
+        string name,
+        LayaQuestionType type,
+        object? instructions,
+        IEnumerable<string>? options,
+        IEnumerable<string>? promptOptions)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(promptOptions);
 
         Name = name;
         Type = type;
         Instructions = instructions;
-        Options = new ReadOnlyCollection<string>((options ?? Array.Empty<string>()).ToArray());
+        Options = new ReadOnlyCollection<string>(options.ToArray());
+        PromptOptions = new ReadOnlyCollection<string>(promptOptions.ToArray());
+        if (Options.Count != PromptOptions.Count)
+        {
+            throw new ArgumentException("Answer and prompt option counts must match.");
+        }
     }
 
     /// <summary>取得呼叫端使用的 question name。</summary>
@@ -44,6 +86,9 @@ public sealed class LayaQuestion
 
     /// <summary>取得 Choice／Score 的 option labels。</summary>
     public IReadOnlyList<string> Options { get; }
+
+    /// <summary>取得送入 upstream prompt 的 option labels。</summary>
+    public IReadOnlyList<string> PromptOptions { get; }
 }
 
 /// <summary>保存一次 state 與多個 questions 的 request。</summary>
@@ -102,12 +147,18 @@ public sealed class LayaAnswer
 public sealed class LayaResult
 {
     /// <summary>建立結果並複製答案順序。</summary>
-    public LayaResult(IEnumerable<LayaAnswer> answers, TimeSpan inferenceDuration)
+    public LayaResult(
+        IEnumerable<LayaAnswer> answers,
+        TimeSpan inferenceDuration,
+        int? sequenceLength = null,
+        bool? wasTruncated = null)
     {
         ArgumentNullException.ThrowIfNull(answers);
 
         Answers = new ReadOnlyCollection<LayaAnswer>(answers.ToArray());
         InferenceDuration = inferenceDuration;
+        SequenceLength = sequenceLength;
+        WasTruncated = wasTruncated;
     }
 
     /// <summary>取得依 request question 順序排列的答案。</summary>
@@ -115,4 +166,10 @@ public sealed class LayaResult
 
     /// <summary>取得只涵蓋 ONNX Run 的 duration。</summary>
     public TimeSpan InferenceDuration { get; }
+
+    /// <summary>取得 request 的實際未 padding sequence length。</summary>
+    public int? SequenceLength { get; }
+
+    /// <summary>取得 request 是否達到 model max length 而被截斷。</summary>
+    public bool? WasTruncated { get; }
 }

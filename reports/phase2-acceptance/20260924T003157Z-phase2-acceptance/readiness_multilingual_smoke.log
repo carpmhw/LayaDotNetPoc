@@ -1,0 +1,11 @@
+{
+  "mode": "phase2-smoke",
+  "requestCount": 1,
+  "successes": 1,
+  "failures": 0,
+  "elapsedMs": 166.0385,
+  "peakWorkingSetBytes": 927014912,
+  "workingSetSeries": [
+    927014912
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "status": "verified",
+  "profile": "multilingual",
+  "checkpoint": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa"
+  },
+  "reference": {
+    "toolchainLockSha256": "f7154044e0dacb4f7eaceee7683c8f690f309703ba8979578df9da3edb027ec2",
+    "sourceManifestSha256": "66dd7a86f5e090115616c508fd30067708d6e03d9c8d1fcd87e4a69c277ee621"
+  },
+  "export": {
+    "opset": 18,
+    "exporter": "torch.onnx.export",
+    "dynamo": true,
+    "attentionBackend": "torch-mha-fastpath-disabled-during-export",
+    "computeDtype": "float32",
+    "externalData": true,
+    "dynamicAxes": {
+      "input_ids": {
+        "0": "batch",
+        "1": "sequence"
+      },
+      "attention_mask": {
+        "0": "batch",
+        "1": "sequence"
+      },
+      "marker_pos": {
+        "0": "batch",
+        "1": "markers"
+      },
+      "marker_mask": {
+        "0": "batch",
+        "1": "markers"
+      },
+      "qtype": {
+        "0": "batch"
+      },
+      "logits": {
+        "0": "batch",
+        "1": "markers"
+      },
+      "act_probs": {
+        "0": "batch"
+      }
+    }
+  },
+  "schema": {
+    "inputs": {
+      "input_ids": {
+        "dtype": "INT64",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          "sequence"
+        ]
+      },
+      "attention_mask": {
+        "dtype": "INT64",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          "sequence"
+        ]
+      },
+      "marker_pos": {
+        "dtype": "INT64",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          "markers"
+        ]
+      },
+      "marker_mask": {
+        "dtype": "BOOL",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          "markers"
+        ]
+      },
+      "qtype": {
+        "dtype": "INT64",
+        "rank": 1,
+        "dimensions": [
+          "batch"
+        ]
+      }
+    },
+    "outputs": {
+      "logits": {
+        "dtype": "FLOAT",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          "markers"
+        ]
+      },
+      "act_probs": {
+        "dtype": "FLOAT",
+        "rank": 2,
+        "dimensions": [
+          "batch",
+          2
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "max_len": 1024,
+    "head_max_len": 256,
+    "temperature": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "temperature_by_options": {},
+    "status": "upstream-unfitted-preserved"
+  },
+  "externalDataFiles": [
+    "laya.onnx.data"
+  ],
+  "files": {
+    "laya.onnx": {
+      "size": 2826231,
+      "sha256": "531d76d5932a0bd893d73c456c7478da665c93d03e0a8eeb3dc961e1c5bcdcc4"
+    },
+    "laya_config.json": {
+      "size": 127,
+      "sha256": "d9f54bcdd1993f9d5e6c5839516de423599759a635a1d53b172c154b3f717880"
+    },
+    "tokenizer/tokenizer.json": {
+      "size": 34363188,
+      "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+    },
+    "tokenizer/tokenizer_config.json": {
+      "size": 502,
+      "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+    },
+    "laya.onnx.data": {
+      "size": 1287651328,
+      "sha256": "6ef993ee707fe1d6a75529f4a1f8347ff89966ff955d332ea3ebe4e5171a9ac1"
+    }
+  },
+  "publication": {
+    "candidateManifestSha256": "023161c117f837805d5659f4ba10a4d2b6c9bc797b145637e0fbe4b06a726804",
+    "publishedUtc": "2026-09-23T16:16:14Z"
+  }
+}

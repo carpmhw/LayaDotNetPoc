@@ -2,6 +2,7 @@ using Laya.Core.Inference;
 
 namespace Laya.Core.Tests.Models;
 
+[Trait("Category", "EnglishModel")]
 public sealed class LayaOnnxSessionTests
 {
     /// <summary>驗證實際 English bundle 可建立 CPU session 並暴露必要 metadata。</summary>

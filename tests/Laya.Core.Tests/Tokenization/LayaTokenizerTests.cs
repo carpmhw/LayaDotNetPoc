@@ -2,6 +2,7 @@ using Laya.Core.Tokenization;
 
 namespace Laya.Core.Tests.Tokenization;
 
+[Trait("Category", "EnglishTokenizer")]
 public sealed class LayaTokenizerTests
 {
     /// <summary>驗證本機 tokenizer 可載入並從設定解析 special token IDs。</summary>

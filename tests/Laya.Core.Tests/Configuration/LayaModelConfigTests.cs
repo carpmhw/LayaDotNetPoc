@@ -3,6 +3,7 @@ using Laya.Core.Exceptions;
 
 namespace Laya.Core.Tests.Configuration;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaModelConfigTests
 {
     /// <summary>驗證真實 bundle 的 per-cardinality temperature lookup。</summary>
@@ -31,6 +32,22 @@ public sealed class LayaModelConfigTests
 
         Assert.Throws<LayaConfigurationException>(
             () => config.GetTemperature("unknown", 2));
+    }
+
+    /// <summary>驗證 multilingual fallback calibration 可在沒有 cardinality map 時使用。</summary>
+    [Fact]
+    public void GetTemperature_AllowsEmptyOptionCalibrationWithFallbacks()
+    {
+        var config = new LayaModelConfig
+        {
+            MaxLength = 1024,
+            HeadMaxLength = 256,
+            Temperature = new[] { 1d, 1d, 1d },
+            TemperatureByOptions = new Dictionary<string, double>()
+        };
+
+        Assert.Equal(1d, config.GetTemperature("choice", 11));
+        Assert.Equal(1d, config.GetTemperature("noul", 2));
     }
 
     /// <summary>尋找 repository 內的本機模型目錄，允許 CI 透過環境變數覆寫。</summary>

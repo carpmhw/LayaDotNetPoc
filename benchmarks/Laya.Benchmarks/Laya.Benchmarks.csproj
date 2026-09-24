@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
     <ProjectReference Include="..\..\src\Laya.Core\Laya.Core.csproj" />
+    <Compile Include="..\..\src\Shared\Configuration\LayaProfileResolver.cs" Link="Shared\Configuration\LayaProfileResolver.cs" />
   </ItemGroup>
 
 </Project>

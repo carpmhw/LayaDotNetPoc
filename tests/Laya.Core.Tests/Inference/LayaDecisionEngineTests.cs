@@ -4,6 +4,7 @@ using Laya.Core.Models;
 
 namespace Laya.Core.Tests.Inference;
 
+[Trait("Category", "EnglishModel")]
 public sealed class LayaDecisionEngineTests
 {
     /// <summary>驗證多題 request 只建立一次 engine 並回傳保序校準結果。</summary>

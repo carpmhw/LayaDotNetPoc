@@ -1,0 +1,14 @@
+.git
+.opencode
+.superpowers
+bin/
+obj/
+BenchmarkDotNet.Artifacts/
+models/
+reports/phase2-runs/
+*.onnx
+*.onnx.data
+*.safetensors
+test-data/transactions*.csv
+test-data/*raw*
+misclassified-transactions.csv

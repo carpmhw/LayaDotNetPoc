@@ -1,0 +1,12 @@
+== test ==
+$ dotnet test LayaDotNetPoc.sln --no-restore
+  Laya.Core -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/bin/Debug/net8.0/Laya.Core.dll
+  Laya.Console -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Console/bin/Debug/net8.0/Laya.Console.dll
+  Laya.Core.Tests -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll
+/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll 的測試回合 (.NETCoreApp,Version=v8.0)
+VSTest 版本 18.0.2 (x64)
+
+正在啟動測試執行，請稍候...
+總共有 1 個測試檔案與指定的模式相符。
+
+已通過! - 失敗:     0，通過:    85，略過:     0，總計:    85，持續時間: 21 s - Laya.Core.Tests.dll (net8.0)

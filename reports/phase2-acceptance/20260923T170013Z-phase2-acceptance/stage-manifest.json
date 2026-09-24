@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260923T170013Z-phase2-acceptance",
+  "status": "failed",
+  "stages": [
+    {
+      "name": "preflight_restore",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:00:13Z",
+      "finishedUtc": "2026-09-23T17:00:14Z",
+      "command": "dotnet restore LayaDotNetPoc.sln ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/preflight_restore.log"
+    },
+    {
+      "name": "preflight_build",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:00:14Z",
+      "finishedUtc": "2026-09-23T17:00:16Z",
+      "command": "dotnet build LayaDotNetPoc.sln --no-restore ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/preflight_build.log"
+    },
+    {
+      "name": "preflight_assets",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:00:16Z",
+      "finishedUtc": "2026-09-23T17:00:16Z",
+      "command": "jq -e $'\\n    .status == \"verified\" and .profile == \"multilingual\" and\\n    (.verifiedManifestSha256 | length == 64)\\n  ' models/laya-multilingual/current-bundle.json ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/preflight_assets.log"
+    },
+    {
+      "name": "preflight_python_report",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:00:16Z",
+      "finishedUtc": "2026-09-23T17:00:16Z",
+      "command": "jq -e $'\\n    .status == \"complete\" and .coverage.fixtureCount == 20 and\\n    .coverage.executedCount == 20 and (.failedFixtures | length) == 0\\n  ' reports/multilingual-export-validation.json ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/preflight_python_report.log"
+    },
+    {
+      "name": "preflight_dotnet_report",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:00:16Z",
+      "finishedUtc": "2026-09-23T17:00:16Z",
+      "command": "jq -e $'\\n    .status == \"complete\" and .expectedCount == 20 and\\n    .executedCount == 20 and .passedCount == 20 and .skippedCount == 0\\n  ' reports/multilingual-dotnet-parity.json ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/preflight_dotnet_report.log"
+    },
+    {
+      "name": "readiness_full_tests",
+      "status": "failed",
+      "exitCode": 1,
+      "startedUtc": "2026-09-23T17:00:16Z",
+      "finishedUtc": "2026-09-23T17:00:41Z",
+      "command": "env LAYA_MODEL_ROOT=/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya LAYA_MULTILINGUAL_MODEL_ROOT=/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual dotnet test tests/Laya.Core.Tests/Laya.Core.Tests.csproj --no-build --no-restore ",
+      "dependencyFingerprint": "ae12a3f1ded0cea6315ad14131ed1d31b23156aeae8c391df40d892a50bdef19",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T170013Z-phase2-acceptance/readiness_full_tests.log"
+    }
+  ]
+}

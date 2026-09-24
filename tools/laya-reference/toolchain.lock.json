@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "sourceUrl": "https://huggingface.co/convaiinnovations/laya-multilingual/tree/052592a15d198d9ad47da779604259b10b47b7aa",
+    "files": {
+      "model.safetensors": {
+        "sizeBytes": 643835514,
+        "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+      },
+      "encoder/config.json": {
+        "sizeBytes": 1938,
+        "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+      },
+      "rl_agent_config.json": {
+        "sizeBytes": 472,
+        "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6"
+      },
+      "tokenizer/tokenizer.json": {
+        "sizeBytes": 34363188,
+        "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+      },
+      "tokenizer/tokenizer_config.json": {
+        "sizeBytes": 502,
+        "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+      }
+    }
+  },
+  "officialSource": {
+    "repository": "https://github.com/NandhaKishorM/laya",
+    "commit": "010bacef009c855ccba814b51f7c8e1d38ab5e3f",
+    "package": "laya",
+    "version": "0.3.7",
+    "wheelSha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a",
+    "sourceDistributionSha256": "cca6e999f18f8a5c5efb51d7f6870aebbfa95477855634d4ba933063c38d0c3f"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "platform": "linux-x86_64",
+    "installation": "target-directory; python3-venv unavailable on validation host",
+    "packages": [
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu",
+        "sha256": "a09987c95ec4cffdb6df798d3d641558110a334cfccce22f2f046d83142bc260"
+      },
+      {
+        "name": "laya",
+        "version": "0.3.7",
+        "sha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a"
+      },
+      {
+        "name": "transformers",
+        "version": "5.0.0",
+        "sha256": "587086f249ce64c817213cf36afdb318d087f790723e9b3d4500b97832afd52d"
+      },
+      {
+        "name": "safetensors",
+        "version": "0.8.0",
+        "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+      },
+      {
+        "name": "huggingface_hub",
+        "version": "1.32.0",
+        "sha256": "b0c7c80561969d9cdacdd55fce67ba9584cca0b9d4ea80957a3a5c1445fac5c8"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.3",
+        "sha256": "b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3"
+      },
+      {
+        "name": "onnx",
+        "version": "1.20.1",
+        "sha256": "9336b6b8e6efcf5c490a845f6afd7e041c89a56199aeda384ed7d58fb953b080"
+      },
+      {
+        "name": "onnxruntime",
+        "version": "1.30.0",
+        "sha256": "fa688e7891a6aa206636fe7372e27ee75fd17713289f6b4fc7b190e0a7de9328"
+      },
+      {
+        "name": "tokenizers",
+        "version": "0.22.2",
+        "sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67"
+      },
+      { "name": "sympy", "version": "1.14.0" },
+      { "name": "networkx", "version": "3.7" },
+      { "name": "jinja2", "version": "3.1.6" },
+      { "name": "fsspec", "version": "2026.9.0" },
+      { "name": "protobuf", "version": "7.36.2" },
+      { "name": "ml-dtypes", "version": "0.6.0" },
+      {
+        "name": "onnxscript",
+        "version": "0.7.2",
+        "sha256": "d0e7121c6a1eefd608058928e111cbdb76709f70d269ff0d07aee493bd1d13c9"
+      },
+      {
+        "name": "onnx-ir",
+        "version": "0.1.16",
+        "sha256": "a8182f2ba716640aafdd10c5c973a02e2a4f7c10ed57b6b000a3be90e9ea6d38"
+      }
+    ]
+  },
+  "acquisition": {
+    "defaultOutput": "models/laya-multilingual/source",
+    "manifestName": "source-manifest.json",
+    "offlineEnvironment": "LAYA_REFERENCE_OFFLINE=1"
+  }
+}

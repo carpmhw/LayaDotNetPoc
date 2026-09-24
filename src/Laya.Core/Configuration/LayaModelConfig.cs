@@ -107,12 +107,6 @@ public sealed class LayaModelConfig
             ValidateTemperature(value, "temperature");
         }
 
-        if (TemperatureByOptions.Count == 0)
-        {
-            throw new LayaConfigurationException(
-                $"Configuration '{path}' must define temperature_by_options.");
-        }
-
         foreach (var item in TemperatureByOptions)
         {
             ValidateTemperature(item.Value, item.Key);

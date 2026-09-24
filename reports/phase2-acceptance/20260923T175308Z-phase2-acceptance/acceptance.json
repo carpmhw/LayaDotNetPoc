@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260923T175308Z-phase2-acceptance",
+  "status": "failed",
+  "scope": "readiness",
+  "exitCode": 1,
+  "stageManifest": "reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/stage-manifest.json",
+  "stages": [
+    {
+      "name": "preflight_restore",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:53:08Z",
+      "finishedUtc": "2026-09-23T17:53:10Z",
+      "command": "dotnet restore LayaDotNetPoc.sln ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_restore.log",
+      "artifactPaths": []
+    },
+    {
+      "name": "preflight_build",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:53:10Z",
+      "finishedUtc": "2026-09-23T17:53:11Z",
+      "command": "dotnet build LayaDotNetPoc.sln --no-restore ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_build.log",
+      "artifactPaths": []
+    },
+    {
+      "name": "preflight_assets",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:53:11Z",
+      "finishedUtc": "2026-09-23T17:53:11Z",
+      "command": "jq -e $'\\n    .status == \"verified\" and .profile == \"multilingual\" and\\n    (.verifiedManifestSha256 | length == 64)\\n  ' models/laya-multilingual/current-bundle.json ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_assets.log",
+      "artifactPaths": []
+    },
+    {
+      "name": "preflight_python_report",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:53:11Z",
+      "finishedUtc": "2026-09-23T17:53:11Z",
+      "command": "jq -e $'\\n    .status == \"complete\" and .coverage.fixtureCount == 20 and\\n    .coverage.executedCount == 20 and (.failedFixtures | length) == 0\\n  ' reports/multilingual-export-validation.json ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_python_report.log",
+      "artifactPaths": []
+    },
+    {
+      "name": "preflight_dotnet_report",
+      "status": "complete",
+      "exitCode": 0,
+      "startedUtc": "2026-09-23T17:53:11Z",
+      "finishedUtc": "2026-09-23T17:53:11Z",
+      "command": "jq -e $'\\n    .status == \"complete\" and .expectedCount == 20 and\\n    .executedCount == 20 and .passedCount == 20 and .skippedCount == 0\\n  ' reports/multilingual-dotnet-parity.json ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_dotnet_report.log",
+      "artifactPaths": []
+    },
+    {
+      "name": "preflight_parity_identity",
+      "status": "failed",
+      "exitCode": 1,
+      "startedUtc": "2026-09-23T17:53:11Z",
+      "finishedUtc": "2026-09-23T17:53:11Z",
+      "command": "jq -e -n --slurpfile reference test-data/multilingual-reference-manifest.json --slurpfile python reports/multilingual-export-validation.json --slurpfile dotnet reports/multilingual-dotnet-parity.json --slurpfile pointer models/laya-multilingual/current-bundle.json $'\\n    ($reference[0].runtimeBundle.manifestSha256 == $python[0].bundle.manifestSha256) and\\n    ($python[0].bundle.manifestSha256 == $dotnet[0].bundleManifestSha256) and\\n    ($dotnet[0].bundleManifestSha256 == $pointer[0].verifiedManifestSha256)\\n  ' ",
+      "dependencyFingerprint": "5651af8d23ed3795d375fa32eb35c8c9c080fc14db0af05b904a0296fc1a51eb",
+      "logPath": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase2-acceptance/20260923T175308Z-phase2-acceptance/preflight_parity_identity.log",
+      "artifactPaths": []
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="ede679a1-06f8-48a2-bcc7-8dbe9e44dddc" name="@Frieren 2026-09-24 08:52:43" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T08:52:43.5195423+08:00" queuing="2026-09-24T08:52:43.5195424+08:00" start="2026-09-24T08:52:40.0482501+08:00" finish="2026-09-24T08:53:00.4790261+08:00" />
+  <TestSettings name="default" id="94c2d777-c7c1-4283-8696-12f2e8084850">
+    <Deployment runDeploymentRoot="_Frieren_2026-09-24_08_52_43" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="538c8977-36cb-45fa-9230-a5b8d3325f02" testId="ee1dd62b-a6fd-5465-9914-ff2e36624167" testName="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsDuplicateQuestionNames" computerName="Frieren" duration="00:00:01.3440550" startTime="2026-09-24T08:52:47.8233583+08:00" endTime="2026-09-24T08:52:49.1633523+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="538c8977-36cb-45fa-9230-a5b8d3325f02" />
+    <UnitTestResult executionId="fce8c67a-da63-4af3-b71f-f3a6479427a4" testId="6cb1d6b0-ad72-7d93-3eae-619ef0111397" testName="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsUnsupportedScore" computerName="Frieren" duration="00:00:04.8071209" startTime="2026-09-24T08:52:43.0156750+08:00" endTime="2026-09-24T08:52:47.8194940+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fce8c67a-da63-4af3-b71f-f3a6479427a4" />
+    <UnitTestResult executionId="120a65cf-c210-4dcc-a3f9-bcd3dc329843" testId="ae7c69f4-f1b9-85f3-ad68-47cee410c0cb" testName="Laya.Core.Tests.Parity.LayaParityFixtureTests.ReferenceFixtures_MatchDotNetImplementation" computerName="Frieren" duration="00:00:10.7569901" startTime="2026-09-24T08:52:40.6335660+08:00" endTime="2026-09-24T08:52:51.3994119+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="120a65cf-c210-4dcc-a3f9-bcd3dc329843" />
+    <UnitTestResult executionId="53e6a3b0-94d8-4f5e-8c5d-7174a6124696" testId="a2dada05-6d8f-4ba7-6dba-598113869240" testName="Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema" computerName="Frieren" duration="00:00:02.1424417" startTime="2026-09-24T08:52:40.6348376+08:00" endTime="2026-09-24T08:52:42.7840471+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53e6a3b0-94d8-4f5e-8c5d-7174a6124696" />
+    <UnitTestResult executionId="266b02f5-48b4-47c5-b02f-1071014e91f2" testId="aec35a03-880f-40de-d6ab-87379be9aebb" testName="Laya.Core.Tests.Inference.LayaInferenceRunnerTests.Run_ReturnsExpectedOutputShapesAndFiniteValues" computerName="Frieren" duration="00:00:03.8190475" startTime="2026-09-24T08:52:40.6348017+08:00" endTime="2026-09-24T08:52:44.4614780+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="266b02f5-48b4-47c5-b02f-1071014e91f2" />
+    <UnitTestResult executionId="efded9ad-398e-4f59-838e-0efc6e7cf38a" testId="ea36ca46-ee85-072e-f046-87254172380c" testName="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_ReturnsOrderedChoiceAndNoulAnswers" computerName="Frieren" duration="00:00:03.9303384" startTime="2026-09-24T08:52:49.1638855+08:00" endTime="2026-09-24T08:52:53.0952130+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efded9ad-398e-4f59-838e-0efc6e7cf38a" />
+    <UnitTestResult executionId="83ce0a72-b2c8-4b0e-92a4-ab50fa0c15c7" testId="96e90ba2-d381-c893-7a6f-02c03040ae6d" testName="Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests.CsvTransactions_ReturnLegalAnswersAndLatency" computerName="Frieren" duration="00:00:19.6896190" startTime="2026-09-24T08:52:40.6348229+08:00" endTime="2026-09-24T08:53:00.3284955+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83ce0a72-b2c8-4b0e-92a4-ab50fa0c15c7" />
+    <UnitTestResult executionId="07746865-e6de-4de2-99c9-a77262fab73b" testId="c2fc2da3-338c-2b9c-f3ec-d6809aa8efa1" testName="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsEmptyQuestions" computerName="Frieren" duration="00:00:02.3728232" startTime="2026-09-24T08:52:40.6347611+08:00" endTime="2026-09-24T08:52:43.0145610+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07746865-e6de-4de2-99c9-a77262fab73b" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Laya.Core.Tests.Inference.LayaInferenceRunnerTests.Run_ReturnsExpectedOutputShapesAndFiniteValues" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="aec35a03-880f-40de-d6ab-87379be9aebb">
+      <Execution id="266b02f5-48b4-47c5-b02f-1071014e91f2" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Inference.LayaInferenceRunnerTests" name="Run_ReturnsExpectedOutputShapesAndFiniteValues" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsEmptyQuestions" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="c2fc2da3-338c-2b9c-f3ec-d6809aa8efa1">
+      <Execution id="07746865-e6de-4de2-99c9-a77262fab73b" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Inference.LayaDecisionEngineTests" name="Decide_RejectsEmptyQuestions" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Parity.LayaParityFixtureTests.ReferenceFixtures_MatchDotNetImplementation" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="ae7c69f4-f1b9-85f3-ad68-47cee410c0cb">
+      <Execution id="120a65cf-c210-4dcc-a3f9-bcd3dc329843" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Parity.LayaParityFixtureTests" name="ReferenceFixtures_MatchDotNetImplementation" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_ReturnsOrderedChoiceAndNoulAnswers" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="ea36ca46-ee85-072e-f046-87254172380c">
+      <Execution id="efded9ad-398e-4f59-838e-0efc6e7cf38a" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Inference.LayaDecisionEngineTests" name="Decide_ReturnsOrderedChoiceAndNoulAnswers" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsUnsupportedScore" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="6cb1d6b0-ad72-7d93-3eae-619ef0111397">
+      <Execution id="fce8c67a-da63-4af3-b71f-f3a6479427a4" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Inference.LayaDecisionEngineTests" name="Decide_RejectsUnsupportedScore" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="a2dada05-6d8f-4ba7-6dba-598113869240">
+      <Execution id="53e6a3b0-94d8-4f5e-8c5d-7174a6124696" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Models.LayaOnnxSessionTests" name="Open_ValidatesEnglishBundleSchema" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests.CsvTransactions_ReturnLegalAnswersAndLatency" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="96e90ba2-d381-c893-7a6f-02c03040ae6d">
+      <Execution id="83ce0a72-b2c8-4b0e-92a4-ab50fa0c15c7" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests" name="CsvTransactions_ReturnLegalAnswersAndLatency" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsDuplicateQuestionNames" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="ee1dd62b-a6fd-5465-9914-ff2e36624167">
+      <Execution id="538c8977-36cb-45fa-9230-a5b8d3325f02" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Inference.LayaDecisionEngineTests" name="Decide_RejectsDuplicateQuestionNames" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ee1dd62b-a6fd-5465-9914-ff2e36624167" executionId="538c8977-36cb-45fa-9230-a5b8d3325f02" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6cb1d6b0-ad72-7d93-3eae-619ef0111397" executionId="fce8c67a-da63-4af3-b71f-f3a6479427a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae7c69f4-f1b9-85f3-ad68-47cee410c0cb" executionId="120a65cf-c210-4dcc-a3f9-bcd3dc329843" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2dada05-6d8f-4ba7-6dba-598113869240" executionId="53e6a3b0-94d8-4f5e-8c5d-7174a6124696" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aec35a03-880f-40de-d6ab-87379be9aebb" executionId="266b02f5-48b4-47c5-b02f-1071014e91f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea36ca46-ee85-072e-f046-87254172380c" executionId="efded9ad-398e-4f59-838e-0efc6e7cf38a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96e90ba2-d381-c893-7a6f-02c03040ae6d" executionId="83ce0a72-b2c8-4b0e-92a4-ab50fa0c15c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2fc2da3-338c-2b9c-f3ec-d6809aa8efa1" executionId="07746865-e6de-4de2-99c9-a77262fab73b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="不在清單中的結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有載入的結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="8" executed="8" passed="8" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v4.0.0+05679a7ab5 (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.08]   Discovering: Laya.Core.Tests
+[xUnit.net 00:00:00.16]   Discovered:  Laya.Core.Tests
+[xUnit.net 00:00:00.26]   Starting:    Laya.Core.Tests
+[xUnit.net 00:00:19.98]   Finished:    Laya.Core.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

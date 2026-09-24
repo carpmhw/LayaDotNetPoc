@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="439ec0e9-20d0-4239-9c85-557f99088d0f" name="@Frieren 2026-09-24 18:46:51" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T18:46:51.6366699+08:00" queuing="2026-09-24T18:46:51.6366700+08:00" start="2026-09-24T18:46:48.2193247+08:00" finish="2026-09-24T18:46:51.6870700+08:00" />
+  <TestSettings name="default" id="a2d1f2d5-c81d-46a7-a8eb-e5b70b6e52e9">
+    <Deployment runDeploymentRoot="_Frieren_2026-09-24_18_46_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="88b87ec9-2ca6-4248-9b89-356f3b40721c" testId="7f7c9373-ecaf-13c0-808a-51c725df451f" testName="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt" computerName="Frieren" duration="00:00:01.4887874" startTime="2026-09-24T18:46:48.9303006+08:00" endTime="2026-09-24T18:46:50.4296826+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88b87ec9-2ca6-4248-9b89-356f3b40721c" />
+    <UnitTestResult executionId="a2169b04-8a64-460f-a16c-60f2ae33da30" testId="cda4d416-1cc4-2871-4289-6b19913af96c" testName="Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures" computerName="Frieren" duration="00:00:01.4887785" startTime="2026-09-24T18:46:48.9288566+08:00" endTime="2026-09-24T18:46:50.4255752+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2169b04-8a64-460f-a16c-60f2ae33da30" />
+    <UnitTestResult executionId="76ee5549-411b-43ae-9e18-d8fb55e616e7" testId="fcaf114c-e242-5871-25a7-7c4de5ec965d" testName="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace" computerName="Frieren" duration="00:00:01.0998576" startTime="2026-09-24T18:46:50.4369744+08:00" endTime="2026-09-24T18:46:51.5258499+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76ee5549-411b-43ae-9e18-d8fb55e616e7" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="cda4d416-1cc4-2871-4289-6b19913af96c">
+      <Execution id="a2169b04-8a64-460f-a16c-60f2ae33da30" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests" name="Encode_MatchesAllOfficialMultilingualFixtures" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="7f7c9373-ecaf-13c0-808a-51c725df451f">
+      <Execution id="88b87ec9-2ca6-4248-9b89-356f3b40721c" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests" name="Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt" />
+    </UnitTest>
+    <UnitTest name="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="fcaf114c-e242-5871-25a7-7c4de5ec965d">
+      <Execution id="76ee5549-411b-43ae-9e18-d8fb55e616e7" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Encoding.MultilingualSequenceParityTests" name="Build_MatchesOfficialChoiceTrace" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7f7c9373-ecaf-13c0-808a-51c725df451f" executionId="88b87ec9-2ca6-4248-9b89-356f3b40721c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cda4d416-1cc4-2871-4289-6b19913af96c" executionId="a2169b04-8a64-460f-a16c-60f2ae33da30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fcaf114c-e242-5871-25a7-7c4de5ec965d" executionId="76ee5549-411b-43ae-9e18-d8fb55e616e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="不在清單中的結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有載入的結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v4.0.0+05679a7ab5 (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.10]   Discovering: Laya.Core.Tests
+[xUnit.net 00:00:00.20]   Discovered:  Laya.Core.Tests
+[xUnit.net 00:00:00.32]   Starting:    Laya.Core.Tests
+[xUnit.net 00:00:02.94]   Finished:    Laya.Core.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

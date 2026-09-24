@@ -4,8 +4,26 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const packageRoot = process.env.LAYA_REFERENCE_NODE_MODULES ?? "/tmp/opencode/laya-reference/node_modules";
-const modelRoot = process.env.LAYA_MODEL_ROOT ?? path.join(repositoryRoot, "models", "laya");
-const outputPath = process.env.LAYA_FIXTURE_OUTPUT ?? path.join(repositoryRoot, "test-data", "parity-fixtures.json");
+const profile = process.env.LAYA_PROFILE ?? "english";
+const outputPath = process.env.LAYA_FIXTURE_OUTPUT ?? path.join(
+    repositoryRoot,
+    "test-data",
+    profile === "multilingual" ? "multilingual-parity-fixtures.json" : "parity-fixtures.json"
+);
+
+/** 在載入 English reference 前拒絕沒有 verified multilingual runtime 的假產物。 */
+function validateProfileAssets() {
+    if (profile !== "multilingual") {
+        return;
+    }
+
+    throw new Error(
+        "BLOCKED multilingual reference generation: this Node generator supports English only; " +
+        "use tools/laya-reference/generate_fixtures.py for the official multilingual Python reference."
+    );
+}
+
+validateProfileAssets();
 const { Laya } = await import(
     pathToFileURL(path.join(packageRoot, "@receptron", "laya", "dist", "laya.js")).href
 );
@@ -243,6 +261,7 @@ async function generateFixtures() {
         JSON.stringify(
             {
                 reference: {
+                    profile,
                     package: "@receptron/laya",
                     version: "0.1.2",
                     bundleRevision: "68f27dfe5a27a54fb2b1fefc432f43f972e90868"

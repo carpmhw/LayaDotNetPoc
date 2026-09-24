@@ -1,0 +1,16 @@
+id,description_redacted,expected,predicted,confidence,second_choice,margin,language
+phase2-020,redacted-af423f9951f9047d,food,transfer,0.9199691336665228,shopping,0.8640209218240507,mixed
+phase2-059,redacted-aaf1cb09cd53c37d,shopping,bank_fee,0.39939396100100993,shopping,0.18912056952337264,mixed
+phase2-077,redacted-9feea5944637c077,utilities,transfer,0.475619452263208,other,0.2964503645188651,mixed
+phase2-078,redacted-9feea5944637c077,utilities,transfer,0.475619452263208,other,0.2964503645188651,mixed
+phase2-096,redacted-522a3c6d93a4137f,transfer,bank_fee,0.8840330766511852,transfer,0.8337028770144235,mixed
+phase2-117,redacted-1cd6f7e618a3ce4c,salary,bank_fee,0.49461886935758537,transfer,0.16974807873502756,mixed
+phase2-158,redacted-38f081605a898bca,investment,transfer,0.9903156398145914,investment,0.981715989059419,mixed
+phase2-177,redacted-aa1ef6ff216b6ef0,medical,shopping,0.9781271630259918,medical,0.9589083485575106,mixed
+phase2-196,redacted-2bdfad14dcdd3729,entertainment,transfer,0.5087742876523063,other,0.328317729447851,mixed
+phase2-199,redacted-8b370581fcd1eca4,entertainment,bank_fee,0.5056507208801997,transfer,0.332872674335399,mixed
+phase2-216,redacted-bf9bdd0ac5699d27,other,bank_fee,0.7659876673921187,transfer,0.6156857494106124,mixed
+phase2-217,redacted-2fdb017abb1243c3,other,bank_fee,0.6279643706039117,transfer,0.3275015745305812,mixed
+phase2-218,redacted-2fdb017abb1243c3,other,bank_fee,0.613115347765394,transfer,0.29162899531015785,mixed
+phase2-219,redacted-6254c72480a7b758,other,transfer,0.6392647010331453,other,0.4685113961304053,mixed
+phase2-220,redacted-6254c72480a7b758,other,transfer,0.774586973794302,other,0.6558865192201129,mixed

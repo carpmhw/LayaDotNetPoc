@@ -6,6 +6,7 @@ using Laya.Core.Tokenization;
 
 namespace Laya.Core.Tests.Inference;
 
+[Trait("Category", "EnglishModel")]
 public sealed class LayaInferenceRunnerTests
 {
     /// <summary>驗證五項 OrtValue input 可透過單次 CPU Run 取得 raw outputs。</summary>

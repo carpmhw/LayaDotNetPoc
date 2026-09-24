@@ -1,0 +1,10 @@
+  Laya.Core -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/bin/Debug/net8.0/Laya.Core.dll
+  Laya.Console -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Console/bin/Debug/net8.0/Laya.Console.dll
+  Laya.Benchmarks -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/benchmarks/Laya.Benchmarks/bin/Debug/net8.0/Laya.Benchmarks.dll
+  Laya.Core.Tests -> /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll
+
+建置成功。
+    0 個警告
+    0 個錯誤
+
+經過時間 00:00:01.11

@@ -1,0 +1,1710 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "generatedUtc": "2026-09-24T00:22:24.592882+00:00",
+  "source": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "manifestFiles": {
+      "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+    }
+  },
+  "toolchain": {
+    "python": "3.12.3",
+    "platform": "linux-x86_64",
+    "packages": {
+      "torch": {
+        "version": "2.14.0+cpu",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/torch-2.14.0+cpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "a09987c95ec4cffdb6df798d3d641558110a334cfccce22f2f046d83142bc260"
+      },
+      "laya": {
+        "version": "0.3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/laya-0.3.7-py3-none-any.whl",
+        "sha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a"
+      },
+      "transformers": {
+        "version": "5.0.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/transformers-5.0.0-py3-none-any.whl",
+        "sha256": "587086f249ce64c817213cf36afdb318d087f790723e9b3d4500b97832afd52d"
+      },
+      "safetensors": {
+        "version": "0.8.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+      },
+      "huggingface_hub": {
+        "version": "1.32.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/huggingface_hub-1.32.0-py3-none-any.whl",
+        "sha256": "b0c7c80561969d9cdacdd55fce67ba9584cca0b9d4ea80957a3a5c1445fac5c8"
+      },
+      "numpy": {
+        "version": "2.5.3",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3"
+      },
+      "onnx": {
+        "version": "1.20.1",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnx-1.20.1-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "9336b6b8e6efcf5c490a845f6afd7e041c89a56199aeda384ed7d58fb953b080"
+      },
+      "onnxruntime": {
+        "version": "1.30.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/onnxruntime-1.30.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+        "sha256": "fa688e7891a6aa206636fe7372e27ee75fd17713289f6b4fc7b190e0a7de9328"
+      },
+      "tokenizers": {
+        "version": "0.22.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/laya-reference-wheels/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67"
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "networkx": {
+        "version": "3.7",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "fsspec": {
+        "version": "2026.9.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "protobuf": {
+        "version": "7.36.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "ml-dtypes": {
+        "version": "0.6.0",
+        "location": "/tmp/opencode/laya-reference-cpu-site"
+      },
+      "onnxscript": {
+        "version": "0.7.2",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnxscript-0.7.2-py3-none-any.whl",
+        "sha256": "d0e7121c6a1eefd608058928e111cbdb76709f70d269ff0d07aee493bd1d13c9"
+      },
+      "onnx-ir": {
+        "version": "0.1.16",
+        "location": "/tmp/opencode/laya-reference-cpu-site",
+        "archive": "/tmp/opencode/onnx_ir-0.1.16-py3-none-any.whl",
+        "sha256": "a8182f2ba716640aafdd10c5c973a02e2a4f7c10ed57b6b000a3be90e9ea6d38"
+      }
+    },
+    "laya": "0.3.7",
+    "torch": "2.14.0+cpu",
+    "transformers": "5.0.0",
+    "numpy": "2.5.3",
+    "threads": 1
+  },
+  "configuration": {
+    "maxLen": 1024,
+    "headMaxLen": 256,
+    "temperature": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "temperatureByOptions": {},
+    "device": "cpu",
+    "dtype": "torch.float32"
+  },
+  "weightCoverage": {
+    "parameterCount": 169,
+    "stateKeyCount": 170,
+    "weightKeyCount": 170,
+    "missingParameterKeys": [],
+    "unexpectedWeightKeys": [],
+    "complete": true
+  },
+  "cases": [
+    {
+      "name": "choice-english-two",
+      "state": "merchant state",
+      "questions": {
+        "category": {
+          "type": "choice",
+          "instructions": "Pick one",
+          "criteria": {
+            "food": "food purchase",
+            "travel": "travel purchase"
+          }
+        }
+      },
+      "native": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "category": {
+            "type": "choice",
+            "choice": "food",
+            "probabilities": {
+              "food": 0.5437,
+              "travel": 0.4563
+            },
+            "confidence": 0.0055,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 21,
+          "output_tokens": 0
+        }
+      },
+      "trace": {
+        "serializedState": "merchant state",
+        "sequences": [
+          {
+            "questionId": "category",
+            "tokenIds": [
+              2,
+              6241,
+              2872,
+              235292,
+              17350,
+              974,
+              1,
+              4,
+              2960,
+              235292,
+              2960,
+              8210,
+              4,
+              5056,
+              235292,
+              5056,
+              8210,
+              1,
+              36818,
+              2329,
+              1
+            ],
+            "markerPositions": [
+              7,
+              12
+            ],
+            "qtype": 0
+          }
+        ],
+        "inputs": {
+          "shapes": {
+            "input_ids": [
+              1,
+              21
+            ],
+            "attention_mask": [
+              1,
+              21
+            ],
+            "marker_pos": [
+              1,
+              2
+            ],
+            "marker_mask": [
+              1,
+              2
+            ],
+            "qtype": [
+              1
+            ]
+          },
+          "input_ids": [
+            2,
+            6241,
+            2872,
+            235292,
+            17350,
+            974,
+            1,
+            4,
+            2960,
+            235292,
+            2960,
+            8210,
+            4,
+            5056,
+            235292,
+            5056,
+            8210,
+            1,
+            36818,
+            2329,
+            1
+          ],
+          "attention_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "marker_pos": [
+            7,
+            12
+          ],
+          "marker_mask": [
+            true,
+            true
+          ],
+          "qtype": [
+            0
+          ]
+        },
+        "outputs": {
+          "logits": [
+            -2.687776803970337,
+            -2.8632051944732666
+          ],
+          "act_logits": [
+            1353.3028564453125,
+            -1610.2882080078125
+          ],
+          "act_probs": [
+            1.0,
+            0.0
+          ],
+          "logitsShape": [
+            1,
+            2
+          ],
+          "actLogitsShape": [
+            1,
+            2
+          ],
+          "actProbsShape": [
+            1,
+            2
+          ]
+        }
+      },
+      "comparison": {
+        "passed": true,
+        "questions": [
+          {
+            "questionId": "category",
+            "type": "choice",
+            "optionCount": 2,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 4.496707530965427e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "choice-chinese-three",
+      "state": "全家便利商店 台灣大車隊",
+      "questions": {
+        "category": {
+          "type": "choice",
+          "instructions": "選擇分類",
+          "criteria": {
+            "餐飲": "餐飲消費",
+            "交通": "交通消費",
+            "其他": "其他交易"
+          }
+        }
+      },
+      "native": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "category": {
+            "type": "choice",
+            "choice": "其他",
+            "probabilities": {
+              "餐飲": 0.0893,
+              "交通": 0.3931,
+              "其他": 0.5176
+            },
+            "confidence": 0.1593,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 35,
+          "output_tokens": 0
+        }
+      },
+      "trace": {
+        "serializedState": "全家便利商店 台灣大車隊",
+        "sequences": [
+          {
+            "questionId": "category",
+            "tokenIds": [
+              2,
+              6241,
+              2872,
+              235292,
+              52737,
+              238833,
+              102443,
+              1,
+              4,
+              57037,
+              237349,
+              235292,
+              57037,
+              237349,
+              66922,
+              4,
+              151746,
+              235292,
+              151746,
+              66922,
+              4,
+              153848,
+              235292,
+              153848,
+              40886,
+              1,
+              21748,
+              235618,
+              46403,
+              76684,
+              130021,
+              235469,
+              236089,
+              237481,
+              1
+            ],
+            "markerPositions": [
+              8,
+              15,
+              20
+            ],
+            "qtype": 0
+          }
+        ],
+        "inputs": {
+          "shapes": {
+            "input_ids": [
+              1,
+              35
+            ],
+            "attention_mask": [
+              1,
+              35
+            ],
+            "marker_pos": [
+              1,
+              3
+            ],
+            "marker_mask": [
+              1,
+              3
+            ],
+            "qtype": [
+              1
+            ]
+          },
+          "input_ids": [
+            2,
+            6241,
+            2872,
+            235292,
+            52737,
+            238833,
+            102443,
+            1,
+            4,
+            57037,
+            237349,
+            235292,
+            57037,
+            237349,
+            66922,
+            4,
+            151746,
+            235292,
+            151746,
+            66922,
+            4,
+            153848,
+            235292,
+            153848,
+            40886,
+            1,
+            21748,
+            235618,
+            46403,
+            76684,
+            130021,
+            235469,
+            236089,
+            237481,
+            1
+          ],
+          "attention_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "marker_pos": [
+            8,
+            15,
+            20
+          ],
+          "marker_mask": [
+            true,
+            true,
+            true
+          ],
+          "qtype": [
+            0
+          ]
+        },
+        "outputs": {
+          "logits": [
+            -2.4749598503112793,
+            -0.9925330877304077,
+            -0.7174819707870483
+          ],
+          "act_logits": [
+            1327.078369140625,
+            -1578.3343505859375
+          ],
+          "act_probs": [
+            1.0,
+            0.0
+          ],
+          "logitsShape": [
+            1,
+            3
+          ],
+          "actLogitsShape": [
+            1,
+            2
+          ],
+          "actProbsShape": [
+            1,
+            2
+          ]
+        }
+      },
+      "comparison": {
+        "passed": true,
+        "questions": [
+          {
+            "questionId": "category",
+            "type": "choice",
+            "optionCount": 3,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 3.060730983739379e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "noul-mixed-language",
+      "state": {
+        "description": "Uber Eats 台灣",
+        "note": "APPLE.COM/BILL"
+      },
+      "questions": {
+        "needs_review": {
+          "type": "noul",
+          "instructions": "這筆交易是否需要人工確認？"
+        }
+      },
+      "native": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "needs_review": {
+            "type": "noul",
+            "noul": 0.0008,
+            "confidence": 0.9992,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 52,
+          "output_tokens": 0
+        }
+      },
+      "trace": {
+        "serializedState": "{\"description\": \"Uber Eats 台灣\", \"note\": \"APPLE.COM/BILL\"}",
+        "sequences": [
+          {
+            "questionId": "needs_review",
+            "tokenIds": [
+              2,
+              552,
+              6311,
+              2872,
+              235292,
+              145772,
+              237836,
+              40886,
+              17557,
+              11213,
+              77616,
+              26685,
+              235544,
+              1,
+              4,
+              1566,
+              235292,
+              793,
+              235269,
+              573,
+              6218,
+              1721,
+              780,
+              3385,
+              4,
+              1382,
+              235292,
+              7778,
+              235269,
+              573,
+              6218,
+              12723,
+              1,
+              19946,
+              6448,
+              1192,
+              664,
+              91853,
+              128697,
+              130021,
+              824,
+              664,
+              10076,
+              1192,
+              664,
+              109248,
+              235265,
+              5518,
+              235283,
+              85538,
+              12990,
+              1
+            ],
+            "markerPositions": [
+              14,
+              24
+            ],
+            "qtype": 2
+          }
+        ],
+        "inputs": {
+          "shapes": {
+            "input_ids": [
+              1,
+              52
+            ],
+            "attention_mask": [
+              1,
+              52
+            ],
+            "marker_pos": [
+              1,
+              2
+            ],
+            "marker_mask": [
+              1,
+              2
+            ],
+            "qtype": [
+              1
+            ]
+          },
+          "input_ids": [
+            2,
+            552,
+            6311,
+            2872,
+            235292,
+            145772,
+            237836,
+            40886,
+            17557,
+            11213,
+            77616,
+            26685,
+            235544,
+            1,
+            4,
+            1566,
+            235292,
+            793,
+            235269,
+            573,
+            6218,
+            1721,
+            780,
+            3385,
+            4,
+            1382,
+            235292,
+            7778,
+            235269,
+            573,
+            6218,
+            12723,
+            1,
+            19946,
+            6448,
+            1192,
+            664,
+            91853,
+            128697,
+            130021,
+            824,
+            664,
+            10076,
+            1192,
+            664,
+            109248,
+            235265,
+            5518,
+            235283,
+            85538,
+            12990,
+            1
+          ],
+          "attention_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "marker_pos": [
+            14,
+            24
+          ],
+          "marker_mask": [
+            true,
+            true
+          ],
+          "qtype": [
+            2
+          ]
+        },
+        "outputs": {
+          "logits": [
+            6.6147236824035645,
+            -0.4554694592952728
+          ],
+          "act_logits": [
+            1436.9072265625,
+            -1704.4835205078125
+          ],
+          "act_probs": [
+            1.0,
+            0.0
+          ],
+          "logitsShape": [
+            1,
+            2
+          ],
+          "actLogitsShape": [
+            1,
+            2
+          ],
+          "actProbsShape": [
+            1,
+            2
+          ]
+        }
+      },
+      "comparison": {
+        "passed": true,
+        "questions": [
+          {
+            "questionId": "needs_review",
+            "type": "noul",
+            "optionCount": 2,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 4.934690615865985e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "mixed-batch-choice-noul",
+      "state": {
+        "merchant": "統一超商",
+        "amount": 125.5,
+        "currency": "TWD"
+      },
+      "questions": {
+        "category": {
+          "type": "choice",
+          "instructions": "Classify this mixed-language transaction",
+          "criteria": {
+            "food": "food",
+            "retail": "retail",
+            "other": "other"
+          }
+        },
+        "needs_review": {
+          "type": "noul",
+          "instructions": "Is this uncertain?"
+        }
+      },
+      "native": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "category": {
+            "type": "choice",
+            "choice": "retail",
+            "probabilities": {
+              "food": 0.0464,
+              "retail": 0.7781,
+              "other": 0.1756
+            },
+            "confidence": 0.4146,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "needs_review": {
+            "type": "noul",
+            "noul": 0.0936,
+            "confidence": 0.9064,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 106,
+          "output_tokens": 0
+        }
+      },
+      "trace": {
+        "serializedState": "{\"merchant\": \"統一超商\", \"amount\": 125.5, \"currency\": \"TWD\"}",
+        "sequences": [
+          {
+            "questionId": "category",
+            "tokenIds": [
+              2,
+              6241,
+              2872,
+              235292,
+              51110,
+              4739,
+              736,
+              10616,
+              235290,
+              14815,
+              13678,
+              1,
+              4,
+              2960,
+              235292,
+              2960,
+              4,
+              12633,
+              235292,
+              12633,
+              4,
+              1156,
+              235292,
+              1156,
+              1,
+              19946,
+              71781,
+              1192,
+              664,
+              115627,
+              236304,
+              236022,
+              824,
+              664,
+              10526,
+              1192,
+              235248,
+              235274,
+              235284,
+              235308,
+              235265,
+              235308,
+              235269,
+              664,
+              16093,
+              1192,
+              664,
+              235279,
+              21678,
+              12990,
+              1
+            ],
+            "markerPositions": [
+              12,
+              16,
+              20
+            ],
+            "qtype": 0
+          },
+          {
+            "questionId": "needs_review",
+            "tokenIds": [
+              2,
+              552,
+              6311,
+              2872,
+              235292,
+              2125,
+              736,
+              26945,
+              235336,
+              1,
+              4,
+              1566,
+              235292,
+              793,
+              235269,
+              573,
+              6218,
+              1721,
+              780,
+              3385,
+              4,
+              1382,
+              235292,
+              7778,
+              235269,
+              573,
+              6218,
+              12723,
+              1,
+              19946,
+              71781,
+              1192,
+              664,
+              115627,
+              236304,
+              236022,
+              824,
+              664,
+              10526,
+              1192,
+              235248,
+              235274,
+              235284,
+              235308,
+              235265,
+              235308,
+              235269,
+              664,
+              16093,
+              1192,
+              664,
+              235279,
+              21678,
+              12990,
+              1
+            ],
+            "markerPositions": [
+              10,
+              20
+            ],
+            "qtype": 2
+          }
+        ],
+        "inputs": {
+          "shapes": {
+            "input_ids": [
+              2,
+              55
+            ],
+            "attention_mask": [
+              2,
+              55
+            ],
+            "marker_pos": [
+              2,
+              3
+            ],
+            "marker_mask": [
+              2,
+              3
+            ],
+            "qtype": [
+              2
+            ]
+          },
+          "input_ids": [
+            2,
+            6241,
+            2872,
+            235292,
+            51110,
+            4739,
+            736,
+            10616,
+            235290,
+            14815,
+            13678,
+            1,
+            4,
+            2960,
+            235292,
+            2960,
+            4,
+            12633,
+            235292,
+            12633,
+            4,
+            1156,
+            235292,
+            1156,
+            1,
+            19946,
+            71781,
+            1192,
+            664,
+            115627,
+            236304,
+            236022,
+            824,
+            664,
+            10526,
+            1192,
+            235248,
+            235274,
+            235284,
+            235308,
+            235265,
+            235308,
+            235269,
+            664,
+            16093,
+            1192,
+            664,
+            235279,
+            21678,
+            12990,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            552,
+            6311,
+            2872,
+            235292,
+            2125,
+            736,
+            26945,
+            235336,
+            1,
+            4,
+            1566,
+            235292,
+            793,
+            235269,
+            573,
+            6218,
+            1721,
+            780,
+            3385,
+            4,
+            1382,
+            235292,
+            7778,
+            235269,
+            573,
+            6218,
+            12723,
+            1,
+            19946,
+            71781,
+            1192,
+            664,
+            115627,
+            236304,
+            236022,
+            824,
+            664,
+            10526,
+            1192,
+            235248,
+            235274,
+            235284,
+            235308,
+            235265,
+            235308,
+            235269,
+            664,
+            16093,
+            1192,
+            664,
+            235279,
+            21678,
+            12990,
+            1
+          ],
+          "attention_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "marker_pos": [
+            12,
+            16,
+            20,
+            10,
+            20,
+            0
+          ],
+          "marker_mask": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "qtype": [
+            0,
+            2
+          ]
+        },
+        "outputs": {
+          "logits": [
+            -4.601828575134277,
+            -1.7814819812774658,
+            -3.2702646255493164,
+            2.826847553253174,
+            0.5562458038330078,
+            -10000.0
+          ],
+          "act_logits": [
+            1275.101806640625,
+            -1524.990478515625,
+            1236.99951171875,
+            -1473.59228515625
+          ],
+          "act_probs": [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "logitsShape": [
+            2,
+            3
+          ],
+          "actLogitsShape": [
+            2,
+            2
+          ],
+          "actProbsShape": [
+            2,
+            2
+          ]
+        }
+      },
+      "comparison": {
+        "passed": true,
+        "questions": [
+          {
+            "questionId": "category",
+            "type": "choice",
+            "optionCount": 3,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 3.851389221278673e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          },
+          {
+            "questionId": "needs_review",
+            "type": "noul",
+            "optionCount": 2,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 1.2845807531414177e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "choice-eleven-options",
+      "state": "AMAZON JP subscription",
+      "questions": {
+        "category": {
+          "type": "choice",
+          "instructions": "Choose one category",
+          "criteria": {
+            "food": "food",
+            "transport": "transport",
+            "shopping": "shopping",
+            "utilities": "utilities",
+            "rent": "rent",
+            "salary": "salary",
+            "transfer": "transfer",
+            "fees": "fees",
+            "cash": "cash",
+            "software": "software",
+            "other": "other"
+          }
+        }
+      },
+      "native": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "category": {
+            "type": "choice",
+            "choice": "shopping",
+            "probabilities": {
+              "food": 0.0015,
+              "transport": 0.0015,
+              "shopping": 0.8515,
+              "utilities": 0.0021,
+              "rent": 0.0046,
+              "salary": 0.0015,
+              "transfer": 0.0156,
+              "fees": 0.0798,
+              "cash": 0.0254,
+              "software": 0.0084,
+              "other": 0.008
+            },
+            "confidence": 0.7317,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 57,
+          "output_tokens": 0
+        }
+      },
+      "trace": {
+        "serializedState": "AMAZON JP subscription",
+        "sequences": [
+          {
+            "questionId": "category",
+            "tokenIds": [
+              2,
+              6241,
+              2872,
+              235292,
+              19262,
+              974,
+              9701,
+              1,
+              4,
+              2960,
+              235292,
+              2960,
+              4,
+              6676,
+              235292,
+              6676,
+              4,
+              9723,
+              235292,
+              9723,
+              4,
+              40016,
+              235292,
+              40016,
+              4,
+              7356,
+              235292,
+              7356,
+              4,
+              18463,
+              235292,
+              18463,
+              4,
+              5853,
+              235292,
+              5853,
+              4,
+              13561,
+              235292,
+              13561,
+              4,
+              9852,
+              235292,
+              9852,
+              4,
+              6815,
+              235292,
+              6815,
+              4,
+              1156,
+              235292,
+              1156,
+              1,
+              147624,
+              44521,
+              20670,
+              1
+            ],
+            "markerPositions": [
+              8,
+              12,
+              16,
+              20,
+              24,
+              28,
+              32,
+              36,
+              40,
+              44,
+              48
+            ],
+            "qtype": 0
+          }
+        ],
+        "inputs": {
+          "shapes": {
+            "input_ids": [
+              1,
+              57
+            ],
+            "attention_mask": [
+              1,
+              57
+            ],
+            "marker_pos": [
+              1,
+              11
+            ],
+            "marker_mask": [
+              1,
+              11
+            ],
+            "qtype": [
+              1
+            ]
+          },
+          "input_ids": [
+            2,
+            6241,
+            2872,
+            235292,
+            19262,
+            974,
+            9701,
+            1,
+            4,
+            2960,
+            235292,
+            2960,
+            4,
+            6676,
+            235292,
+            6676,
+            4,
+            9723,
+            235292,
+            9723,
+            4,
+            40016,
+            235292,
+            40016,
+            4,
+            7356,
+            235292,
+            7356,
+            4,
+            18463,
+            235292,
+            18463,
+            4,
+            5853,
+            235292,
+            5853,
+            4,
+            13561,
+            235292,
+            13561,
+            4,
+            9852,
+            235292,
+            9852,
+            4,
+            6815,
+            235292,
+            6815,
+            4,
+            1156,
+            235292,
+            1156,
+            1,
+            147624,
+            44521,
+            20670,
+            1
+          ],
+          "attention_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "marker_pos": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48
+          ],
+          "marker_mask": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "qtype": [
+            0
+          ]
+        },
+        "outputs": {
+          "logits": [
+            -4.573221206665039,
+            -4.600928783416748,
+            1.7415039539337158,
+            -4.25055456161499,
+            -3.479361057281494,
+            -4.569918632507324,
+            -2.2598204612731934,
+            -0.6264408826828003,
+            -1.7687575817108154,
+            -2.8780839443206787,
+            -2.921065330505371
+          ],
+          "act_logits": [
+            1466.94580078125,
+            -1749.8045654296875
+          ],
+          "act_probs": [
+            1.0,
+            0.0
+          ],
+          "logitsShape": [
+            1,
+            11
+          ],
+          "actLogitsShape": [
+            1,
+            2
+          ],
+          "actProbsShape": [
+            1,
+            2
+          ]
+        }
+      },
+      "comparison": {
+        "passed": true,
+        "questions": [
+          {
+            "questionId": "category",
+            "type": "choice",
+            "optionCount": 11,
+            "temperature": 1.0,
+            "maxAbsoluteProbabilityError": 4.968702268374689e-05,
+            "selectedAnswerMatchesTrace": true,
+            "finite": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "blocked",
+  "root": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc",
+  "errors": [],
+  "blocked": [
+    "run 20260924T053223400Z-9c5b079f681348f28b285cdfee7810b4 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053223400Z-9c5b079f681348f28b285cdfee7810b4 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053223400Z-9c5b079f681348f28b285cdfee7810b4 is missing required v2 provenance field sourceDigest",
+    "run 20260924T053250451Z-4a2e12ad9dc44c049b38400c36cb3192 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053250451Z-4a2e12ad9dc44c049b38400c36cb3192 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053250451Z-4a2e12ad9dc44c049b38400c36cb3192 is missing required v2 provenance field sourceDigest",
+    "run 20260924T053320028Z-1d6b9dbf97c646258c4102460ea31fd5 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053320028Z-1d6b9dbf97c646258c4102460ea31fd5 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053320028Z-1d6b9dbf97c646258c4102460ea31fd5 is missing required v2 provenance field sourceDigest",
+    "run 20260924T053423065Z-92c6cb8f08114ca8b0270de494cce531 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053423065Z-92c6cb8f08114ca8b0270de494cce531 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053423065Z-92c6cb8f08114ca8b0270de494cce531 is missing required v2 provenance field sourceDigest",
+    "run 20260924T053529886Z-e94490435827418a813858ec9eaca6b7 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053529886Z-e94490435827418a813858ec9eaca6b7 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053529886Z-e94490435827418a813858ec9eaca6b7 is missing required v2 provenance field sourceDigest",
+    "run 20260924T053643379Z-4284cc33e8894be18a573cb6908bd8e8 is missing required v2 provenance field sourceCommit",
+    "run 20260924T053643379Z-4284cc33e8894be18a573cb6908bd8e8 is missing required v2 provenance field sourceDirty",
+    "run 20260924T053643379Z-4284cc33e8894be18a573cb6908bd8e8 is missing required v2 provenance field sourceDigest",
+    "no complete held-out run with frozen-candidate and policy provenance is available"
+  ]
+}

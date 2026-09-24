@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "category": "MultilingualModel",
+  "expectedCount": 1,
+  "executedCount": 1,
+  "passedCount": 1,
+  "failedCount": 0,
+  "skippedCount": 0,
+  "expectedTests": [
+    "Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity"
+  ],
+  "status": "complete"
+}

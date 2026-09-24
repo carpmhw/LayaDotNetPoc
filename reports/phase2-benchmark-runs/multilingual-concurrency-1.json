@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "mode": "concurrency",
+  "runId": "20260924T043633309Z-8438b4825622435989de2a77a9d3dc32",
+  "profile": "multilingual",
+  "modelRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "checkpointRevision": "052592a15d198d9ad47da779604259b10b47b7aa",
+  "environment": {
+    "os": "Linux Mint 22.3",
+    "architecture": "X64",
+    "framework": ".NET 10.0.12",
+    "processorCount": 10,
+    "ortThreads": "default"
+  },
+  "concurrency": 1,
+  "warmupCount": 5,
+  "sampleCount": 50,
+  "completedCount": 50,
+  "errorCount": 0,
+  "integrityFailureCount": 0,
+  "totalElapsedMs": 5341.4323,
+  "throughputRequestsPerSecond": 9.36078512124922,
+  "processWorkingSetBeforeBytes": 942288896,
+  "processWorkingSetAfterBytes": 952057856,
+  "peakWorkingSetBytes": 950616064,
+  "latency": {
+    "WarmupCount": 5,
+    "SampleCount": 50,
+    "MeanMs": 105.87457599999999,
+    "P50Ms": 98.35810000000001,
+    "P95Ms": 148.03816999999998,
+    "P99Ms": 159.64195799999996,
+    "MinMs": 71.8145,
+    "MaxMs": 167.2937
+  },
+  "memorySamples": [
+    {
+      "Iteration": 0,
+      "WorkingSetBytes": 945311744,
+      "ManagedBytes": 2854264
+    },
+    {
+      "Iteration": 1,
+      "WorkingSetBytes": 945410048,
+      "ManagedBytes": 2919800
+    },
+    {
+      "Iteration": 2,
+      "WorkingSetBytes": 945496064,
+      "ManagedBytes": 2985336
+    },
+    {
+      "Iteration": 3,
+      "WorkingSetBytes": 945872896,
+      "ManagedBytes": 3050872
+    },
+    {
+      "Iteration": 4,
+      "WorkingSetBytes": 945942528,
+      "ManagedBytes": 3116408
+    },
+    {
+      "Iteration": 5,
+      "WorkingSetBytes": 946016256,
+      "ManagedBytes": 3181944
+    },
+    {
+      "Iteration": 6,
+      "WorkingSetBytes": 946229248,
+      "ManagedBytes": 3247480
+    },
+    {
+      "Iteration": 7,
+      "WorkingSetBytes": 946372608,
+      "ManagedBytes": 3313016
+    },
+    {
+      "Iteration": 8,
+      "WorkingSetBytes": 946462720,
+      "ManagedBytes": 3378552
+    },
+    {
+      "Iteration": 9,
+      "WorkingSetBytes": 946610176,
+      "ManagedBytes": 3444088
+    },
+    {
+      "Iteration": 10,
+      "WorkingSetBytes": 946679808,
+      "ManagedBytes": 3509624
+    },
+    {
+      "Iteration": 11,
+      "WorkingSetBytes": 946753536,
+      "ManagedBytes": 3575160
+    },
+    {
+      "Iteration": 12,
+      "WorkingSetBytes": 946819072,
+      "ManagedBytes": 3640696
+    },
+    {
+      "Iteration": 13,
+      "WorkingSetBytes": 946954240,
+      "ManagedBytes": 3706232
+    },
+    {
+      "Iteration": 14,
+      "WorkingSetBytes": 947027968,
+      "ManagedBytes": 3771768
+    },
+    {
+      "Iteration": 15,
+      "WorkingSetBytes": 947847168,
+      "ManagedBytes": 3837304
+    },
+    {
+      "Iteration": 16,
+      "WorkingSetBytes": 947916800,
+      "ManagedBytes": 3894616
+    },
+    {
+      "Iteration": 17,
+      "WorkingSetBytes": 947986432,
+      "ManagedBytes": 3960152
+    },
+    {
+      "Iteration": 18,
+      "WorkingSetBytes": 948088832,
+      "ManagedBytes": 4025688
+    },
+    {
+      "Iteration": 19,
+      "WorkingSetBytes": 948154368,
+      "ManagedBytes": 4091224
+    },
+    {
+      "Iteration": 20,
+      "WorkingSetBytes": 948219904,
+      "ManagedBytes": 4156760
+    },
+    {
+      "Iteration": 21,
+      "WorkingSetBytes": 948293632,
+      "ManagedBytes": 4222208
+    },
+    {
+      "Iteration": 22,
+      "WorkingSetBytes": 948363264,
+      "ManagedBytes": 4287744
+    },
+    {
+      "Iteration": 23,
+      "WorkingSetBytes": 948428800,
+      "ManagedBytes": 4353280
+    },
+    {
+      "Iteration": 24,
+      "WorkingSetBytes": 948494336,
+      "ManagedBytes": 4418816
+    },
+    {
+      "Iteration": 25,
+      "WorkingSetBytes": 948559872,
+      "ManagedBytes": 4484352
+    },
+    {
+      "Iteration": 26,
+      "WorkingSetBytes": 948625408,
+      "ManagedBytes": 4549888
+    },
+    {
+      "Iteration": 27,
+      "WorkingSetBytes": 948695040,
+      "ManagedBytes": 4615424
+    },
+    {
+      "Iteration": 28,
+      "WorkingSetBytes": 948854784,
+      "ManagedBytes": 4680960
+    },
+    {
+      "Iteration": 29,
+      "WorkingSetBytes": 948924416,
+      "ManagedBytes": 4746496
+    },
+    {
+      "Iteration": 30,
+      "WorkingSetBytes": 948989952,
+      "ManagedBytes": 4812032
+    },
+    {
+      "Iteration": 31,
+      "WorkingSetBytes": 949055488,
+      "ManagedBytes": 4877568
+    },
+    {
+      "Iteration": 32,
+      "WorkingSetBytes": 949125120,
+      "ManagedBytes": 4943104
+    },
+    {
+      "Iteration": 33,
+      "WorkingSetBytes": 949526528,
+      "ManagedBytes": 5000672
+    },
+    {
+      "Iteration": 34,
+      "WorkingSetBytes": 949612544,
+      "ManagedBytes": 5066208
+    },
+    {
+      "Iteration": 35,
+      "WorkingSetBytes": 949678080,
+      "ManagedBytes": 5131744
+    },
+    {
+      "Iteration": 36,
+      "WorkingSetBytes": 949743616,
+      "ManagedBytes": 5197280
+    },
+    {
+      "Iteration": 37,
+      "WorkingSetBytes": 949809152,
+      "ManagedBytes": 5262816
+    },
+    {
+      "Iteration": 38,
+      "WorkingSetBytes": 949866496,
+      "ManagedBytes": 5328352
+    },
+    {
+      "Iteration": 39,
+      "WorkingSetBytes": 949932032,
+      "ManagedBytes": 5393888
+    },
+    {
+      "Iteration": 40,
+      "WorkingSetBytes": 949997568,
+      "ManagedBytes": 5459424
+    },
+    {
+      "Iteration": 41,
+      "WorkingSetBytes": 950063104,
+      "ManagedBytes": 5524960
+    },
+    {
+      "Iteration": 42,
+      "WorkingSetBytes": 950128640,
+      "ManagedBytes": 5590496
+    },
+    {
+      "Iteration": 43,
+      "WorkingSetBytes": 950222848,
+      "ManagedBytes": 5656032
+    },
+    {
+      "Iteration": 44,
+      "WorkingSetBytes": 950288384,
+      "ManagedBytes": 5721568
+    },
+    {
+      "Iteration": 45,
+      "WorkingSetBytes": 950353920,
+      "ManagedBytes": 5787104
+    },
+    {
+      "Iteration": 46,
+      "WorkingSetBytes": 950419456,
+      "ManagedBytes": 5852640
+    },
+    {
+      "Iteration": 47,
+      "WorkingSetBytes": 950484992,
+      "ManagedBytes": 5918176
+    },
+    {
+      "Iteration": 48,
+      "WorkingSetBytes": 950550528,
+      "ManagedBytes": 5983712
+    },
+    {
+      "Iteration": 49,
+      "WorkingSetBytes": 950616064,
+      "ManagedBytes": 6041024
+    }
+  ],
+  "measurements": [
+    {
+      "Index": 0,
+      "Succeeded": true,
+      "EndToEndMs": 89.0237,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 1,
+      "Succeeded": true,
+      "EndToEndMs": 92.3935,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 2,
+      "Succeeded": true,
+      "EndToEndMs": 89.2929,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 3,
+      "Succeeded": true,
+      "EndToEndMs": 144.0748,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 4,
+      "Succeeded": true,
+      "EndToEndMs": 99.1234,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 5,
+      "Succeeded": true,
+      "EndToEndMs": 100.0787,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 6,
+      "Succeeded": true,
+      "EndToEndMs": 147.516,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 7,
+      "Succeeded": true,
+      "EndToEndMs": 138.0303,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 8,
+      "Succeeded": true,
+      "EndToEndMs": 136.6841,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 9,
+      "Succeeded": true,
+      "EndToEndMs": 148.4654,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 10,
+      "Succeeded": true,
+      "EndToEndMs": 98.2099,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 11,
+      "Succeeded": true,
+      "EndToEndMs": 90.9722,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 12,
+      "Succeeded": true,
+      "EndToEndMs": 90.8659,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 13,
+      "Succeeded": true,
+      "EndToEndMs": 93.0983,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 14,
+      "Succeeded": true,
+      "EndToEndMs": 95.1025,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 15,
+      "Succeeded": true,
+      "EndToEndMs": 90.9716,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 16,
+      "Succeeded": true,
+      "EndToEndMs": 88.7288,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 17,
+      "Succeeded": true,
+      "EndToEndMs": 84.9699,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 18,
+      "Succeeded": true,
+      "EndToEndMs": 83.6859,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 19,
+      "Succeeded": true,
+      "EndToEndMs": 122.1499,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 20,
+      "Succeeded": true,
+      "EndToEndMs": 115.8385,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 21,
+      "Succeeded": true,
+      "EndToEndMs": 98.5063,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 22,
+      "Succeeded": true,
+      "EndToEndMs": 102.0197,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 23,
+      "Succeeded": true,
+      "EndToEndMs": 74.1862,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 24,
+      "Succeeded": true,
+      "EndToEndMs": 167.2937,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 25,
+      "Succeeded": true,
+      "EndToEndMs": 106.4308,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 26,
+      "Succeeded": true,
+      "EndToEndMs": 100.2724,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 27,
+      "Succeeded": true,
+      "EndToEndMs": 93.1358,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 28,
+      "Succeeded": true,
+      "EndToEndMs": 85.5897,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 29,
+      "Succeeded": true,
+      "EndToEndMs": 89.162,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 30,
+      "Succeeded": true,
+      "EndToEndMs": 110.4681,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 31,
+      "Succeeded": true,
+      "EndToEndMs": 93.2977,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 32,
+      "Succeeded": true,
+      "EndToEndMs": 100.4459,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 33,
+      "Succeeded": true,
+      "EndToEndMs": 137.3185,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 34,
+      "Succeeded": true,
+      "EndToEndMs": 93.6091,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 35,
+      "Succeeded": true,
+      "EndToEndMs": 136.6231,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 36,
+      "Succeeded": true,
+      "EndToEndMs": 113.4364,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 37,
+      "Succeeded": true,
+      "EndToEndMs": 97.9996,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 38,
+      "Succeeded": true,
+      "EndToEndMs": 89.578,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 39,
+      "Succeeded": true,
+      "EndToEndMs": 90.8532,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 40,
+      "Succeeded": true,
+      "EndToEndMs": 143.0054,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 41,
+      "Succeeded": true,
+      "EndToEndMs": 112.6343,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 42,
+      "Succeeded": true,
+      "EndToEndMs": 115.1987,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 43,
+      "Succeeded": true,
+      "EndToEndMs": 124.1863,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 44,
+      "Succeeded": true,
+      "EndToEndMs": 151.6779,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 45,
+      "Succeeded": true,
+      "EndToEndMs": 102.7489,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 46,
+      "Succeeded": true,
+      "EndToEndMs": 91.8863,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 47,
+      "Succeeded": true,
+      "EndToEndMs": 79.4583,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 48,
+      "Succeeded": true,
+      "EndToEndMs": 81.6158,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    },
+    {
+      "Index": 49,
+      "Succeeded": true,
+      "EndToEndMs": 71.8145,
+      "SelectedAnswers": [
+        "bank_fee",
+        "false"
+      ],
+      "ErrorType": null,
+      "IntegrityMatch": true
+    }
+  ],
+  "errors": []
+}

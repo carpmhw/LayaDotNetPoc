@@ -1,0 +1,24 @@
+{
+  "mode": "cold-start",
+  "processId": 1467978,
+  "runId": "20260924T052525432Z-ecca60036c6f4d0aa1a413667e7036c7",
+  "profile": "multilingual",
+  "modelRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "environment": {
+    "os": "Linux Mint 22.3",
+    "architecture": "X64",
+    "framework": ".NET 10.0.12",
+    "processorCount": 10,
+    "ortThreads": "default"
+  },
+  "loadMs": 2403.994,
+  "firstRunEndToEndMs": 94.84,
+  "runOnlyMs": 67.919,
+  "workingSetBeforeBytes": 44142592,
+  "workingSetAfterLoadBytes": 928473088,
+  "workingSetAfterFirstRunBytes": 934703104,
+  "peakWorkingSetBytes": 934703104,
+  "managedBeforeBytes": 94240,
+  "managedAfterLoadBytes": 324232,
+  "managedAfterFirstRunBytes": 345904
+}

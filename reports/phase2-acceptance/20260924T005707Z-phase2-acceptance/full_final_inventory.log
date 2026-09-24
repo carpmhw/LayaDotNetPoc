@@ -1,0 +1,8 @@
+{
+  "status": "blocked",
+  "root": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc",
+  "errors": [],
+  "blocked": [
+    "no complete held-out run with frozen-candidate and policy provenance is available"
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "status": "ready-for-phase2",
+  "scope": "engineering-readiness",
+  "stages": {
+    "reference": true,
+    "bundle": true,
+    "pythonExport": true,
+    "dotnetParity": true,
+    "testCategories": true
+  },
+  "testCategories": [
+    {
+      "schemaVersion": 1,
+      "category": "EnglishModel",
+      "expectedCount": 9,
+      "executedCount": 9,
+      "passedCount": 9,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "expectedTests": [
+        "Laya.Core.Tests.Parity.LayaParityFixtureTests.ReferenceFixtures_MatchDotNetImplementation",
+        "Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema",
+        "Laya.Core.Tests.Inference.LayaDecisionEngineConcurrencyTests.Decide_PreservesAnswersAcrossConcurrentRequests",
+        "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_ReturnsOrderedChoiceAndNoulAnswers",
+        "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsEmptyQuestions",
+        "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsDuplicateQuestionNames",
+        "Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsUnsupportedScore",
+        "Laya.Core.Tests.Inference.LayaInferenceRunnerTests.Run_ReturnsExpectedOutputShapesAndFiniteValues",
+        "Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests.CsvTransactions_ReturnLegalAnswersAndLatency"
+      ],
+      "status": "complete"
+    },
+    {
+      "schemaVersion": 1,
+      "category": "EnglishTokenizer",
+      "expectedCount": 8,
+      "executedCount": 8,
+      "passedCount": 8,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "expectedTests": [
+        "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_ResolvesSpecialTokensAndEncodesWithoutSpecialTokens",
+        "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Encode_MatchesGoldenIds",
+        "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_RejectsMissingSpecialTokenConfig",
+        "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MixesChoiceAndNoulWithRightPadding",
+        "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesChoiceGoldenTrace",
+        "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesNoulGoldenTrace",
+        "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_TruncatesStateToMaxLength",
+        "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_RejectsOptionsThatExceedModelContext"
+      ],
+      "status": "complete"
+    },
+    {
+      "schemaVersion": 1,
+      "category": "MultilingualModel",
+      "expectedCount": 1,
+      "executedCount": 1,
+      "passedCount": 1,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "expectedTests": [
+        "Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity"
+      ],
+      "status": "complete"
+    },
+    {
+      "schemaVersion": 1,
+      "category": "MultilingualTokenizer",
+      "expectedCount": 3,
+      "executedCount": 3,
+      "passedCount": 3,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "expectedTests": [
+        "Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures",
+        "Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt",
+        "Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace"
+      ],
+      "status": "complete"
+    },
+    {
+      "schemaVersion": 1,
+      "category": "PureLogic",
+      "expectedCount": 76,
+      "executedCount": 76,
+      "passedCount": 76,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "expectedTests": [
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_StringReturnsOriginalText",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_ObjectMatchesReferenceJsonStyle",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_NestedValuesPreserveOrder",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_NumbersUseInvariantCulture",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_RejectsNonFiniteNumbers(value: 非數值)",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_RejectsNonFiniteNumbers(value: ∞)",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_RejectsNonFiniteNumbers(value: -∞)",
+        "Laya.Core.Tests.Serialization.LayaStateSerializerTests.Serialize_RejectsCycles",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_ReturnsNormalizedDistribution",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_EqualLogitsAreUniform",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_IsStableForExtremeFiniteLogits",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_RejectsInvalidTemperature(temperature: 非數值)",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_RejectsInvalidTemperature(temperature: 0)",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_RejectsInvalidTemperature(temperature: -1)",
+        "Laya.Core.Tests.PostProcessing.LayaCalibrationTests.Softmax_RejectsNonFiniteLogit",
+        "Laya.Core.Tests.PostProcessing.LayaPostProcessorTests.Process_MapsChoiceProbabilitiesInOptionOrder",
+        "Laya.Core.Tests.Parity.LayaParityToleranceTests.CompareProbability_RejectsNumericMismatchDespiteSameAnswer",
+        "Laya.Core.Tests.Parity.LayaParityToleranceTests.Validate_RequiresInvestigationForExplicitRelaxation",
+        "Laya.Core.Tests.Parity.LayaParityToleranceTests.CompareProbability_RejectsNonFiniteValues(actual: 非數值)",
+        "Laya.Core.Tests.Parity.LayaParityToleranceTests.CompareProbability_RejectsNonFiniteValues(actual: ∞)",
+        "Laya.Core.Tests.Parity.LayaParityToleranceTests.CompareProbability_RejectsNonFiniteValues(actual: -∞)",
+        "Laya.Core.Tests.Models.LayaDomainModelTests.QuestionType_UsesReferenceValues",
+        "Laya.Core.Tests.Models.LayaDomainModelTests.Request_PreservesQuestionOrder",
+        "Laya.Core.Tests.Inference.LayaExceptionTests.Exceptions_ExposeSafeStructuredDiagnostics",
+        "Laya.Core.Tests.Evaluation.LayaCalibrationAnalyzerTests.Analyze_UsesClosedOpenBucketsAndHandComputableEce",
+        "Laya.Core.Tests.Evaluation.LayaCalibrationAnalyzerTests.Analyze_ReturnsNaForEmptyInput",
+        "Laya.Core.Tests.Evaluation.LayaConfidencePolicyTests.Classify_UsesDocumentedBoundaries(probability: 0.84999999999999998, margin: 0.20000000000000001, expected: Auto)",
+        "Laya.Core.Tests.Evaluation.LayaConfidencePolicyTests.Classify_UsesDocumentedBoundaries(probability: 0.90000000000000002, margin: 0.19, expected: Review)",
+        "Laya.Core.Tests.Evaluation.LayaConfidencePolicyTests.Classify_UsesDocumentedBoundaries(probability: 0.59999999999999998, margin: 0.90000000000000002, expected: Suggest)",
+        "Laya.Core.Tests.Evaluation.LayaConfidencePolicyTests.Classify_UsesDocumentedBoundaries(probability: 0.58999999999999997, margin: 0.90000000000000002, expected: Review)",
+        "Laya.Core.Tests.Evaluation.LayaGate3AssessmentTests.Decide_ReturnsPassOnlyForCompleteReliableEvidence",
+        "Laya.Core.Tests.Evaluation.LayaGate3AssessmentTests.Decide_ReturnsPartialForSuggestionOnlyEvidence",
+        "Laya.Core.Tests.Evaluation.LayaGate3AssessmentTests.Decide_ReturnsFailWhenEvidenceCannotSupportIntegration",
+        "Laya.Core.Tests.Evaluation.LayaNoulAnalyzerTests.Analyze_ReportsFiveBucketsAndCorrectWrongMeans",
+        "Laya.Core.Tests.Evaluation.LayaNoulAnalyzerTests.Analyze_ReturnsNaForEmptyBuckets",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Calculate_ReportsSuccessAndFullInputAccuracySeparately",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Prediction_PreservesSequenceMetadata",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Calculate_ReportsTopKWithStableRanking",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Calculate_UsesFixedLabelSetForMacroF1AndTransferShare",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Calculate_AllFailuresReturnsNaForSuccessMetrics",
+        "Laya.Core.Tests.Evaluation.LayaPhase2MetricsTests.Calculate_RejectsIncompleteDistribution",
+        "Laya.Core.Tests.Evaluation.LayaPhase2RunComparerTests.Compare_AllowsDifferentModelsAndKeepsCommonSuccesses",
+        "Laya.Core.Tests.Evaluation.LayaPhase2RunComparerTests.Compare_MismatchedContract_IsRejected(mismatch: \"dataset\")",
+        "Laya.Core.Tests.Evaluation.LayaPhase2RunComparerTests.Compare_MismatchedContract_IsRejected(mismatch: \"prompt\")",
+        "Laya.Core.Tests.Evaluation.LayaPhase2RunComparerTests.Compare_MismatchedContract_IsRejected(mismatch: \"environment\")",
+        "Laya.Core.Tests.Evaluation.LayaPhase2RunComparerTests.Compare_SuccessOutsideSelectedIds_IsRejected",
+        "Laya.Core.Tests.Evaluation.LayaPolicyEvaluatorTests.EvaluateGrid_ProducesAllThresholdPairsAndUsesAndCondition",
+        "Laya.Core.Tests.Evaluation.LayaPolicyEvaluatorTests.SelectScenarios_DisablesAutoWhenTargetIsNotMet",
+        "Laya.Core.Tests.Evaluation.LayaPolicyEvaluatorTests.Classify_UsesExplicitPolicyAndRequiresBothAutoThresholds",
+        "Laya.Core.Tests.Evaluation.LayaTransactionRequestFactoryTests.CreateBaselineRequest_PreservesPhase1Contract",
+        "Laya.Core.Tests.Evaluation.LayaTransactionRequestFactoryTests.CreateRequest_AllowsOnlyBoundedPromptVariants",
+        "Laya.Core.Tests.Evaluation.MisclassifiedTransactionWriterTests.Write_EmitsRedactedEightColumnCsv",
+        "Laya.Core.Tests.Evaluation.Phase2DatasetManifestTests.Manifest_MatchesRepositoryDatasetAndHasUniqueGroupSplit",
+        "Laya.Core.Tests.Evaluation.Phase2FrozenCandidateValidatorTests.Validate_CompleteCandidate_ReturnsFixedPolicyAndArtifactHash",
+        "Laya.Core.Tests.Evaluation.Phase2FrozenCandidateValidatorTests.Validate_TamperedPolicyHash_IsRejected",
+        "Laya.Core.Tests.Evaluation.Phase2FrozenCandidateValidatorTests.Validate_MismatchedHeldOutSelection_IsRejected",
+        "Laya.Core.Tests.Evaluation.Phase2HeldOutReportWriterTests.WriteRun_WithFixedPolicy_LeavesGridNullAndPersistsCandidateIdentity",
+        "Laya.Core.Tests.Evaluation.Phase2ReportWriterTests.WriteRun_PersistsRecomputableRawArtifacts",
+        "Laya.Core.Tests.Evaluation.Phase2ReportWriterTests.WriteRun_WithFailure_PersistsIncompleteFullInputDenominator",
+        "Laya.Core.Tests.Configuration.LayaModelConfigTests.GetTemperature_UsesReferenceCardinalityBuckets",
+        "Laya.Core.Tests.Configuration.LayaModelConfigTests.GetTemperature_RejectsUnknownQuestionType",
+        "Laya.Core.Tests.Configuration.LayaModelConfigTests.GetTemperature_AllowsEmptyOptionCalibrationWithFallbacks",
+        "Laya.Core.Tests.Configuration.LayaOptionsTests.Constructor_StoresResolvedRootAndIdentity",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_UsesExplicitRootBeforeOtherSources",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_UsesCliProfileBeforeConfiguredProfile",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_UsesConfiguredProfileBeforeHostDefault",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_UsesEnglishHostDefault",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsInvalidProfile(profile: \"unknown\", configuredProfile: null)",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsInvalidProfile(profile: \"\", configuredProfile: null)",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsInvalidProfile(profile: null, configuredProfile: \"\")",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_ResolvesRelativeConfiguredRootAgainstWorkingDirectory",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsMismatchedRootManifestIdentity",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsNestedCheckpointRevisionMismatch",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_DerivesIdentityFromNestedV2Manifest",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_RejectsExistingMultilingualRootWithoutManifest",
+        "Laya.Core.Tests.Configuration.LayaProfileResolverTests.Resolve_FollowsVerifiedMultilingualCurrentPointer"
+      ],
+      "status": "complete"
+    }
+  ],
+  "artifacts": {
+    "test-data/multilingual-reference-manifest.json": "e340f74fc448a15afbcb4bd9dda8ac4f7ca6d531cb37f3a3c4e03a2837c38500",
+    "reports/multilingual-export-validation.json": "0fafb25a5629f7503497efbbf387b7ad1244fbe7cedae2c9c7f824a6abcb747b",
+    "reports/multilingual-dotnet-parity.json": "8b525b1fdb1bb40a490d09ead981d58efc8a043d4284c521beb1ff8b4eca664e",
+    "models/laya-multilingual/current-bundle.json": "c619e566325ca2690047309d62a0b9a997c879c7f5091dce628c9877268593f1"
+  },
+  "evidence": {
+    "reference": [
+      {
+        "path": "test-data/multilingual-reference-manifest.json",
+        "sha256": "e340f74fc448a15afbcb4bd9dda8ac4f7ca6d531cb37f3a3c4e03a2837c38500"
+      },
+      {
+        "path": "reports/multilingual-reference-validation.md",
+        "sha256": "85cd9fc97388073e44d8555f1768c2fe5a09adb15d6db041bef05c616b45e254"
+      },
+      {
+        "path": "reports/multilingual-reference-probe.json",
+        "sha256": "78f00c8ae63923ec6ca26ce9abb9c57a66cb858e94e73c0cc858f294f490f63b"
+      }
+    ],
+    "bundle": [
+      {
+        "path": "models/laya-multilingual/current-bundle.json",
+        "sha256": "c619e566325ca2690047309d62a0b9a997c879c7f5091dce628c9877268593f1"
+      },
+      {
+        "path": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728/laya-bundle-manifest.json",
+        "sha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553"
+      }
+    ],
+    "pythonExport": [
+      {
+        "path": "reports/multilingual-export-validation.json",
+        "sha256": "0fafb25a5629f7503497efbbf387b7ad1244fbe7cedae2c9c7f824a6abcb747b"
+      },
+      {
+        "path": "reports/multilingual-export-validation.md",
+        "sha256": "8501628a681f8a01195ca56a905b6e4cbc3c92640fbc68329fbc2bdc876e8432"
+      },
+      {
+        "path": "test-data/multilingual-parity-fixtures.json",
+        "sha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f"
+      }
+    ],
+    "dotnetParity": [
+      {
+        "path": "reports/multilingual-dotnet-parity.json",
+        "sha256": "8b525b1fdb1bb40a490d09ead981d58efc8a043d4284c521beb1ff8b4eca664e"
+      },
+      {
+        "path": "test-data/multilingual-tokenizer-fixtures.json",
+        "sha256": "45b198063a20371bbaa9223fe46c3e7263cf7f80803d7df635eab83243654260"
+      }
+    ],
+    "testCategories": [
+      {
+        "category": "EnglishModel",
+        "status": "complete",
+        "expectedCount": 9,
+        "executedCount": 9,
+        "passedCount": 9,
+        "skippedCount": 0
+      },
+      {
+        "category": "EnglishTokenizer",
+        "status": "complete",
+        "expectedCount": 8,
+        "executedCount": 8,
+        "passedCount": 8,
+        "skippedCount": 0
+      },
+      {
+        "category": "MultilingualModel",
+        "status": "complete",
+        "expectedCount": 1,
+        "executedCount": 1,
+        "passedCount": 1,
+        "skippedCount": 0
+      },
+      {
+        "category": "MultilingualTokenizer",
+        "status": "complete",
+        "expectedCount": 3,
+        "executedCount": 3,
+        "passedCount": 3,
+        "skippedCount": 0
+      },
+      {
+        "category": "PureLogic",
+        "status": "complete",
+        "expectedCount": 76,
+        "executedCount": 76,
+        "passedCount": 76,
+        "skippedCount": 0
+      }
+    ]
+  },
+  "developmentA": {
+    "status": "handoff-only",
+    "runs": [
+      {
+        "runId": "20260923T173746182Z-a2bc771d7b39428f823f6117928569a0",
+        "profile": "english",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260923T173746182Z-a2bc771d7b39428f823f6117928569a0/manifest.json",
+            "sha256": "48cf9737357e486246d19131500b425dbe9386544e55587102929ceaa13f4622"
+          },
+          {
+            "path": "reports/phase2-runs/20260923T173746182Z-a2bc771d7b39428f823f6117928569a0/results.json",
+            "sha256": "327bbf4ad81ec7e8ec03152b2532f960ad14325bff3f2d8c7d8d1d0798ceb1e4"
+          },
+          {
+            "path": "reports/phase2-runs/20260923T173746182Z-a2bc771d7b39428f823f6117928569a0/artifact-index.json",
+            "sha256": "1bfa1e907019f52d8a9a80009766d5fa894c534f9050ba419adfd680ea50c7b4"
+          }
+        ]
+      },
+      {
+        "runId": "20260923T173817495Z-b5d16a8a1108462a831e198000076df7",
+        "profile": "multilingual",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260923T173817495Z-b5d16a8a1108462a831e198000076df7/manifest.json",
+            "sha256": "6a2950b641a3d90010815c6484572b129986fdeb16fd3175e8e0d06d1b957920"
+          },
+          {
+            "path": "reports/phase2-runs/20260923T173817495Z-b5d16a8a1108462a831e198000076df7/results.json",
+            "sha256": "77f893d1fcd0f644b6a21f5c6eb7081fe4d221b0cb053330d5355d757c1f7862"
+          },
+          {
+            "path": "reports/phase2-runs/20260923T173817495Z-b5d16a8a1108462a831e198000076df7/artifact-index.json",
+            "sha256": "ed7532efe3ee8d7b26fe560bfa05e114d7b5904b16338dcf05d25771530620d6"
+          }
+        ]
+      },
+      {
+        "runId": "20260924T002751238Z-1e161fa773244115924747c6e79c0701",
+        "profile": "english",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260924T002751238Z-1e161fa773244115924747c6e79c0701/manifest.json",
+            "sha256": "8337818c2edd5a6a35c1ec51c6824b94b5cdd4fbd0472c0483acef5affacbc61"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T002751238Z-1e161fa773244115924747c6e79c0701/results.json",
+            "sha256": "cc06ad7d29473a56c98261dc903fd2ef1f6fbe0884a4dc37e4b49d63f0c638c2"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T002751238Z-1e161fa773244115924747c6e79c0701/artifact-index.json",
+            "sha256": "a931e2ffb51e7cabebaae05d16746c86fe7de1efa1fc272d52e65c7f0bd7ae10"
+          }
+        ]
+      },
+      {
+        "runId": "20260924T002817055Z-45e3e8ed98d3423e89338a9dad6aae4c",
+        "profile": "multilingual",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260924T002817055Z-45e3e8ed98d3423e89338a9dad6aae4c/manifest.json",
+            "sha256": "b17e07e09e0cad57c7fb77f8ae3a66ea40ee27c15334e1b16963e2284c3cf0cf"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T002817055Z-45e3e8ed98d3423e89338a9dad6aae4c/results.json",
+            "sha256": "1d02a730ff831944d0a11a813039f7d91de5e53bf456ed84bf070a7dbdc08401"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T002817055Z-45e3e8ed98d3423e89338a9dad6aae4c/artifact-index.json",
+            "sha256": "23bd96fea953b2236fdab77754b0d8f4154034d9c7b9ebe56953421fda85fc63"
+          }
+        ]
+      },
+      {
+        "runId": "20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f",
+        "profile": "multilingual",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f/manifest.json",
+            "sha256": "6a06217fec36272868d99b25e6cc30dc9e4339880015f3086e98451e7604a68c"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f/results.json",
+            "sha256": "035dbab230c84da8d3a2bb843d8c392f19efc06022644295f3a1aa42ed591436"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T054805799Z-9c9ecccb8a254918be6ae18ef44a4d7f/artifact-index.json",
+            "sha256": "d989c9d3a11c80ec091c14e7d6dca2d5cd021c16db5de28f1536f3e3c7ac451c"
+          }
+        ]
+      },
+      {
+        "runId": "20260924T055011652Z-72d14048b85c4d2396dc899832d41343",
+        "profile": "english",
+        "split": "development",
+        "promptVariant": "A",
+        "selectedIdsCount": 165,
+        "inputCount": 165,
+        "complete": true,
+        "artifacts": [
+          {
+            "path": "reports/phase2-runs/20260924T055011652Z-72d14048b85c4d2396dc899832d41343/manifest.json",
+            "sha256": "f642cfb3145a5db42adcc337135575992a081312e537c8b5bbfe84f8429d5368"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T055011652Z-72d14048b85c4d2396dc899832d41343/results.json",
+            "sha256": "475b04cdc8e469d034063fc4ac8885dbfce05514fe3dad1a1ac503651e5c9044"
+          },
+          {
+            "path": "reports/phase2-runs/20260924T055011652Z-72d14048b85c4d2396dc899832d41343/artifact-index.json",
+            "sha256": "5aaaeb3bbc928114cf918f8fc7bea7c9f31ed28249a08a58c62182919de57d39"
+          }
+        ]
+      }
+    ],
+    "note": "Development A artifacts are preserved for the original Phase 2 change; this report does not select policy or evaluate held-out data."
+  },
+  "phase2TaskMapping": [
+    {
+      "tasks": [
+        "1.3",
+        "2.5",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5"
+      ],
+      "status": "readiness-evidence",
+      "evidence": [
+        "reference",
+        "bundle",
+        "pythonExport",
+        "dotnetParity",
+        "testCategories"
+      ]
+    },
+    {
+      "tasks": [
+        "7.1",
+        "7.2"
+      ],
+      "status": "development-A-handoff",
+      "evidence": [
+        "developmentA"
+      ],
+      "note": "The original change owns quality interpretation and final baseline reports."
+    },
+    {
+      "tasks": [
+        "7.3",
+        "8.6",
+        "9.1",
+        "9.3",
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "11.x",
+        "12.x",
+        "13.6"
+      ],
+      "status": "owned-by-phase2",
+      "evidence": [],
+      "note": "Quality, policy, held-out, benchmark, deployment, and Gate 3 evidence remain outside this readiness handoff."
+    }
+  ],
+  "blockedReason": null
+}

@@ -1,0 +1,7 @@
+== restore ==
+$ dotnet restore LayaDotNetPoc.sln
+  正在判斷要還原的專案...
+  已還原 /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/Laya.Core.csproj (979 毫秒 內)。
+  已還原 /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/benchmarks/Laya.Benchmarks/Laya.Benchmarks.csproj (979 毫秒 內)。
+  已還原 /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/Laya.Core.Tests.csproj (979 毫秒 內)。
+  4 項專案中有 1 項在最新狀態，可進行還原。

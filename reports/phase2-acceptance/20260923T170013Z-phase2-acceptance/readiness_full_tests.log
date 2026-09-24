@@ -1,0 +1,49 @@
+/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll 的測試回合 (.NETCoreApp,Version=v8.0)
+VSTest 版本 18.0.2 (x64)
+
+正在啟動測試執行，請稍候...
+總共有 1 個測試檔案與指定的模式相符。
+[xUnit.net 00:00:00.41]     Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity [FAIL]
+[xUnit.net 00:00:00.42]     Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt [FAIL]
+  失敗 Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity [9 ms]
+  錯誤訊息:
+   System.IO.FileNotFoundException : Could not find file '/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/laya-bundle-manifest.json'.
+  堆疊追蹤:
+     at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity() in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/Parity/MultilingualDotnetParityTests.cs:line 31
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  失敗 Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt [9 ms]
+  錯誤訊息:
+   Laya.Core.Exceptions.LayaTokenizationException : Tokenizer file '/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/tokenizer/tokenizer.json' does not exist.
+  堆疊追蹤:
+     at Laya.Core.Tokenization.LayaTokenizer.Load(String tokenizerPath, String tokenizerConfigPath) in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/Tokenization/LayaTokenizer.cs:line 58
+   at Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt() in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/Encoding/MultilingualSequenceParityTests.cs:line 18
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.44]     Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace [FAIL]
+  失敗 Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace [1 ms]
+  錯誤訊息:
+   Laya.Core.Exceptions.LayaTokenizationException : Tokenizer file '/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/tokenizer/tokenizer.json' does not exist.
+  堆疊追蹤:
+     at Laya.Core.Tokenization.LayaTokenizer.Load(String tokenizerPath, String tokenizerConfigPath) in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/Tokenization/LayaTokenizer.cs:line 58
+   at Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace() in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/Encoding/MultilingualSequenceParityTests.cs:line 46
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.59]     Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures [FAIL]
+  失敗 Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures [3 ms]
+  錯誤訊息:
+   Laya.Core.Exceptions.LayaTokenizationException : Tokenizer file '/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/tokenizer/tokenizer.json' does not exist.
+  堆疊追蹤:
+     at Laya.Core.Tokenization.LayaTokenizer.Load(String tokenizerPath, String tokenizerConfigPath) in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/src/Laya.Core/Tokenization/LayaTokenizer.cs:line 58
+   at Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures() in /srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/Tokenization/MultilingualTokenizerParityTests.cs:line 18
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+失敗!  - 失敗:     4，通過:   216，略過:     0，總計:   220，持續時間: 23 s - Laya.Core.Tests.dll (net8.0)

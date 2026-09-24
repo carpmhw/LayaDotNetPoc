@@ -1,0 +1,5 @@
+/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll 的測試回合 (.NETCoreApp,Version=v8.0)
+VSTest 版本 18.0.2 (x64)
+
+可使用下列測試:
+    Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity

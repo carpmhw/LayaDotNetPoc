@@ -1,0 +1,12 @@
+/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll 的測試回合 (.NETCoreApp,Version=v8.0)
+VSTest 版本 18.0.2 (x64)
+
+可使用下列測試:
+    Laya.Core.Tests.Parity.LayaParityFixtureTests.ReferenceFixtures_MatchDotNetImplementation
+    Laya.Core.Tests.Models.LayaOnnxSessionTests.Open_ValidatesEnglishBundleSchema
+    Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_ReturnsOrderedChoiceAndNoulAnswers
+    Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsEmptyQuestions
+    Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsDuplicateQuestionNames
+    Laya.Core.Tests.Inference.LayaDecisionEngineTests.Decide_RejectsUnsupportedScore
+    Laya.Core.Tests.Inference.LayaInferenceRunnerTests.Run_ReturnsExpectedOutputShapesAndFiniteValues
+    Laya.Core.Tests.Evaluation.LayaTransactionIntegrationTests.CsvTransactions_ReturnLegalAnswersAndLatency

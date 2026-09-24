@@ -2,6 +2,7 @@ using Laya.Core.Models;
 
 namespace Laya.Core.Tests.Models;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaDomainModelTests
 {
     /// <summary>驗證 question type numeric values 與 ONNX qtype 契約一致。</summary>

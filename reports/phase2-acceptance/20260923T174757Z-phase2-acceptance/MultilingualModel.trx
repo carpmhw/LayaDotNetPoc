@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="30fe1fb0-6ac4-43ed-b767-a83bc6e5dda7" name="@Frieren 2026-09-24 01:49:25" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T01:49:25.2230894+08:00" queuing="2026-09-24T01:49:25.2230894+08:00" start="2026-09-24T01:49:15.9742324+08:00" finish="2026-09-24T01:49:25.2299503+08:00" />
+  <TestSettings name="default" id="293e474d-efe5-4d89-9687-9af4036f12b0">
+    <Deployment runDeploymentRoot="_Frieren_2026-09-24_01_49_25" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="44309ea9-1380-49fa-ae7c-3613071671d0" testId="18b45152-bc99-abc5-db24-ab527645bf4a" testName="Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity" computerName="Frieren" duration="00:00:08.3260905" startTime="2026-09-24T01:49:16.6659339+08:00" endTime="2026-09-24T01:49:24.9967027+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44309ea9-1380-49fa-ae7c-3613071671d0" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Laya.Core.Tests.Parity.MultilingualDotnetParityTests.RunAllOfficialFixturesWithLayeredParity" storage="/srv/hermes_agent/home/workspace/repo/layadotnetpoc/tests/laya.core.tests/bin/debug/net8.0/laya.core.tests.dll" id="18b45152-bc99-abc5-db24-ab527645bf4a">
+      <Execution id="44309ea9-1380-49fa-ae7c-3613071671d0" />
+      <TestMethod codeBase="/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/tests/Laya.Core.Tests/bin/Debug/net8.0/Laya.Core.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Laya.Core.Tests.Parity.MultilingualDotnetParityTests" name="RunAllOfficialFixturesWithLayeredParity" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="18b45152-bc99-abc5-db24-ab527645bf4a" executionId="44309ea9-1380-49fa-ae7c-3613071671d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="不在清單中的結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有載入的結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v4.0.0+05679a7ab5 (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.10]   Discovering: Laya.Core.Tests
+[xUnit.net 00:00:00.19]   Discovered:  Laya.Core.Tests
+[xUnit.net 00:00:00.30]   Starting:    Laya.Core.Tests
+[xUnit.net 00:00:08.66]   Finished:    Laya.Core.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

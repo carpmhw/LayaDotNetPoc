@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "root": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc",
+  "errors": [],
+  "blocked": [
+    "No verified multilingual Laya ONNX export or compatible external reference is available.",
+    "reports/phase2-runs does not exist; no model run artifacts are available"
+  ]
+}

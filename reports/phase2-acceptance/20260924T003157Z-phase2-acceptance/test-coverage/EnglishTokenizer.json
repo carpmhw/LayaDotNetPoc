@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "category": "EnglishTokenizer",
+  "expectedCount": 8,
+  "executedCount": 8,
+  "passedCount": 8,
+  "failedCount": 0,
+  "skippedCount": 0,
+  "expectedTests": [
+    "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_ResolvesSpecialTokensAndEncodesWithoutSpecialTokens",
+    "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Encode_MatchesGoldenIds",
+    "Laya.Core.Tests.Tokenization.LayaTokenizerTests.Load_RejectsMissingSpecialTokenConfig",
+    "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MixesChoiceAndNoulWithRightPadding",
+    "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesChoiceGoldenTrace",
+    "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_MatchesNoulGoldenTrace",
+    "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_TruncatesStateToMaxLength",
+    "Laya.Core.Tests.Encoding.LayaSequenceBuilderTests.Build_RejectsOptionsThatExceedModelContext"
+  ],
+  "status": "complete"
+}

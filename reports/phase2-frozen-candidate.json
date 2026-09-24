@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "laya.phase2.frozen-candidate",
+  "frozenAtUtc": "2026-09-24T10:37:03Z",
+  "developmentRun": {
+    "runId": "20260924T054908845Z-eaeb23f26ffb44658cd3350ba7a6dea4",
+    "manifestPath": "reports/phase2-runs/20260924T054908845Z-eaeb23f26ffb44658cd3350ba7a6dea4/manifest.json",
+    "manifestSha256": "9de1d87b05d25c03ab9262d9b90556ef94badc8a8d18f49951da77c559e55422",
+    "resultsPath": "reports/phase2-runs/20260924T054908845Z-eaeb23f26ffb44658cd3350ba7a6dea4/results.json",
+    "resultsSha256": "e983cff927f6d6f89e10776562d32b17425b52f9693e586a3ff02b87958a1dd6"
+  },
+  "model": {
+    "profile": "multilingual",
+    "checkpointRevision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553"
+  },
+  "reference": {
+    "manifestPath": "test-data/multilingual-reference-manifest.json",
+    "manifestSha256": "e340f74fc448a15afbcb4bd9dda8ac4f7ca6d531cb37f3a3c4e03a2837c38500"
+  },
+  "dataset": {
+    "manifestSha256": "0503882813a57430e28d9acea25eeb08053c7ab881c5e74ab3d2a70b2ba82ccd",
+    "datasetSha256": "3d25581e9014c1de9709346f1bf5cd49a5d88614e085a19a9015eee578b7f4e9",
+    "guidelineSha256": "6304c96ae622fe8e6db9c314168b356edc1a073ada60bc9269f5d0eea6a0e0bb",
+    "sourceSplit": "development",
+    "targetSplit": "held-out",
+    "developmentSelectedIdsHash": "35225d5afaa85bade1d642edf4a34d02d06d5d486792d6f95e9e81b1eab7330d",
+    "heldOutSelectedIdsHash": "44442d6a42d39fd26d165268205448269503518102b488a36f29c5111f098761"
+  },
+  "request": {
+    "promptVariant": "C",
+    "promptHash": "7d673d577434e09fbff688c9ad30b92f6b822b5cb8e96b166a842b0394415d0b",
+    "optionOrderHash": "a89955aa3d46e497c1d6ab7c297a0011916cb2aa1004359d5cfae92076efab02",
+    "serializationVersion": "laya-state-v1",
+    "serializationHash": "e21c6db34441a596a487c8ccff17e73ab68adcdf907705f5db190dfaae86b459"
+  },
+  "policy": {
+    "name": "Balanced",
+    "autoEnabled": true,
+    "autoProbabilityThreshold": 0.95,
+    "autoMarginThreshold": 0.8,
+    "suggestProbabilityThreshold": 0.6,
+    "suggestMarginThreshold": 0.1
+  },
+  "policyHash": "8cacd8c9242562eed66a0dcab16b06d95fe9e9feda69227881867b8027e16e0b"
+}

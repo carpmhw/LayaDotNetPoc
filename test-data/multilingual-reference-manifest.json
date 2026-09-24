@@ -1,0 +1,94 @@
+{
+  "status": "ready-for-phase2",
+  "referenceStatus": "complete",
+  "exportStatus": "complete",
+  "reason": "Engineering readiness is complete for the fixed reference, verified bundle, Python/.NET parity, split selector, provenance contract, and regression coverage; Phase 2 quality and Gate 3 remain outside this change.",
+  "checkpoint": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "source": "https://huggingface.co/convaiinnovations/laya-multilingual/tree/052592a15d198d9ad47da779604259b10b47b7aa",
+    "format": "transformers-safetensors",
+    "availableFiles": [
+      { "path": "model.safetensors", "sizeBytes": 643835514, "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204" },
+      { "path": "encoder/config.json", "sizeBytes": 1938, "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4" },
+      { "path": "rl_agent_config.json", "sizeBytes": 472, "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6" },
+      { "path": "tokenizer/tokenizer.json", "sizeBytes": 34363188, "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f" },
+      { "path": "tokenizer/tokenizer_config.json", "sizeBytes": 502, "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7" }
+    ],
+    "license": "Apache-2.0"
+  },
+  "runtimeBundle": {
+    "profile": "multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "status": "verified",
+    "candidateRoot": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+    "manifestPath": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728/laya-bundle-manifest.json",
+    "manifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "files": [
+      { "path": "laya.onnx", "sizeBytes": 2826231, "sha256": "7b8aec9fd45882c1591ee83edd84d00b7dc7f0b342a07011ac177e22b93611e2", "status": "verified" },
+      { "path": "laya.onnx.data", "sizeBytes": 1287651328, "sha256": "6ef993ee707fe1d6a75529f4a1f8347ff89966ff955d332ea3ebe4e5171a9ac1", "status": "verified" },
+      { "path": "laya_config.json", "sizeBytes": 127, "sha256": "d9f54bcdd1993f9d5e6c5839516de423599759a635a1d53b172c154b3f717880", "status": "verified" },
+      { "path": "tokenizer/tokenizer.json", "sizeBytes": 34363188, "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f", "status": "verified" },
+      { "path": "tokenizer/tokenizer_config.json", "sizeBytes": 502, "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7", "status": "verified" }
+    ],
+    "externalDataShards": ["laya.onnx.data"],
+    "onnxSchema": {
+      "inputs": ["input_ids:int64[B,S]", "attention_mask:int64[B,S]", "marker_pos:int64[B,M]", "marker_mask:bool[B,M]", "qtype:int64[B]"],
+      "outputs": ["logits:float32[B,M]", "act_probs:float32[B,2]"]
+    },
+    "supportedTypes": ["choice", "noul"],
+    "maxLength": 1024,
+    "headMaxLength": 256,
+    "specialTokenIds": { "bos": 2, "eos": 1, "cls": 2, "sep": 1, "mask": 4, "pad": 0, "unk": 3 },
+    "calibration": {
+      "temperature": [1.0, 1.0, 1.0],
+      "temperatureByOptions": {},
+      "status": "upstream-unfitted-preserved"
+    }
+  },
+  "pythonExport": {
+    "report": "reports/multilingual-export-validation.json",
+    "status": "complete",
+    "fixtureCount": 20,
+    "absoluteTolerance": 0.0001,
+    "maximumRawAbsoluteError": 0.000012874603271484375,
+    "maximumProbabilityAbsoluteError": 0.000002182206334522263,
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "fixtureSha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f",
+    "reportSha256": "0fafb25a5629f7503497efbbf387b7ad1244fbe7cedae2c9c7f824a6abcb747b"
+  },
+  "dotnetParity": {
+    "report": "reports/multilingual-dotnet-parity.json",
+    "reportSha256": "8b525b1fdb1bb40a490d09ead981d58efc8a043d4284c521beb1ff8b4eca664e",
+    "status": "complete",
+    "fixtureCount": 20,
+    "executedCount": 20,
+    "passedCount": 20,
+    "absoluteTolerance": 0.0001,
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "fixtureSha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f"
+  },
+  "reference": {
+    "package": "laya",
+    "version": "0.3.7",
+    "sourceCommit": "010bacef009c855ccba814b51f7c8e1d38ab5e3f",
+    "wheelSha256": "370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a",
+    "probeCommand": "LAYA_REFERENCE_SITE=/tmp/opencode/laya-reference-cpu-site tools/laya-reference/run.sh tools/laya-reference/probe.py --source-root models/laya-multilingual/source --output reports/multilingual-reference-probe.json",
+    "probeReport": "reports/multilingual-reference-probe.json",
+    "weightStateKeyCount": 170,
+    "missingWeightStateKeys": 0,
+    "unexpectedWeightStateKeys": 0,
+    "caseCount": 5,
+    "questionCount": 6,
+    "maximumProbabilityAbsoluteError": 0.00004968702268374689,
+    "status": "complete"
+  },
+  "acquisition": {
+      "downloadCommand": "LAYA_REFERENCE_SITE=/tmp/opencode/laya-reference-cpu-site tools/laya-reference/run.sh tools/laya-reference/acquire.py --output models/laya-multilingual/source",
+    "exportCommand": "LAYA_REFERENCE_SITE=/tmp/opencode/laya-reference-cpu-site tools/export-laya-multilingual.sh",
+    "toolVersions": "tools/laya-reference/toolchain.lock.json",
+      "preservedPromptHeadCalibrationTokenizer": true,
+      "offlineVerifyCommand": "LAYA_REFERENCE_SITE=/tmp/opencode/laya-reference-cpu-site tools/laya-reference/run.sh tools/laya-reference/acquire.py --offline --output models/laya-multilingual/source",
+    "status": "source-python-dotnet-verified"
+  }
+}

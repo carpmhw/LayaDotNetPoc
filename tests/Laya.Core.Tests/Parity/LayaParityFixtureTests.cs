@@ -10,6 +10,7 @@ using Laya.Core.Tokenization;
 
 namespace Laya.Core.Tests.Parity;
 
+[Trait("Category", "EnglishModel")]
 public sealed class LayaParityFixtureTests
 {
     /// <summary>驗證 reference fixtures 的 sequence、tensors、raw outputs 與 probabilities。</summary>

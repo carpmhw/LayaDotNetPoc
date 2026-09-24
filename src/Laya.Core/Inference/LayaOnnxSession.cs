@@ -96,7 +96,7 @@ public sealed class LayaOnnxSession : IDisposable
     {
         ArgumentNullException.ThrowIfNull(options);
 
-        var bundle = LayaModelValidator.ValidateBundle(options.ModelRoot);
+        var bundle = LayaModelValidator.ValidateBundle(options.ModelRoot, options.ManifestPath, options);
         SessionOptions? sessionOptions = null;
         InferenceSession? session = null;
 

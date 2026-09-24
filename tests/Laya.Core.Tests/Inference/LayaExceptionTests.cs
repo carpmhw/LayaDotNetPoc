@@ -2,6 +2,7 @@ using Laya.Core.Exceptions;
 
 namespace Laya.Core.Tests.Inference;
 
+[Trait("Category", "PureLogic")]
 public sealed class LayaExceptionTests
 {
     /// <summary>驗證六類例外保留 stage 與可用診斷欄位，但 message 不攜帶 inner 原文。</summary>

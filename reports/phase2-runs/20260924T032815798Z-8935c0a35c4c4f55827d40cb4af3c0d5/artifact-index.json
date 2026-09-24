@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260924T032815798Z-8935c0a35c4c4f55827d40cb4af3c0d5",
+  "artifacts": {
+    "manifest.json": {
+      "path": "manifest.json",
+      "sha256": "e1476e61158f919f9768427692531dd9e32479d2ceabdd6f17f41c1d3776d78d",
+      "sizeBytes": 4636
+    },
+    "results.json": {
+      "path": "results.json",
+      "sha256": "f20241e7d79622f8d74fc8ab6d7d436b5761746c346dea52b58bc4ee7258ff72",
+      "sizeBytes": 184249
+    },
+    "metrics.json": {
+      "path": "metrics.json",
+      "sha256": "a9446671ed09a862cac0ad9d6588f7de8532f5cb3874ce365d50e1a8c99b0695",
+      "sizeBytes": 224977
+    },
+    "summary.md": {
+      "path": "summary.md",
+      "sha256": "e9d57ef90dabb0056991fb304d08a1175a13e59c34f8ee8dbc5c73c7bb11e0a0",
+      "sizeBytes": 613
+    }
+  }
+}

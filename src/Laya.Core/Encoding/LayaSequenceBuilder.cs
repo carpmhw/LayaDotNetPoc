@@ -266,8 +266,8 @@ public sealed class LayaSequenceBuilder
 
         return question.Type switch
         {
-            LayaQuestionType.Choice => question.Options,
-            LayaQuestionType.Score => question.Options
+            LayaQuestionType.Choice => question.PromptOptions,
+            LayaQuestionType.Score => question.PromptOptions
                 .Select((option, index) => $"level {index}: {option}")
                 .ToArray(),
             _ => throw new LayaConfigurationException(

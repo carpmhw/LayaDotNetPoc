@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "category": "MultilingualTokenizer",
+  "expectedCount": 3,
+  "executedCount": 3,
+  "passedCount": 3,
+  "failedCount": 0,
+  "skippedCount": 0,
+  "expectedTests": [
+    "Laya.Core.Tests.Tokenization.MultilingualTokenizerParityTests.Encode_MatchesAllOfficialMultilingualFixtures",
+    "Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_CriteriaMappingPreservesAnswerKeysAndOfficialPrompt",
+    "Laya.Core.Tests.Encoding.MultilingualSequenceParityTests.Build_MatchesOfficialChoiceTrace"
+  ],
+  "status": "complete"
+}

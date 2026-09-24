@@ -4,6 +4,7 @@ using Laya.Core.Models;
 
 namespace Laya.Core.Tests.Evaluation;
 
+[Trait("Category", "EnglishModel")]
 public sealed class LayaTransactionIntegrationTests
 {
     /// <summary>驗證 CSV 每筆交易回傳合法答案、完整機率分布與正的 Run latency。</summary>

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "status": "verified",
+  "profile": "multilingual",
+  "root": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "manifest": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728/laya-bundle-manifest.json",
+  "candidateManifestSha256": "8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+  "verifiedManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+  "publishedUtc": "2026-09-24T00:24:21Z"
+}
