@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "policyId": "phase3a-memory-policy-20260925-v2",
+  "status": "frozen",
+  "frozenUtc": "2026-09-24T19:13:18Z",
+  "freezeCommit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+  "pilotRunIds": [
+    "phase3a-pilot-20260925-v2-pilot-tokenizer-en",
+    "phase3a-pilot-20260925-v2-pilot-tokenizer-zh",
+    "phase3a-pilot-20260925-v2-pilot-tokenizer-mixed",
+    "phase3a-pilot-20260925-v2-pilot-full-pipeline",
+    "phase3a-pilot-noise-a-20260925-v2",
+    "phase3a-pilot-noise-b-20260925-v2",
+    "phase3a-pilot-docker-fullpipeline-500-20260925-v2"
+  ],
+  "pilotArtifactSha256": "251ee705174657c11b25f97c34a8ce263ac2737892ff96d537b3a2cfa0df9faa",
+  "targetMemoryLimitBytes": 3000000000,
+  "rationale": "Frozen from v2 pilot artifacts produced with the managed-heap invalid-counter guard. The two native 1000-request repeats had maximum 500-1000 RSS endpoint rate 78643.2 bytes per 100 requests; the 2000000-byte slope ceiling remains an explicit POC acceptance budget, not a fitted leak rate. With a 3000000000-byte target, reserve 600000000 bytes (20%) as deployment headroom. A separate 64000000-byte late growth cap is 10.7% of that reserve; a 2000000-byte/100 slope projects to 50000000 bytes over 2500 requests, leaving 14000000 bytes under the cap. The managed-heap budget is half the retained process/RSS growth budget. Peak/end replicate tolerance is 5%; slope tolerance is 25% and requires a third replicate when exceeded. R-squared 0.95 is a strict fit-quality threshold only; positive slope and growth must also exceed budget. The v1 formal baseline with negative GC.GetTotalMemory(false) samples is excluded from v2 calibration and the v2 formal campaign. Values are POC acceptance inputs, not formal measurements or production SLA.",
+  "limitations": "V2 native pilot requests used .NET 10.0.12 with ONNX Runtime 1.30.0.0; the Docker 500-request pilot used .NET 8.0.31 and remains a separate runtime group. Native pilot repeats ended at 1000 requests, so the 2500-5000 formal late segment and 3000000000-byte Docker target have not yet been tested. Collector/writer/latency-window allocations were not isolated against a telemetry-disabled control. Native host cgroup limits were unavailable at the visible mount. Negative GC.GetTotalMemory(false) readings are saved as unavailable with reasons and block managed-heap slope segments. A changed threshold requires a new policy hash and campaign.",
+  "thresholds": {
+    "privateMemory": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "rss": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "managedHeap": {
+      "maximumLateSlopeBytesPer100Requests": 1000000,
+      "lateGrowthBudgetBytes": 32000000
+    },
+    "nearLinearR2Minimum": 0.95,
+    "replicateTolerance": {
+      "peakRelativeDifferenceMaximum": 0.05,
+      "endRelativeDifferenceMaximum": 0.05,
+      "slopeRelativeDifferenceMaximum": 0.25
+    }
+  },
+  "minimumMatrix": {
+    "baselineRuns": 2,
+    "runOnlyRuns": 2,
+    "arenaOnRuns": 2,
+    "arenaOffRuns": 2,
+    "dockerTargetRuns": 2,
+    "repetitionsBeforeThirdRun": 2,
+    "baselineRequests": 5000,
+    "runOnlyRequests": 5000,
+    "arenaRequests": 5000,
+    "tokenizerRequestsPerLanguage": 10000,
+    "sequenceOnlyRequests": 10000,
+    "tensorOnlyRequests": 10000,
+    "calibrationOnlyRequests": 10000,
+    "shapeAndConcurrencyRequests": 1000,
+    "dockerLimitsBytes": [2000000000, 2500000000, 3000000000, 4000000000],
+    "dockerSmokeRequests": [100, 1000],
+    "dockerExtendedLimitsBytes": [3000000000, 4000000000],
+    "dockerExtendedRequests": 5000,
+    "sessionRecreateCycles": [10, 100],
+    "shapeProfiles": ["short", "medium", "long"],
+    "questionCounts": [1, 2, 5],
+    "concurrencyLevels": [1, 2, 4]
+  }
+}

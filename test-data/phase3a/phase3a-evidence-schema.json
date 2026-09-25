@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://laya-dotnet-poc.local/schemas/phase3a-evidence-v1.json",
+  "title": "Laya Phase 3A 記憶體 campaign evidence",
+  "description": "Frozen memory policy、campaign manifest 與 per-process run manifest 的版本化契約。數值 thresholds 必須來自獨立 pilot，不提供隱含預設值。",
+  "oneOf": [
+    { "$ref": "#/$defs/memoryPolicy" },
+    { "$ref": "#/$defs/campaignManifest" },
+    { "$ref": "#/$defs/runManifest" }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "memoryPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "policyId",
+        "status",
+        "frozenUtc",
+        "freezeCommit",
+        "pilotRunIds",
+        "pilotArtifactSha256",
+        "targetMemoryLimitBytes",
+        "rationale",
+        "limitations",
+        "thresholds",
+        "minimumMatrix"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "policyId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,63}$" },
+        "status": { "const": "frozen" },
+        "frozenUtc": { "type": "string", "format": "date-time" },
+        "freezeCommit": { "type": "string", "minLength": 7 },
+        "pilotRunIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "pilotArtifactSha256": { "$ref": "#/$defs/sha256" },
+        "targetMemoryLimitBytes": { "const": 3000000000 },
+        "rationale": { "type": "string", "minLength": 20 },
+        "limitations": { "type": "string", "minLength": 1 },
+        "thresholds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["privateMemory", "rss", "managedHeap", "nearLinearR2Minimum", "replicateTolerance"],
+          "properties": {
+            "privateMemory": { "$ref": "#/$defs/slopeAndGrowthBudget" },
+            "rss": { "$ref": "#/$defs/slopeAndGrowthBudget" },
+            "managedHeap": { "$ref": "#/$defs/slopeAndGrowthBudget" },
+            "nearLinearR2Minimum": { "type": "number", "minimum": 0, "maximum": 1 },
+            "replicateTolerance": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["peakRelativeDifferenceMaximum", "endRelativeDifferenceMaximum", "slopeRelativeDifferenceMaximum"],
+              "properties": {
+                "peakRelativeDifferenceMaximum": { "type": "number", "minimum": 0 },
+                "endRelativeDifferenceMaximum": { "type": "number", "minimum": 0 },
+                "slopeRelativeDifferenceMaximum": { "type": "number", "minimum": 0 }
+              }
+            }
+          }
+        },
+        "minimumMatrix": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "baselineRuns",
+            "runOnlyRuns",
+            "arenaOnRuns",
+            "arenaOffRuns",
+            "dockerTargetRuns",
+            "repetitionsBeforeThirdRun",
+            "baselineRequests",
+            "runOnlyRequests",
+            "arenaRequests",
+            "tokenizerRequestsPerLanguage",
+            "sequenceOnlyRequests",
+            "tensorOnlyRequests",
+            "calibrationOnlyRequests",
+            "shapeAndConcurrencyRequests",
+            "dockerLimitsBytes",
+            "dockerSmokeRequests",
+            "dockerExtendedLimitsBytes",
+            "dockerExtendedRequests",
+            "sessionRecreateCycles",
+            "shapeProfiles",
+            "questionCounts",
+            "concurrencyLevels"
+          ],
+          "properties": {
+            "baselineRuns": { "const": 2 },
+            "runOnlyRuns": { "const": 2 },
+            "arenaOnRuns": { "const": 2 },
+            "arenaOffRuns": { "const": 2 },
+            "dockerTargetRuns": { "const": 2 },
+            "repetitionsBeforeThirdRun": { "const": 2 },
+            "baselineRequests": { "const": 5000 },
+            "runOnlyRequests": { "const": 5000 },
+            "arenaRequests": { "const": 5000 },
+            "tokenizerRequestsPerLanguage": { "const": 10000 },
+            "sequenceOnlyRequests": { "const": 10000 },
+            "tensorOnlyRequests": { "const": 10000 },
+            "calibrationOnlyRequests": { "const": 10000 },
+            "shapeAndConcurrencyRequests": { "const": 1000 },
+            "dockerLimitsBytes": {
+              "const": [2000000000, 2500000000, 3000000000, 4000000000]
+            },
+            "dockerSmokeRequests": { "const": [100, 1000] },
+            "dockerExtendedLimitsBytes": { "const": [3000000000, 4000000000] },
+            "dockerExtendedRequests": { "const": 5000 },
+            "sessionRecreateCycles": { "const": [10, 100] },
+            "shapeProfiles": { "const": ["short", "medium", "long"] },
+            "questionCounts": { "const": [1, 2, 5] },
+            "concurrencyLevels": { "const": [1, 2, 4] }
+          }
+        }
+      }
+    },
+    "slopeAndGrowthBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maximumLateSlopeBytesPer100Requests", "lateGrowthBudgetBytes"],
+      "properties": {
+        "maximumLateSlopeBytesPer100Requests": { "type": "number", "minimum": 0 },
+        "lateGrowthBudgetBytes": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "campaignManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "campaignId",
+        "stage",
+        "mode",
+        "evidenceStatus",
+        "createdUtc",
+        "sourceIdentity",
+        "policy",
+        "workload",
+        "model",
+        "environment",
+        "requiredRunIds",
+        "stageStatus"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "campaignId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,63}$" },
+        "stage": { "enum": ["pilot", "baseline", "components", "lifecycle", "arena", "shape", "concurrency", "reproduction"] },
+        "mode": { "enum": ["pilot", "formal"] },
+        "evidenceStatus": { "enum": ["in-progress", "complete", "blocked"] },
+        "createdUtc": { "type": "string", "format": "date-time" },
+        "sourceIdentity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["commit", "dirty", "dirtyIdentity"],
+          "properties": {
+            "commit": { "type": "string", "minLength": 7 },
+            "dirty": { "type": "boolean" },
+            "dirtyIdentity": { "type": ["string", "null"] }
+          }
+        },
+        "policy": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "sha256", "targetMemoryLimitBytes"],
+              "properties": {
+                "path": { "type": "string", "minLength": 1 },
+                "sha256": { "$ref": "#/$defs/sha256" },
+                "targetMemoryLimitBytes": { "const": 3000000000 }
+              }
+            }
+          ]
+        },
+        "workload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "sha256", "profile", "questionCount", "questionCounts", "serializationVersion"],
+          "properties": {
+            "path": { "type": "string", "minLength": 1 },
+            "sha256": { "$ref": "#/$defs/sha256" },
+            "profile": { "const": "multilingual" },
+            "questionCount": { "enum": [1, 2, 5] },
+            "questionCounts": { "const": [1, 2, 5] },
+            "serializationVersion": { "const": "laya-state-v1" }
+          }
+        },
+        "model": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["profile", "revision", "bundleRoot", "bundleManifestSha256", "tokenizerSha256"],
+          "properties": {
+            "profile": { "const": "multilingual" },
+            "revision": { "type": "string", "minLength": 7 },
+            "bundleRoot": { "type": "string", "minLength": 1 },
+            "bundleManifestSha256": { "$ref": "#/$defs/sha256" },
+            "tokenizerSha256": { "$ref": "#/$defs/sha256" }
+          }
+        },
+        "environment": { "$ref": "#/$defs/environment" },
+        "requiredRunIds": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "stageStatus": { "type": "object", "minProperties": 1, "additionalProperties": { "enum": ["pending", "running", "complete", "blocked", "failed"] } },
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "artifacts": { "$ref": "#/$defs/artifactList" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "mode": { "const": "formal" } } },
+          "then": { "properties": { "policy": { "type": "object" } } }
+        }
+      ]
+    },
+    "runManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "runId",
+        "campaignId",
+        "mode",
+        "status",
+        "scenario",
+        "startedUtc",
+        "sourceIdentity",
+        "policySha256",
+        "workloadSha256",
+        "model",
+        "environment",
+        "requestedConfiguration",
+        "plannedCounts",
+        "actualCounts",
+        "terminalOutcome",
+        "artifacts"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "runId": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{2,127}$" },
+        "campaignId": { "type": "string", "minLength": 1 },
+        "mode": { "enum": ["pilot", "formal"] },
+        "status": { "enum": ["in-progress", "complete", "incomplete", "terminal-failure"] },
+        "scenario": { "enum": ["tokenizer-only", "sequence-only", "tensor-only", "run-only", "calibration-only", "full-pipeline", "session-recreate", "load-only"] },
+        "startedUtc": { "type": "string", "format": "date-time" },
+        "endedUtc": { "type": ["string", "null"], "format": "date-time" },
+        "sourceIdentity": { "$ref": "#/$defs/campaignManifest/properties/sourceIdentity" },
+        "policySha256": { "oneOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }] },
+        "workloadSha256": { "$ref": "#/$defs/sha256" },
+        "model": { "$ref": "#/$defs/campaignManifest/properties/model" },
+        "environment": { "$ref": "#/$defs/environment" },
+        "requestedConfiguration": {
+          "type": "object",
+          "required": ["profile", "concurrency", "cpuArena", "warmupRequests", "sampleEvery"],
+          "properties": {
+            "profile": { "const": "multilingual" },
+            "concurrency": { "type": "integer", "minimum": 1 },
+            "cpuArena": { "type": "boolean" },
+            "warmupRequests": { "type": "integer", "minimum": 0 },
+            "sampleEvery": { "type": "integer", "minimum": 1 },
+            "stateProfile": { "enum": ["short", "medium", "long"] },
+            "questionCount": { "enum": [1, 2, 5] },
+            "idleSeconds": { "type": "array", "items": { "type": "integer", "minimum": 0 } },
+            "idleOmissionReason": { "type": ["string", "null"] },
+            "gcCheckpoints": { "type": "array", "items": { "type": "integer", "minimum": 1 } },
+            "gcTreatment": { "enum": ["natural", "forced-gc-checkpoints"] },
+            "naturalSamplesExcludeForcedGc": { "const": true }
+          }
+        },
+        "plannedCounts": { "$ref": "#/$defs/counts" },
+        "actualCounts": { "$ref": "#/$defs/counts" },
+        "terminalOutcome": { "enum": ["in-progress", "completed", "crash", "oom", "cancelled", "probe-error", "host-error"] },
+        "failure": { "type": ["object", "null"] },
+        "artifacts": { "$ref": "#/$defs/artifactList" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["warmupRequests", "attemptedRequests", "completedRequests", "errors", "integrityFailures"],
+      "properties": {
+        "warmupRequests": { "type": "integer", "minimum": 0 },
+        "attemptedRequests": { "type": "integer", "minimum": 0 },
+        "completedRequests": { "type": "integer", "minimum": 0 },
+        "errors": { "type": "integer", "minimum": 0 },
+        "integrityFailures": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["os", "kernel", "architecture", "cpu", "logicalCores", "ramBytes", "swapBytes", "dotnetSdk", "dotnetRuntime", "onnxRuntime", "executionProvider"],
+      "properties": {
+        "os": { "type": "string", "minLength": 1 },
+        "kernel": { "type": "string", "minLength": 1 },
+        "architecture": { "type": "string", "minLength": 1 },
+        "cpu": { "type": "string", "minLength": 1 },
+        "logicalCores": { "type": "integer", "minimum": 1 },
+        "ramBytes": { "type": "integer", "minimum": 1 },
+        "swapBytes": { "type": "integer", "minimum": 0 },
+        "dotnetSdk": { "type": "string", "minLength": 1 },
+        "dotnetRuntime": { "type": "string", "minLength": 1 },
+        "onnxRuntime": { "type": "string", "minLength": 1 },
+        "executionProvider": { "const": "CPU" },
+        "containerRuntime": { "type": ["string", "null"] },
+        "memoryLimitBytes": { "type": ["integer", "null"], "minimum": 1 },
+        "memorySwapLimitBytes": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "artifactList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "sizeBytes", "status"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "$ref": "#/$defs/sha256" },
+          "sizeBytes": { "type": "integer", "minimum": 0 },
+          "status": { "enum": ["complete", "partial", "unavailable"] },
+          "unavailableReason": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

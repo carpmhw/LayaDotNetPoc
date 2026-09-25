@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-repro-run-only-r3",
+  "scenario": "run-only",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 5000,
+  "warmupRequests": 5,
+  "attemptedRequests": 5000,
+  "completedRequests": 5000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 5000,
+    "meanMilliseconds": 79.09123457999969,
+    "p50Milliseconds": 76.1374,
+    "p95Milliseconds": 108.928955,
+    "p99Milliseconds": 130.95253100000008,
+    "minMilliseconds": 48.5345,
+    "maxMilliseconds": 291.2114,
+    "lastMilliseconds": 98.1359
+  },
+  "checksum": -3207.9366731643677
+}

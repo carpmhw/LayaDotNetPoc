@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-pilot-docker-fullpipeline-500-20260925-v2",
+  "scenario": "full-pipeline",
+  "mode": "pilot",
+  "status": "complete",
+  "plannedRequests": 500,
+  "warmupRequests": 5,
+  "attemptedRequests": 500,
+  "completedRequests": 500,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 500,
+    "meanMilliseconds": 100.48250120000002,
+    "p50Milliseconds": 94.97455,
+    "p95Milliseconds": 149.22748499999997,
+    "p99Milliseconds": 198.003054,
+    "minMilliseconds": 53.0845,
+    "maxMilliseconds": 255.4535,
+    "lastMilliseconds": 84.894
+  },
+  "checksum": 500.02307357221105
+}

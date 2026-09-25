@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Laya.Core/Laya.Core.csproj" />
+    <Compile Include="../../src/Shared/Configuration/LayaProfileResolver.cs" Link="Shared/Configuration/LayaProfileResolver.cs" />
+    <Compile Include="../../benchmarks/Laya.MemoryBenchmarks/Analysis/MemoryPolicy.cs" Link="Shared/Analysis/MemoryPolicy.cs" />
+    <Compile Include="../../benchmarks/Laya.MemoryBenchmarks/Analysis/MemoryPolicyLoader.cs" Link="Shared/Analysis/MemoryPolicyLoader.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Laya.Core.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="../../test-data/phase3a/memory-workloads.json" Link="test-data/phase3a/memory-workloads.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../test-data/phase3a/memory-workloads-manifest.json" Link="test-data/phase3a/memory-workloads-manifest.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

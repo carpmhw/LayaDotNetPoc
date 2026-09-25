@@ -1,0 +1,11 @@
+request_index,end_to_end_latency_ms,inference_latency_ms,integrity_failure
+0,1740.6101,130.5776,false
+1,1420.4355,98.1056,false
+2,1409.3565,96.1389,false
+3,1420.1851,89.6405,false
+4,1434.9142,108.8923,false
+5,1429.9968,93.5914,false
+6,1437.5505,119.5176,false
+7,1418.5842,98.1082,false
+8,1460.1772,97.2911,false
+9,1531.2248,82.794,false

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "profile": "multilingual",
+  "stateContract": {
+    "fieldOrder": ["description", "amount", "currency", "direction"],
+    "descriptionExpansion": "repeat the profile phrase descriptionRepeatCount times, joined by one ASCII space",
+    "synthetic": true
+  },
+  "stateProfiles": {
+    "short": {
+      "descriptionPhrase": "超市採購日用品",
+      "descriptionRepeatCount": 1,
+      "amount": 420,
+      "currency": "TWD",
+      "direction": "debit"
+    },
+    "medium": {
+      "descriptionPhrase": "超市採購日用品",
+      "descriptionRepeatCount": 12,
+      "amount": 420,
+      "currency": "TWD",
+      "direction": "debit"
+    },
+    "long": {
+      "descriptionPhrase": "超市採購日用品",
+      "descriptionRepeatCount": 64,
+      "amount": 420,
+      "currency": "TWD",
+      "direction": "debit"
+    }
+  },
+  "questions": {
+    "categoryOptions": [
+      "food",
+      "transport",
+      "shopping",
+      "utilities",
+      "transfer",
+      "salary",
+      "bank_fee",
+      "investment",
+      "medical",
+      "entertainment",
+      "other"
+    ],
+    "categoryPrompt": "Choose the best transaction category",
+    "noulPrompt": "Is this transaction uncertain?",
+    "sets": {
+      "1": [
+        { "name": "category", "type": "choice", "prompt": "categoryPrompt", "options": "categoryOptions" }
+      ],
+      "2": [
+        { "name": "category", "type": "choice", "prompt": "categoryPrompt", "options": "categoryOptions" },
+        { "name": "needs_review", "type": "noul", "prompt": "noulPrompt" }
+      ],
+      "5": [
+        { "name": "category_0", "type": "choice", "prompt": "categoryPrompt", "options": "categoryOptions" },
+        { "name": "needs_review_1", "type": "noul", "prompt": "noulPrompt" },
+        { "name": "category_2", "type": "choice", "prompt": "categoryPrompt", "options": "categoryOptions" },
+        { "name": "needs_review_3", "type": "noul", "prompt": "noulPrompt" },
+        { "name": "category_4", "type": "choice", "prompt": "categoryPrompt", "options": "categoryOptions" }
+      ]
+    }
+  },
+  "tokenizerInputs": [
+    { "id": "tokenizer-en", "language": "en", "text": "Cafe breakfast purchase" },
+    { "id": "tokenizer-zh", "language": "zh", "text": "便利商店早餐與咖啡" },
+    { "id": "tokenizer-mixed", "language": "mixed", "text": "便利商店咖啡 Cafe latte" }
+  ],
+  "calibrationFixture": {
+    "id": "calibration-mixed-english-reference",
+    "source": "test-data/multilingual-parity-fixtures.json#mixed-english",
+    "sourceClassification": "fixed-upstream-reference; isolated post-processing input; not Phase 3A transaction memory evidence",
+    "state": { "merchant": "NETFLIX.COM", "amount": 12.5 },
+    "questions": [
+      {
+        "name": "category",
+        "type": "choice",
+        "prompt": "Classify",
+        "criteria": { "food": "food", "other": "other" }
+      },
+      { "name": "needs_review", "type": "noul", "prompt": "Is this uncertain?" }
+    ],
+    "questionCount": 2,
+    "markerCount": 2,
+    "logits": [-4.5964226722717285, -0.46473056077957153, 2.556765079498291, -0.29583218693733215],
+    "actProbabilities": [1.0, 0.0, 1.0, 0.0],
+    "temperature": 1.0
+  },
+  "integrityRequests": [
+    {
+      "id": "integrity-001",
+      "state": { "description": "便利商店早餐", "amount": 96, "currency": "TWD", "direction": "debit" },
+      "questionSet": "2"
+    },
+    {
+      "id": "integrity-002",
+      "state": { "description": "Metro pass monthly renewal", "amount": 1280, "currency": "TWD", "direction": "debit" },
+      "questionSet": "2"
+    },
+    {
+      "id": "integrity-003",
+      "state": { "description": "Cafe latte 咖啡", "amount": 135, "currency": "TWD", "direction": "debit" },
+      "questionSet": "2"
+    },
+    {
+      "id": "integrity-004",
+      "state": { "description": "Monthly salary 薪資", "amount": 68000, "currency": "TWD", "direction": "credit" },
+      "questionSet": "2"
+    }
+  ]
+}

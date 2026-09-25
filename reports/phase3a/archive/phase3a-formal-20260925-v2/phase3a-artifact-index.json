@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v2",
+  "generatedUtc": "2026-09-24T20:43:39.9788714\u002B00:00",
+  "reports": [
+    {
+      "path": "baseline-full-pipeline.csv",
+      "sha256": "015fcfddc59a5ddb6df73500ff2f3c595c50192dbd7744d881bad62c91ffba68",
+      "sizeBytes": 41955
+    },
+    {
+      "path": "baseline-full-pipeline.md",
+      "sha256": "83b9f355657050c3fdbc0c8240b5b6001a66fb449ce9b91b32af2f9f621798f4",
+      "sizeBytes": 2004
+    },
+    {
+      "path": "environment-baseline.md",
+      "sha256": "0027edb15522c75fd0caf0a049c2caa4391a1918dcd9ea55bb183c84f98a6e27",
+      "sizeBytes": 8441
+    },
+    {
+      "path": "memory-policy-v2.json",
+      "sha256": "fca022bdbcc450d95eec4c28c4bcd00cc7aba9fec68fb5249c6f341f35628a68",
+      "sizeBytes": 3836
+    },
+    {
+      "path": "memory-policy.json",
+      "sha256": "191da02a3ce54b74feff9942095604e2ad7f99fe1a8e7fa37849303380f4dfc5",
+      "sizeBytes": 3644
+    },
+    {
+      "path": "phase3a-docker-memory.md",
+      "sha256": "49bc70d1b82f39a558b9d7c9198da86613eafc97308c3e2f5798d5f4a6e870f9",
+      "sizeBytes": 360
+    },
+    {
+      "path": "phase3a-lifecycle-audit.json",
+      "sha256": "65a301f6f25033c0b32dfcb05d5c44d730c70558fea4162e96bd0c49e4569b81",
+      "sizeBytes": 6694
+    },
+    {
+      "path": "phase3a-lifecycle-audit.md",
+      "sha256": "65a301f6f25033c0b32dfcb05d5c44d730c70558fea4162e96bd0c49e4569b81",
+      "sizeBytes": 6694
+    },
+    {
+      "path": "phase3a-managed-heap-counter-v2.md",
+      "sha256": "3ff5085e25dcedaf2c824f5ef0e592f909f5a73d7da7c952895f6101a868e9d3",
+      "sizeBytes": 1656
+    },
+    {
+      "path": "phase3a-memory-components.md",
+      "sha256": "ffa7c500593a431a4eb4aab4c9cd7ab973a879539641ea84e19906bc07b55a0d",
+      "sizeBytes": 1034
+    },
+    {
+      "path": "phase3a-memory-concurrency.md",
+      "sha256": "6df7953f248f27eb80b53b7ae81c19ea9520936c870e149ec22954e3a82c969f",
+      "sizeBytes": 326
+    },
+    {
+      "path": "phase3a-memory-gate-report.md",
+      "sha256": "c0aa330556a26f54bfc8877bed07e716cb42e40060f13046e35df04a9605136a",
+      "sizeBytes": 805
+    },
+    {
+      "path": "phase3a-memory-gate.json",
+      "sha256": "0abf8454001bf0e5c0f11c60fff88db09b943ad9d7cf08a41a38ab216e4d7a85",
+      "sizeBytes": 5718
+    },
+    {
+      "path": "phase3a-memory-samples.csv",
+      "sha256": "4c1ac676501b45e4f6a0ceb12f52446ef559070d961310e531019d0a1fd893a6",
+      "sizeBytes": 718758
+    },
+    {
+      "path": "phase3a-ort-arena-comparison.md",
+      "sha256": "ce3852b05b4b50ff96b2404b7cb126d6d85a52effb5b4c7c3ff9f81fee0f6a70",
+      "sizeBytes": 375
+    },
+    {
+      "path": "phase3a-pilot-calibration-v2.json",
+      "sha256": "251ee705174657c11b25f97c34a8ce263ac2737892ff96d537b3a2cfa0df9faa",
+      "sizeBytes": 11191
+    },
+    {
+      "path": "phase3a-pilot-calibration-v2.md",
+      "sha256": "5c4c43f09c026e52cd4eb6bfb2d0f4161209a6f8f52768ed2690933ff5306a05",
+      "sizeBytes": 4710
+    },
+    {
+      "path": "phase3a-pilot-calibration.json",
+      "sha256": "56534c4c65cc488faa6b7d5cb9e45ec86d8ad718c9d3756bab1f09dfe36583bf",
+      "sizeBytes": 10017
+    },
+    {
+      "path": "phase3a-pilot-calibration.md",
+      "sha256": "70fb4515f011855568021a9ff561e1091eedc7c819585a18bcdc5de0fa6484a2",
+      "sizeBytes": 5610
+    },
+    {
+      "path": "phase3a-reproducibility.md",
+      "sha256": "cb756272d6b118041c86769a5bfa4742dcfa3c26993ec0a5ed4171795d8e53e1",
+      "sizeBytes": 315
+    },
+    {
+      "path": "phase3a-session-lifecycle.md",
+      "sha256": "bb2769dffa98dc283e9599798e8cf74a175050beac666ea10d8ddfdd4363e2eb",
+      "sizeBytes": 398
+    },
+    {
+      "path": "phase3a-shape-memory-matrix.md",
+      "sha256": "a51527399e8c9b225f62f1ed13a818f919df5f16e7a6bd4eaf6834b80026c1ff",
+      "sizeBytes": 320
+    }
+  ]
+}

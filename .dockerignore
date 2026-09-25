@@ -1,6 +1,7 @@
 .git
 .opencode
 .superpowers
+AGENTS.md
 bin/
 obj/
 BenchmarkDotNet.Artifacts/

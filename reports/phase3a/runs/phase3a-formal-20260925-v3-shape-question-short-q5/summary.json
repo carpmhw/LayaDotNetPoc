@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-shape-question-short-q5",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 1000,
+  "warmupRequests": 5,
+  "attemptedRequests": 1000,
+  "completedRequests": 1000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 1000,
+    "meanMilliseconds": 298.3850589,
+    "p50Milliseconds": 296.0617,
+    "p95Milliseconds": 350.469595,
+    "p99Milliseconds": 376.36346699999996,
+    "minMilliseconds": 228.8776,
+    "maxMilliseconds": 543.6012,
+    "lastMilliseconds": 260.8045
+  },
+  "checksum": 3242.4372419009196
+}

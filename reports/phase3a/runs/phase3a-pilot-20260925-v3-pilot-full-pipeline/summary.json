@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-pilot-20260925-v3-pilot-full-pipeline",
+  "scenario": "full-pipeline",
+  "mode": "pilot",
+  "status": "complete",
+  "plannedRequests": 200,
+  "warmupRequests": 5,
+  "attemptedRequests": 200,
+  "completedRequests": 200,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 200,
+    "meanMilliseconds": 76.893316,
+    "p50Milliseconds": 75.01859999999999,
+    "p95Milliseconds": 98.90073499999998,
+    "p99Milliseconds": 133.60111699999996,
+    "minMilliseconds": 53.2154,
+    "maxMilliseconds": 142.9042,
+    "lastMilliseconds": 65.9854
+  },
+  "checksum": 202.9796635293136
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "policyId": "phase3a-memory-policy-20260925-v3",
+  "status": "frozen",
+  "frozenUtc": "2026-09-24T21:18:06Z",
+  "freezeCommit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+  "pilotRunIds": [
+    "phase3a-pilot-20260925-v3-pilot-tokenizer-en",
+    "phase3a-pilot-20260925-v3-pilot-tokenizer-zh",
+    "phase3a-pilot-20260925-v3-pilot-tokenizer-mixed",
+    "phase3a-pilot-20260925-v3-pilot-full-pipeline",
+    "phase3a-pilot-noise-a-20260925-v3",
+    "phase3a-pilot-noise-b-20260925-v3",
+    "phase3a-pilot-noise-c-20260925-v3",
+    "phase3a-pilot-docker-fullpipeline-500-20260925-v3"
+  ],
+  "pilotArtifactSha256": "4d81a9dbf657d7dbf3547230b0d2aa59972c2fc096566fb0269458995676a4ef",
+  "targetMemoryLimitBytes": 3000000000,
+  "rationale": "Frozen from the v3 calibration artifact generated with the unique shape-matrix planner and negative-managed-counter guard. The largest native 500-1000 VmRSS endpoint rate was 888012.8 bytes per 100 requests; the 2000000-byte ceiling is a 2.25x margin and remains a POC limit. The 3000000000-byte Docker target reserves 600000000 bytes (20%) as deployment headroom. A separate 64000000-byte late-growth cap is 10.7% of that reserve; a 2 MB/100 rate projects to 50 MB across a 2500-request late segment. Managed heap uses half the process/RSS growth cap and unavailable samples block that segment. Peak/end tolerance is 5%; slope tolerance is 25% and invokes a third run when exceeded. R-squared 0.95 is a strict fit-quality criterion, never a standalone leak condition. The v1/v2 formal runs with other source identities are excluded from the v3 campaign. These are POC acceptance values, not formal outcomes or production SLA.",
+  "limitations": "Native pilot requests used .NET 10.0.12／ONNX Runtime 1.30.0.0; a separate 500-request Docker pilot used .NET 8.0.31 and is not a matched replicate. One v3 1000-request native repeat had three negative GC.GetTotalMemory(false) samples, which were saved as null plus reason; these unavailable points are not used as numeric slope inputs. The native host cgroup limit is unavailable at the visible mount. The 2500-5000 late segment, full formal matrix and Docker 3000000000-byte target runs have not yet been completed. Collector/writer/latency buffer allocation was not isolated against a telemetry-disabled control. Any threshold change requires a new policy hash and campaign.",
+  "thresholds": {
+    "privateMemory": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "rss": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "managedHeap": {
+      "maximumLateSlopeBytesPer100Requests": 1000000,
+      "lateGrowthBudgetBytes": 32000000
+    },
+    "nearLinearR2Minimum": 0.95,
+    "replicateTolerance": {
+      "peakRelativeDifferenceMaximum": 0.05,
+      "endRelativeDifferenceMaximum": 0.05,
+      "slopeRelativeDifferenceMaximum": 0.25
+    }
+  },
+  "minimumMatrix": {
+    "baselineRuns": 2,
+    "runOnlyRuns": 2,
+    "arenaOnRuns": 2,
+    "arenaOffRuns": 2,
+    "dockerTargetRuns": 2,
+    "repetitionsBeforeThirdRun": 2,
+    "baselineRequests": 5000,
+    "runOnlyRequests": 5000,
+    "arenaRequests": 5000,
+    "tokenizerRequestsPerLanguage": 10000,
+    "sequenceOnlyRequests": 10000,
+    "tensorOnlyRequests": 10000,
+    "calibrationOnlyRequests": 10000,
+    "shapeAndConcurrencyRequests": 1000,
+    "dockerLimitsBytes": [2000000000, 2500000000, 3000000000, 4000000000],
+    "dockerSmokeRequests": [100, 1000],
+    "dockerExtendedLimitsBytes": [3000000000, 4000000000],
+    "dockerExtendedRequests": 5000,
+    "sessionRecreateCycles": [10, 100],
+    "shapeProfiles": ["short", "medium", "long"],
+    "questionCounts": [1, 2, 5],
+    "concurrencyLevels": [1, 2, 4]
+  }
+}

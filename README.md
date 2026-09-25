@@ -167,6 +167,57 @@ docker build --tag laya-dotnet-poc:phase2 .
 
 驗證 script 會保留 2／3／4 GiB 各自的 raw output；缺 Docker、缺 mount、OOM 或 request failure 都不會冒充通過。
 
+## Phase 3A Memory Investigation
+
+Phase 3A 是離線記憶體診斷工具，不是 BankReportImporter 整合或 production SLA。Probe 固定使用已驗證的 multilingual bundle 與 CPU execution provider；不下載或替換模型。每次 run 以唯一 ID 寫入 `reports/phase3a/runs/<run-id>/`，保存逐行 samples、numeric latency、errors、summary、manifest 與 artifact hashes。既有 run ID 不可覆寫。
+
+### MemoryProbe scenarios
+
+| Scenario | 迴圈工作 | ONNX session |
+| --- | --- | --- |
+| `tokenizer-only` | 固定 zh／en／mixed fixture 編碼 | 不建立 |
+| `sequence-only` | 真實序列建構，包含 serialization／tokenization | 不建立 |
+| `tensor-only` | 建立並釋放五項 input arrays／OrtValues | 不建立 |
+| `run-only` | 固定 inputs／每 worker RunOptions，只執行 ONNX Run 並釋放 outputs | 一個共享 session |
+| `calibration-only` | 固定 raw output 的 calibration／result mapping | 不建立 |
+| `full-pipeline` | Serialize → Tokenize → Build → Tensor → Run → Calibration → Map | 一個長生命週期 session |
+| `session-recreate` | 每 cycle Create → Run once → Dispose | 每 cycle 新 session |
+
+`--requests` 是正式 measured work，不含暖機；一般 scenario 預設 warmup 5 且至少 5，`session-recreate` 固定 warmup 0。latency buffers 有界，單次 run 最多接受 100,000 requests。預設每 50 個完成 requests 採樣；每 worker 的輸入與 RunOptions 獨立。`--questions` 僅接受 1／2／5；state 為 `short`／`medium`／`long`。預設 workload 來自 `test-data/phase3a/memory-workloads.json`；tokenizer fixture ID 為 `tokenizer-en`、`tokenizer-zh`、`tokenizer-mixed`，calibration fixture ID 為 `calibration-mixed-english-reference`。
+
+### Pilot 與正式 campaign
+
+先執行獨立 pilot，不把 pilot runs 當正式 Gate evidence：
+
+```bash
+./tools/run-phase3a-memory.sh \
+  --stage pilot \
+  --mode pilot \
+  --campaign-id phase3a-pilot-YYYYMMDD \
+  --model-root models/laya-multilingual \
+  --output-root reports/phase3a
+```
+
+wrapper 會將 multilingual pointer 解析為 versioned bundle、建置 solution，再由獨立 Probe 子程序執行 stage。`--resume` 僅適用於相同 campaign／stage 且 immutable identity 相同的 campaign runs；不覆寫既有證據。Docker matrix 不會覆寫中斷的 output，需先檢視既有結果並以新 campaign ID 另行執行。
+
+正式 mode 必須提供完整、已凍結的 memory policy。v1 因 managed-heap counter 品質異常、v2 因 shape planner run-ID 修正造成 source identity 變更而保留為歷史 evidence；新的 formal campaign 使用 `reports/phase3a/memory-policy-v3.json`，不得跨版本混跑：
+
+```bash
+./tools/run-phase3a-memory.sh \
+  --stage all \
+  --mode formal \
+  --campaign-id phase3a-formal-YYYYMMDD \
+  --model-root models/laya-multilingual \
+  --policy reports/phase3a/memory-policy-v3.json \
+  --output-root reports/phase3a
+```
+
+Policy 必須帶 pilot run IDs／artifact hash、freeze time／commit、理由與限制；PrivateMemory／RSS／managed late slope 和 growth budgets、近線性 R²、replicate tolerance、minimum matrix 均須明確填值。target 固定為十進位 `3,000,000,000` bytes。不得以範例門檻、Phase 2 的 WorkingSet 比例或事後調整門檻代替 pilot 校準。
+
+`tools/validate-phase3a-deployment.sh` 使用 2／2.5／3／4 GB 十進位 bytes，設定相同 memory／memory-swap 並驗證 inspect 與 page-rounded cgroup limit。報告分別標記 process VmRSS、cgroup memory counters 與可能含 file cache 的 usage；這些指標不可互相冒稱。Docker effective limit 可能按 host page size round down；無法核對限制或必要 counters 時 evidence blocked。3 GB target 的獨立 5,000-request runs 是部署 Gate；較高限額成功不能抵銷 target OOM。
+
+詳細 CLI、run evidence、resume 限制與驗證命令請見 [`tools/Laya.MemoryProbe/README.md`](tools/Laya.MemoryProbe/README.md)。
+
 ## Known Limitations
 
 - English ONNX bundle 是 Phase 1 regression；中文／混合文字測試不代表 multilingual checkpoint 表現。

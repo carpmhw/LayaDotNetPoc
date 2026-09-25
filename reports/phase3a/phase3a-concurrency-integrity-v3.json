@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v3",
+  "stage": "concurrency",
+  "status": "blocked-integrity-not-executed",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "737f971d1cf7de4409c026245c8cbf9f09fe1279e1149559f0c146b34924dfec"
+  },
+  "policySha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+  "concurrencyRuns": [
+    { "runId": "phase3a-formal-20260925-v3-concurrency-1", "requests": 1000, "completedRequests": 1000, "errors": 0, "integrityFailuresCounter": 0 },
+    { "runId": "phase3a-formal-20260925-v3-concurrency-2", "requests": 1000, "completedRequests": 1000, "errors": 0, "integrityFailuresCounter": 0 },
+    { "runId": "phase3a-formal-20260925-v3-concurrency-4", "requests": 1000, "completedRequests": 1000, "errors": 0, "integrityFailuresCounter": 0 }
+  ],
+  "integrityRequests": [
+    "integrity-001",
+    "integrity-002",
+    "integrity-003",
+    "integrity-004"
+  ],
+  "integrityChecksExecuted": false,
+  "reason": "MemoryWorkloadCatalog defines four fixed integrity requests, but the current concurrency plan/Probe execution never invokes them or compares shared-engine answers to a serial reference. Full-pipeline ProbeOperationSample currently reports IntegrityFailure=false; zero counters therefore do not prove integrity parity.",
+  "gateInterpretation": "Keep the concurrency integrity requirement blocked; do not convert the counter value of zero into a passing integrity result."
+}

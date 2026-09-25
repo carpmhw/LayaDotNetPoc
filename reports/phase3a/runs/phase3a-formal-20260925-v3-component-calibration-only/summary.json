@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-component-calibration-only",
+  "scenario": "calibration-only",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 10000,
+  "warmupRequests": 5,
+  "attemptedRequests": 10000,
+  "completedRequests": 10000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 10000,
+    "meanMilliseconds": 0.004692659999999808,
+    "p50Milliseconds": 0.0033,
+    "p95Milliseconds": 0.0096,
+    "p99Milliseconds": 0.0347,
+    "minMilliseconds": 0.0021,
+    "maxMilliseconds": 1.0483,
+    "lastMilliseconds": 0.003
+  },
+  "checksum": 10392.64612798048
+}

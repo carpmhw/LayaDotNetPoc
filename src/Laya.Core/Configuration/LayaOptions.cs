@@ -9,7 +9,8 @@ public sealed record LayaOptions
         string? profile = null,
         string? checkpointRevision = null,
         string? manifestPath = null,
-        bool allowCandidateStaged = false)
+        bool allowCandidateStaged = false,
+        bool enableCpuMemArena = true)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(modelRoot);
         ModelRoot = Path.GetFullPath(modelRoot);
@@ -17,6 +18,7 @@ public sealed record LayaOptions
         CheckpointRevision = checkpointRevision;
         ManifestPath = manifestPath is null ? null : Path.GetFullPath(manifestPath);
         AllowCandidateStaged = allowCandidateStaged;
+        EnableCpuMemArena = enableCpuMemArena;
     }
 
     /// <summary>取得模型 bundle 的絕對根目錄。</summary>
@@ -33,4 +35,7 @@ public sealed record LayaOptions
 
     /// <summary>取得是否由 parity harness 明確允許載入 candidate-staged bundle。</summary>
     public bool AllowCandidateStaged { get; }
+
+    /// <summary>取得是否啟用 ONNX Runtime CPU memory arena。</summary>
+    public bool EnableCpuMemArena { get; }
 }

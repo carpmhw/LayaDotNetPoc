@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-repro-arena-off-r2",
+  "campaignId": "phase3a-formal-20260925-v3",
+  "mode": "formal",
+  "status": "complete",
+  "scenario": "full-pipeline",
+  "startedUtc": "2026-09-25T01:34:55.6239508\u002B00:00",
+  "endedUtc": "2026-09-25T01:48:24.7216702\u002B00:00",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "737f971d1cf7de4409c026245c8cbf9f09fe1279e1149559f0c146b34924dfec"
+  },
+  "policySha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+  "workloadSha256": "9c781dd4f312dc90b5f74443721650a7f2a5a87d2745bbdb6d353fb900a5b56a",
+  "model": {
+    "profile": "multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "bundleRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "tokenizerSha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+  },
+  "environment": {
+    "os": "Linux Mint 22.3",
+    "kernel": "7.0.0-34-generic",
+    "architecture": "X64",
+    "cpu": "AMD Ryzen 7 255 w/ Radeon 780M Graphics",
+    "logicalCores": 10,
+    "ramBytes": 16692830208,
+    "swapBytes": 2147479552,
+    "dotnetSdk": "10.0.112",
+    "dotnetRuntime": ".NET 10.0.12",
+    "onnxRuntime": "1.30.0.0",
+    "executionProvider": "CPU",
+    "containerRuntime": null,
+    "memoryLimitBytes": null,
+    "memorySwapLimitBytes": null
+  },
+  "requestedConfiguration": {
+    "profile": "multilingual",
+    "concurrency": 1,
+    "cpuArena": false,
+    "warmupRequests": 5,
+    "sampleEvery": 50,
+    "stateProfile": "short",
+    "questionCount": 1,
+    "idleSeconds": [
+      30,
+      60,
+      300
+    ],
+    "idleOmissionReason": null,
+    "gcCheckpoints": [],
+    "gcTreatment": "natural",
+    "naturalSamplesExcludeForcedGc": true
+  },
+  "plannedCounts": {
+    "warmupRequests": 5,
+    "attemptedRequests": 5000,
+    "completedRequests": 5000,
+    "errors": 0,
+    "integrityFailures": 0
+  },
+  "actualCounts": {
+    "warmupRequests": 5,
+    "attemptedRequests": 5000,
+    "completedRequests": 5000,
+    "errors": 0,
+    "integrityFailures": 0
+  },
+  "terminalOutcome": "completed",
+  "failure": null,
+  "artifacts": [
+    {
+      "path": "phase3a-memory-samples.csv",
+      "sha256": "00e748e0278b0844acd81613f51162beb1b0892d4edd2f24dcfd113c41c21fb7",
+      "sizeBytes": 41490,
+      "status": "complete",
+      "unavailableReason": null
+    },
+    {
+      "path": "phase3a-memory-latency.csv",
+      "sha256": "6a9f5817b85e179513a104cbc6aac11b3914e3b6b8b52aa8b1b17745ca63992e",
+      "sizeBytes": 134119,
+      "status": "complete",
+      "unavailableReason": null
+    },
+    {
+      "path": "phase3a-memory-errors.csv",
+      "sha256": "8b4a0412a99d12bedb0a0626f3a80cde48c333cb9ddd255ad1cc9f2fad470b9a",
+      "sizeBytes": 37,
+      "status": "complete",
+      "unavailableReason": null
+    },
+    {
+      "path": "summary.json",
+      "sha256": "bdce41059909c90af934168fb8f3aa980380d81383909b1da3d113221ba1bf09",
+      "sizeBytes": 644,
+      "status": "complete",
+      "unavailableReason": null
+    }
+  ]
+}

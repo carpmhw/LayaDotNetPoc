@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-pilot-docker-load-20260925",
+  "scenario": "load-only",
+  "mode": "pilot",
+  "status": "complete",
+  "plannedRequests": 0,
+  "warmupRequests": 0,
+  "attemptedRequests": 0,
+  "completedRequests": 0,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": null,
+  "checksum": 0
+}

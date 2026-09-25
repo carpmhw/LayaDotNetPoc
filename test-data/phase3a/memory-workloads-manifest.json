@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "createdUtc": "2026-09-24T13:33:16Z",
+  "workload": {
+    "path": "test-data/phase3a/memory-workloads.json",
+    "sha256": "9c781dd4f312dc90b5f74443721650a7f2a5a87d2745bbdb6d353fb900a5b56a",
+    "source": "synthetic; authored for Phase 3A; contains no customer transaction data"
+  },
+  "contracts": {
+    "state": {
+      "source": "src/Laya.Core/Evaluation/LayaTransactionRequestFactory.cs",
+      "fieldOrder": ["description", "amount", "currency", "direction"],
+      "serializationVersion": "laya-state-v1",
+      "phase2DatasetManifest": "test-data/transactions-phase2-manifest.json",
+      "phase2DatasetManifestSha256": "0503882813a57430e28d9acea25eeb08053c7ab881c5e74ab3d2a70b2ba82ccd",
+      "phase2Dataset": "test-data/transactions-phase2.csv",
+      "phase2DatasetSha256": "3d25581e9014c1de9709346f1bf5cd49a5d88614e085a19a9015eee578b7f4e9",
+      "annotationGuideline": "test-data/category-label-guideline.md",
+      "annotationGuidelineSha256": "6304c96ae622fe8e6db9c314168b356edc1a073ada60bc9269f5d0eea6a0e0bb"
+    },
+    "questions": {
+      "source": "src/Laya.Core/Evaluation/LayaTransactionRequestFactory.cs; src/Laya.Core/Evaluation/LayaPhase2Evaluation.cs",
+      "categoryPrompt": "Choose the best transaction category",
+      "noulPrompt": "Is this transaction uncertain?",
+      "categoryOrder": ["food", "transport", "shopping", "utilities", "transfer", "salary", "bank_fee", "investment", "medical", "entertainment", "other"]
+    },
+    "multilingualBundle": {
+      "sourceManifest": "test-data/multilingual-reference-manifest.json",
+      "profile": "multilingual",
+      "checkpointRevision": "052592a15d198d9ad47da779604259b10b47b7aa",
+      "bundleRoot": "models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+      "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+      "tokenizerSha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+    },
+    "calibration": {
+      "source": "test-data/multilingual-parity-fixtures.json",
+      "sourceSha256": "fe97f8e47b08c2377af88cffda9610e30615104104784123a9d0c79ddeddc23f",
+      "fixtureId": "mixed-english",
+      "use": "isolated calibration-only input; not transaction accuracy or memory evidence"
+    }
+  },
+  "integrityContract": {
+    "requests": 4,
+    "goldenPredictions": false,
+    "comparison": "same fixed request IDs and workload are executed sequentially and concurrently under the same verified bundle; compare result identity and values using existing parity tolerance",
+    "sensitiveTransactionText": false
+  }
+}

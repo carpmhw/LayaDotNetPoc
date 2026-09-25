@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Laya.Core/Laya.Core.csproj" />
+    <Compile Include="../../src/Shared/Configuration/LayaProfileResolver.cs" Link="Shared/Configuration/LayaProfileResolver.cs" />
+    <Compile Include="../../tools/Laya.MemoryProbe/Reporting/MemoryProbeHostMetadata.cs" Link="Shared/MemoryProbeHostMetadata.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Laya.Core.Tests" />
+  </ItemGroup>
+
+</Project>

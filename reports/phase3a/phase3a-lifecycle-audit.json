@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "auditStatus": "complete",
+  "campaignId": "phase3a-formal-20260925-v3",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "737f971d1cf7de4409c026245c8cbf9f09fe1279e1149559f0c146b34924dfec"
+  },
+  "policySha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+  "ownerAudit": [
+    {
+      "owner": "Input OrtValues and backing arrays",
+      "source": "src/Laya.Core/Inference/LayaInputTensorOwner.cs",
+      "successPath": "LayaInferenceRunner.Run scopes one owner with using. Dispose atomically invalidates Inputs, releases five OrtValues in reverse order, and keeps the batch／attention-mask arrays alive through release.",
+      "partialConstructionFailure": "Create catches tensor factory failure and disposes values already created; disposal exceptions are aggregated with the construction exception.",
+      "runOnlyPath": "Each RunOnlyWorker owns a fixed LayaInputTensorOwner; bounded workers drain before scenario owners are disposed.",
+      "tests": [
+        "LayaInputTensorOwnerTests.Create_OwnsFiveInputsAndDisposesThemOnce",
+        "LayaInputTensorOwnerTests.Create_DisposesPreviouslyCreatedValuesWhenFactoryThrows",
+        "LayaInferenceRunnerLifecycleTests.Run_DisposesInputValuesWhenNativeRunThrows"
+      ]
+    },
+    {
+      "owner": "RunOptions and native output OrtValues",
+      "source": "src/Laya.Core/Inference/LayaInferenceRunner.cs",
+      "successPath": "RunOptions and IDisposableReadOnlyCollection<OrtValue> outputs are scoped with using; outputs are copied to managed arrays before native collection disposal.",
+      "failurePath": "The same scopes release inputs／RunOptions／returned outputs after native Run or output validation/copy errors.",
+      "runOnlyPath": "Run-only workers retain their own RunOptions and inputs; each per-request output collection is disposed.",
+      "tests": ["LayaInferenceRunnerLifecycleTests.Run_DisposesInputValuesWhenNativeRunThrows"]
+    },
+    {
+      "owner": "ONNX InferenceSession and SessionOptions",
+      "source": "src/Laya.Core/Inference/LayaOnnxSession.cs",
+      "successPath": "A successfully initialized InferenceSession transfers to LayaOnnxSession; SessionOptions are disposed in finally. Session.Dispose atomically clears and releases the native session.",
+      "initializationFailure": "Open disposes an untransferred session and always disposes SessionOptions; CPU provider setup disposes options if append fails.",
+      "tests": [
+        "LayaOnnxSessionOptionsTests.CreateSessionOptions_EnablesCpuArenaWhenRequested",
+        "LayaOnnxSessionOptionsTests.CreateSessionOptions_DisablesCpuArenaWhenRequested",
+        "LayaInferenceRunnerLifecycleTests.Run_DisposesInputValuesWhenNativeRunThrows"
+      ]
+    },
+    {
+      "owner": "Long-lived decision engine and tokenizer",
+      "source": "src/Laya.Core/Inference/LayaDecisionEngine.cs; src/Laya.Core/Tokenization/LayaTokenizer.cs",
+      "successPath": "LayaDecisionEngine.Dispose releases tokenizer then session idempotently. LayaTokenizer owns its native tokenizer handle and disposes it atomically.",
+      "initializationFailure": "Engine Open disposes loaded tokenizer/session on failure; tokenizer Load disposes a partially created tokenizer in finally unless ownership transfers.",
+      "tests": [
+        "LayaDecisionEngineTests.Dispose_ReleasesInjectedSessionAndTokenizerAfterRepeatedDecisions",
+        "LayaTokenizerTests.Load_RejectsMissingSpecialTokenConfig"
+      ]
+    },
+    {
+      "owner": "Probe scenario execution and run-only workers",
+      "source": "tools/Laya.MemoryProbe/Scenarios/MemoryProbeScenarioExecution.cs",
+      "successPath": "Scenario shutdown drains workers, disposes each worker owner, then releases engine/session/tokenizer. Arrays remain managed and are retained only by batch/owner references.",
+      "partialFailure": "Scenario creation disposes partially acquired resources; Run-only worker creation disposes its input owner if RunOptions construction fails.",
+      "tests": [
+        "MemoryProbeScenarioExecutionTests.Create_ComponentScenariosDoNotOpenInferenceSession",
+        "BoundedProbeCoordinatorTests.ExecuteAsync_CancellationDrainsInFlightWorkers",
+        "BoundedProbeCoordinatorTests.ExecuteAsync_UsesBoundedWorkersAndDispatchesEachRequestOnce"
+      ]
+    }
+  ],
+  "measuredTotalAllocatedBytes": [
+    {
+      "runId": "phase3a-formal-20260925-v3-baseline-full-pipeline",
+      "request0": 2214992,
+      "request5000": 130830416,
+      "postDispose": 131403888,
+      "measuredRequestIntervalDeltaBytes": 128615424,
+      "errors": 0,
+      "integrityFailures": 0,
+      "managedCounterUnavailableInLateSegment": true
+    },
+    {
+      "runId": "phase3a-formal-20260925-v3-component-full-pipeline",
+      "request0": 2206984,
+      "request5000": 130817248,
+      "postDispose": 131390824,
+      "measuredRequestIntervalDeltaBytes": 128610264,
+      "errors": 0,
+      "integrityFailures": 0,
+      "managedCounterUnavailableInLateSegment": true
+    },
+    {
+      "runId": "phase3a-formal-20260925-v3-component-run-only",
+      "request0": 2132064,
+      "request5000": 14498624,
+      "postDispose": 14672384,
+      "measuredRequestIntervalDeltaBytes": 12366560,
+      "errors": 0,
+      "integrityFailures": 0
+    }
+  ],
+  "sessionRecreateObservations": [
+    {
+      "runId": "phase3a-formal-20260925-v3-session-recreate-10",
+      "cycles": 10,
+      "status": "complete",
+      "errors": 0,
+      "cycle0BeforeWorkingSetBytes": 398356480,
+      "cycle0BeforePrivateMemoryBytes": 514580480,
+      "postDisposeWorkingSetBytes": 714723328,
+      "postDisposePrivateMemoryBytes": 910888960,
+      "postDisposeVmRssBytes": 714702848
+    },
+    {
+      "runId": "phase3a-formal-20260925-v3-session-recreate-100",
+      "cycles": 100,
+      "status": "complete",
+      "errors": 0,
+      "cycle0BeforeWorkingSetBytes": 398622720,
+      "cycle0BeforePrivateMemoryBytes": 514617344,
+      "postDisposeWorkingSetBytes": 727191552,
+      "postDisposePrivateMemoryBytes": 905306112,
+      "postDisposeVmRssBytes": 727191552,
+      "postDisposeTotalAllocatedBytes": 30997272
+    }
+  ],
+  "lifecycleDisposition": {
+    "leakReproduced": false,
+    "retentionSourceIdentified": false,
+    "lifecycleAuditConfirmsUndisposedResource": false,
+    "nativeRetentionObserved": true,
+    "boundedNativeRetention": false,
+    "nativeRetentionExplained": false,
+    "allocatorComparisonSupportsPlateau": false,
+    "sessionRecreateUnboundedGrowth": false,
+    "arenaTradeoffExplained": false,
+    "deploymentLimitDocumented": true,
+    "monitoringConditionsDocumented": false,
+    "finding": "Source review and covered tests found no confirmed undisposed owner. Session-recreate has residual process memory after disposal; the difference between 10 and 100 cycles is small, but it is not source-attributed or established as a bounded allocator plateau. Full-pipeline managed-heap late segments have unavailable observations, and the v3 shape stage is partial; no Leak Confirmed/No Leak Evidence classification is supported."
+  }
+}

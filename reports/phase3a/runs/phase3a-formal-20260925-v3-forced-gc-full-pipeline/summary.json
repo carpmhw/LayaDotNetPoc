@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-forced-gc-full-pipeline",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 5000,
+  "warmupRequests": 5,
+  "attemptedRequests": 5000,
+  "completedRequests": 5000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 5000,
+    "meanMilliseconds": 79.60674504000045,
+    "p50Milliseconds": 76.983,
+    "p95Milliseconds": 108.486225,
+    "p99Milliseconds": 128.22544800000009,
+    "minMilliseconds": 47.5284,
+    "maxMilliseconds": 270.5905,
+    "lastMilliseconds": 54.3608
+  },
+  "checksum": 4955.674224215673
+}

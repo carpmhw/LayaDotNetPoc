@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v2-component-tensor-only",
+  "scenario": "tensor-only",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 10000,
+  "warmupRequests": 5,
+  "attemptedRequests": 10000,
+  "completedRequests": 10000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 10000,
+    "meanMilliseconds": 0.006921890000000039,
+    "p50Milliseconds": 0.0047,
+    "p95Milliseconds": 0.0131,
+    "p99Milliseconds": 0.03780100000000002,
+    "minMilliseconds": 0.0028,
+    "maxMilliseconds": 3.0406,
+    "lastMilliseconds": 0.0149
+  },
+  "checksum": 50025
+}

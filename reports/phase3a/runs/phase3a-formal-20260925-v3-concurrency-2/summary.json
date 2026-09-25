@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-concurrency-2",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 1000,
+  "warmupRequests": 5,
+  "attemptedRequests": 1000,
+  "completedRequests": 1000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 1000,
+    "meanMilliseconds": 138.0309344000001,
+    "p50Milliseconds": 135.61180000000002,
+    "p95Milliseconds": 174.896855,
+    "p99Milliseconds": 193.058191,
+    "minMilliseconds": 96.8095,
+    "maxMilliseconds": 267.3397,
+    "lastMilliseconds": 133.2338
+  },
+  "checksum": 1123.6709091286364
+}

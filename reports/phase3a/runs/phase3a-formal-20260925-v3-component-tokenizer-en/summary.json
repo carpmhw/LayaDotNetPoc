@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-component-tokenizer-en",
+  "scenario": "tokenizer-only",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 10000,
+  "warmupRequests": 5,
+  "attemptedRequests": 10000,
+  "completedRequests": 10000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 10000,
+    "meanMilliseconds": 0.009204499999999751,
+    "p50Milliseconds": 0.0068,
+    "p95Milliseconds": 0.01610499999999993,
+    "p99Milliseconds": 0.06690700000000016,
+    "minMilliseconds": 0.0045,
+    "maxMilliseconds": 0.5989,
+    "lastMilliseconds": 0.0078
+  },
+  "checksum": 348994410
+}

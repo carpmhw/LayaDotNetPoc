@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "policyId": "phase3a-memory-policy-20260925-v1",
+  "status": "frozen",
+  "frozenUtc": "2026-09-24T18:16:05Z",
+  "freezeCommit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+  "pilotRunIds": [
+    "phase3a-pilot-20260925-pilot-tokenizer-en",
+    "phase3a-pilot-20260925-pilot-tokenizer-zh",
+    "phase3a-pilot-20260925-pilot-tokenizer-mixed",
+    "phase3a-pilot-20260925-pilot-full-pipeline",
+    "phase3a-pilot-noise-a-20260925",
+    "phase3a-pilot-noise-b-20260925",
+    "phase3a-pilot-docker-load-20260925"
+  ],
+  "pilotArtifactSha256": "56534c4c65cc488faa6b7d5cb9e45ec86d8ad718c9d3756bab1f09dfe36583bf",
+  "targetMemoryLimitBytes": 3000000000,
+  "rationale": "Frozen from three .NET 10 full-pipeline pilot runs, fixed tokenizer fixtures, and a separate .NET 8 Docker load-only smoke. The larger native 500-1000 RSS endpoint rate was 888832 bytes per 100 requests; 2000000 bytes per 100 requests is a 2.25x margin. The target is 3000000000 decimal bytes; reserve 600000000 bytes (20%) as deployment headroom. A separate 64000000-byte late growth cap is 10.7% of that reserve and 14000000 bytes above the slope-only 50000000-byte allowance over 2500 requests. Managed heap uses half that retained-growth cap. Replicate peak/end tolerances are 5%; the 25% slope tolerance is about three times the observed native RSS endpoint-rate difference, with a third replicate required on disagreement. R-squared 0.95 is a strict fit-quality floor and never independently establishes a leak. These are POC acceptance inputs, not measured formal outcomes or a production SLA.",
+  "limitations": "Native pilot requests used .NET 10.0.12 and ONNX Runtime 1.30.0.0. The Docker smoke used .NET 8.0.31 but executed load-only with zero requests; it is not a matched request replicate. Native repeats ended at 1000 requests, so the 2500-5000 formal late segment and 3000000000-byte Docker target remain untested. Collector/writer/latency-window allocations were not isolated against a telemetry-disabled control. Native host cgroup limits were unavailable at the visible mount; in-container memory.max was available in the load-only smoke. Changed thresholds require a new policy hash, campaign, and rerun of required evidence.",
+  "thresholds": {
+    "privateMemory": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "rss": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000
+    },
+    "managedHeap": {
+      "maximumLateSlopeBytesPer100Requests": 1000000,
+      "lateGrowthBudgetBytes": 32000000
+    },
+    "nearLinearR2Minimum": 0.95,
+    "replicateTolerance": {
+      "peakRelativeDifferenceMaximum": 0.05,
+      "endRelativeDifferenceMaximum": 0.05,
+      "slopeRelativeDifferenceMaximum": 0.25
+    }
+  },
+  "minimumMatrix": {
+    "baselineRuns": 2,
+    "runOnlyRuns": 2,
+    "arenaOnRuns": 2,
+    "arenaOffRuns": 2,
+    "dockerTargetRuns": 2,
+    "repetitionsBeforeThirdRun": 2,
+    "baselineRequests": 5000,
+    "runOnlyRequests": 5000,
+    "arenaRequests": 5000,
+    "tokenizerRequestsPerLanguage": 10000,
+    "sequenceOnlyRequests": 10000,
+    "tensorOnlyRequests": 10000,
+    "calibrationOnlyRequests": 10000,
+    "shapeAndConcurrencyRequests": 1000,
+    "dockerLimitsBytes": [2000000000, 2500000000, 3000000000, 4000000000],
+    "dockerSmokeRequests": [100, 1000],
+    "dockerExtendedLimitsBytes": [3000000000, 4000000000],
+    "dockerExtendedRequests": 5000,
+    "sessionRecreateCycles": [10, 100],
+    "shapeProfiles": ["short", "medium", "long"],
+    "questionCounts": [1, 2, 5],
+    "concurrencyLevels": [1, 2, 4]
+  }
+}

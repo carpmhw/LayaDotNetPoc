@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v2-session-recreate-10",
+  "scenario": "session-recreate",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 10,
+  "warmupRequests": 0,
+  "attemptedRequests": 10,
+  "completedRequests": 10,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 10,
+    "meanMilliseconds": 1470.3034899999998,
+    "p50Milliseconds": 1432.4555,
+    "p95Milliseconds": 1646.3867149999999,
+    "p99Milliseconds": 1721.765423,
+    "minMilliseconds": 1409.3565,
+    "maxMilliseconds": 1740.6101,
+    "lastMilliseconds": 1531.2248
+  },
+  "checksum": -6.409463882446289
+}

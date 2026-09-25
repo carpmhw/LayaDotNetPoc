@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v3",
+  "evidenceStatus": "blocked",
+  "status": null,
+  "classification": null,
+  "recommendation": "DO NOT PROCEED",
+  "blockers": [
+    "Required Phase 3A evidence, frozen thresholds or metrics are missing.",
+    "Campaign stage \u0027shape\u0027 is in-progress.",
+    "Campaign stage \u0027reproduction\u0027 is blocked.",
+    "Run \u0027phase3a-formal-20260925-v3-shape-retention-short-long-short\u0027 has no raw artifacts in its manifest.",
+    "Run \u0027phase3a-formal-20260925-v3-shape-retention-short-long-short\u0027 is in-progress.",
+    "One or more baseline slope segments lack required endpoints or metric values."
+  ],
+  "runIds": [
+    "phase3a-formal-20260925-v3-arena-off",
+    "phase3a-formal-20260925-v3-arena-on",
+    "phase3a-formal-20260925-v3-baseline-full-pipeline",
+    "phase3a-formal-20260925-v3-component-calibration-only",
+    "phase3a-formal-20260925-v3-component-full-pipeline",
+    "phase3a-formal-20260925-v3-component-run-only",
+    "phase3a-formal-20260925-v3-component-sequence-only",
+    "phase3a-formal-20260925-v3-component-tensor-only",
+    "phase3a-formal-20260925-v3-component-tokenizer-en",
+    "phase3a-formal-20260925-v3-component-tokenizer-mixed",
+    "phase3a-formal-20260925-v3-component-tokenizer-zh",
+    "phase3a-formal-20260925-v3-concurrency-1",
+    "phase3a-formal-20260925-v3-concurrency-2",
+    "phase3a-formal-20260925-v3-concurrency-4",
+    "phase3a-formal-20260925-v3-repro-arena-off-r1",
+    "phase3a-formal-20260925-v3-repro-arena-off-r2",
+    "phase3a-formal-20260925-v3-repro-arena-off-r3",
+    "phase3a-formal-20260925-v3-repro-arena-on-r1",
+    "phase3a-formal-20260925-v3-repro-arena-on-r2",
+    "phase3a-formal-20260925-v3-repro-arena-on-r3",
+    "phase3a-formal-20260925-v3-repro-baseline-r1",
+    "phase3a-formal-20260925-v3-repro-baseline-r2",
+    "phase3a-formal-20260925-v3-repro-baseline-r3",
+    "phase3a-formal-20260925-v3-repro-run-only-r1",
+    "phase3a-formal-20260925-v3-repro-run-only-r2",
+    "phase3a-formal-20260925-v3-repro-run-only-r3",
+    "phase3a-formal-20260925-v3-session-recreate-10",
+    "phase3a-formal-20260925-v3-session-recreate-100",
+    "phase3a-formal-20260925-v3-shape-long-q1",
+    "phase3a-formal-20260925-v3-shape-medium-q1",
+    "phase3a-formal-20260925-v3-shape-question-short-q1",
+    "phase3a-formal-20260925-v3-shape-question-short-q2",
+    "phase3a-formal-20260925-v3-shape-question-short-q5",
+    "phase3a-formal-20260925-v3-shape-retention-short-long-short",
+    "phase3a-formal-20260925-v3-shape-short-q1"
+  ],
+  "slopeSegments": {
+    "working_set_bytes": {
+      "0-500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 3021281.073825503,
+        "endpointDeltaBytes": 17903616,
+        "rSquared": 0.8139946847325443,
+        "sampleCount": 12,
+        "unavailableReason": null
+      },
+      "500-1000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 305189.2363636364,
+        "endpointDeltaBytes": 2568192,
+        "rSquared": 0.4237017174528659,
+        "sampleCount": 11,
+        "unavailableReason": null
+      },
+      "1000-2500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 21873.96129032258,
+        "endpointDeltaBytes": 282624,
+        "rSquared": 0.7310508114250456,
+        "sampleCount": 31,
+        "unavailableReason": null
+      },
+      "2500-5000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 52491.815384615344,
+        "endpointDeltaBytes": 1040384,
+        "rSquared": 0.6613748744166591,
+        "sampleCount": 51,
+        "unavailableReason": null
+      }
+    },
+    "private_memory_bytes": {
+      "0-500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 8548619.402074436,
+        "endpointDeltaBytes": 49086464,
+        "rSquared": 0.43997317260592606,
+        "sampleCount": 12,
+        "unavailableReason": null
+      },
+      "500-1000": {
+        "complete": true,
+        "slopeBytesPer100Requests": -1547021.9636363636,
+        "endpointDeltaBytes": 19218432,
+        "rSquared": 0.03614225809260263,
+        "sampleCount": 11,
+        "unavailableReason": null
+      },
+      "1000-2500": {
+        "complete": true,
+        "slopeBytesPer100Requests": -739361.032258064,
+        "endpointDeltaBytes": -33484800,
+        "rSquared": 0.13644764437502177,
+        "sampleCount": 31,
+        "unavailableReason": null
+      },
+      "2500-5000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 19986.255927601807,
+        "endpointDeltaBytes": 188416,
+        "rSquared": 0.10949318999720947,
+        "sampleCount": 51,
+        "unavailableReason": null
+      }
+    },
+    "vmrss_bytes": {
+      "0-500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 3022992.946918853,
+        "endpointDeltaBytes": 17895424,
+        "rSquared": 0.813954664776014,
+        "sampleCount": 12,
+        "unavailableReason": null
+      },
+      "500-1000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 309210.7636363636,
+        "endpointDeltaBytes": 2592768,
+        "rSquared": 0.42522179774571356,
+        "sampleCount": 11,
+        "unavailableReason": null
+      },
+      "1000-2500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 21873.96129032258,
+        "endpointDeltaBytes": 282624,
+        "rSquared": 0.7310508114250456,
+        "sampleCount": 31,
+        "unavailableReason": null
+      },
+      "2500-5000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 52491.815384615344,
+        "endpointDeltaBytes": 1040384,
+        "rSquared": 0.6613748744166591,
+        "sampleCount": 51,
+        "unavailableReason": null
+      }
+    },
+    "managed_heap_bytes": {
+      "0-500": {
+        "complete": true,
+        "slopeBytesPer100Requests": 524435.1921903599,
+        "endpointDeltaBytes": 5236352,
+        "rSquared": 0.17660550602076952,
+        "sampleCount": 12,
+        "unavailableReason": null
+      },
+      "500-1000": {
+        "complete": true,
+        "slopeBytesPer100Requests": -622144.8727272728,
+        "endpointDeltaBytes": -3873384,
+        "rSquared": 0.1439916376410565,
+        "sampleCount": 11,
+        "unavailableReason": null
+      },
+      "1000-2500": {
+        "complete": false,
+        "slopeBytesPer100Requests": null,
+        "endpointDeltaBytes": null,
+        "rSquared": null,
+        "sampleCount": 31,
+        "unavailableReason": "A required memory metric is unavailable in the segment."
+      },
+      "2500-5000": {
+        "complete": true,
+        "slopeBytesPer100Requests": 8827.853031674214,
+        "endpointDeltaBytes": 1510992,
+        "rSquared": 0.0007672320410970768,
+        "sampleCount": 51,
+        "unavailableReason": null
+      }
+    }
+  }
+}

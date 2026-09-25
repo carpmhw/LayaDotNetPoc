@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v3",
+  "generatedUtc": "2026-09-25T03:45:28.394Z",
+  "reports": [
+    {
+      "path": "baseline-full-pipeline.csv",
+      "sha256": "35e1b68c5a6c1f3bf152d0fd8bd3d705bebc890ce88888a6207423c95ee78bc6",
+      "sizeBytes": 42102
+    },
+    {
+      "path": "baseline-full-pipeline.md",
+      "sha256": "1579164727806efe413911ed80fe167e4483141d55a4279eebbf871833394bf4",
+      "sizeBytes": 2011
+    },
+    {
+      "path": "environment-baseline.md",
+      "sha256": "0027edb15522c75fd0caf0a049c2caa4391a1918dcd9ea55bb183c84f98a6e27",
+      "sizeBytes": 8441
+    },
+    {
+      "path": "memory-policy-v2.json",
+      "sha256": "fca022bdbcc450d95eec4c28c4bcd00cc7aba9fec68fb5249c6f341f35628a68",
+      "sizeBytes": 3836
+    },
+    {
+      "path": "memory-policy-v3.json",
+      "sha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+      "sizeBytes": 3798
+    },
+    {
+      "path": "memory-policy.json",
+      "sha256": "191da02a3ce54b74feff9942095604e2ad7f99fe1a8e7fa37849303380f4dfc5",
+      "sizeBytes": 3644
+    },
+    {
+      "path": "phase3a-concurrency-integrity-v3.json",
+      "sha256": "70524ad2fe87e795b26bdf4e5beba2318b180a0d5c2e20dec088735fa2ae9b68",
+      "sizeBytes": 1533
+    },
+    {
+      "path": "phase3a-docker-memory.md",
+      "sha256": "3bbb2478a564549cd676179436a42bfaa065b58e5206a4201e72320d4b7ea092",
+      "sizeBytes": 4262
+    },
+    {
+      "path": "phase3a-follow-up-decision-v3.md",
+      "sha256": "6143e1719c04061146a87c207f7deb2802676acde9299ad196d1edafc84b4460",
+      "sizeBytes": 2218
+    },
+    {
+      "path": "phase3a-gc-impact.md",
+      "sha256": "3a27c0456fd0ee4c5e93826daea04c527005f4ce2b3faece25322351f9c386b1",
+      "sizeBytes": 1612
+    },
+    {
+      "path": "phase3a-lifecycle-audit.json",
+      "sha256": "2592ac29e49b6bdf1c503e3f2024535bc56dc3c5a9b009fb744313c0798085d8",
+      "sizeBytes": 7149
+    },
+    {
+      "path": "phase3a-lifecycle-audit.md",
+      "sha256": "d9128e5ffbadc1d067fc9fe3d0d837c8a2e90898ffeacbd934af65232c246b2a",
+      "sizeBytes": 4329
+    },
+    {
+      "path": "phase3a-managed-heap-counter-v2.md",
+      "sha256": "3ff5085e25dcedaf2c824f5ef0e592f909f5a73d7da7c952895f6101a868e9d3",
+      "sizeBytes": 1656
+    },
+    {
+      "path": "phase3a-memory-components.md",
+      "sha256": "b681d6fea3e95ca1870bc74a36b1f88c58cf8888ef2ca0cf2aa30dbb82a5f8ec",
+      "sizeBytes": 3665
+    },
+    {
+      "path": "phase3a-memory-concurrency.md",
+      "sha256": "c4ca3c6d0c8346a790fadf40a5fb9df6290fdc197b337d6730c6ae3b23c8a3f9",
+      "sizeBytes": 1831
+    },
+    {
+      "path": "phase3a-memory-gate-report.md",
+      "sha256": "c1859d63acd6023f6ecfe8f69757e5afcd4f7da8307c51d294a072b8752591ec",
+      "sizeBytes": 1618
+    },
+    {
+      "path": "phase3a-memory-gate.json",
+      "sha256": "b7789c6e0acdd3657384907b4cb0ca950ce5fe0979ea42273d1c85ec3e6d2aee",
+      "sizeBytes": 6783
+    },
+    {
+      "path": "phase3a-memory-samples.csv",
+      "sha256": "6547c35747693615ab91c04da94bf1d31cb1b6dd4f96baa6f577ff1e3f4afeae",
+      "sizeBytes": 1311486
+    },
+    {
+      "path": "phase3a-ort-arena-comparison.md",
+      "sha256": "65c2b1e6fd4f7c712ccd1d656d4eee4c051e6017b24075e629e415a260047819",
+      "sizeBytes": 2063
+    },
+    {
+      "path": "phase3a-pilot-calibration-v2.json",
+      "sha256": "251ee705174657c11b25f97c34a8ce263ac2737892ff96d537b3a2cfa0df9faa",
+      "sizeBytes": 11191
+    },
+    {
+      "path": "phase3a-pilot-calibration-v2.md",
+      "sha256": "5c4c43f09c026e52cd4eb6bfb2d0f4161209a6f8f52768ed2690933ff5306a05",
+      "sizeBytes": 4710
+    },
+    {
+      "path": "phase3a-pilot-calibration-v3.json",
+      "sha256": "4d81a9dbf657d7dbf3547230b0d2aa59972c2fc096566fb0269458995676a4ef",
+      "sizeBytes": 9373
+    },
+    {
+      "path": "phase3a-pilot-calibration.json",
+      "sha256": "56534c4c65cc488faa6b7d5cb9e45ec86d8ad718c9d3756bab1f09dfe36583bf",
+      "sizeBytes": 10017
+    },
+    {
+      "path": "phase3a-pilot-calibration.md",
+      "sha256": "70fb4515f011855568021a9ff561e1091eedc7c819585a18bcdc5de0fa6484a2",
+      "sizeBytes": 5610
+    },
+    {
+      "path": "phase3a-reproducibility.json",
+      "sha256": "b4d1d2d38a0cbfa838eb2b39e196c4d2be5852822aa225d31fc8448c7bf37b83",
+      "sizeBytes": 6794
+    },
+    {
+      "path": "phase3a-reproducibility.md",
+      "sha256": "1e6c1ace6c3ee19741cbccb29e9b2edfa37106f67ac47a806962848389e155ba",
+      "sizeBytes": 2093
+    },
+    {
+      "path": "phase3a-session-lifecycle.md",
+      "sha256": "4277c90291b4f0a67f4f9768e1d3bd6352b6b0ebed2d58b458223927594d8bfe",
+      "sizeBytes": 2357
+    },
+    {
+      "path": "phase3a-shape-interruption-v3.json",
+      "sha256": "fefdd2c858e71da3fb3f89d409f6166e31878ad82944e197f80987b60087a405",
+      "sizeBytes": 1738
+    },
+    {
+      "path": "phase3a-shape-memory-matrix.md",
+      "sha256": "d5f7d6ac87a20bc1c8f223958fb7f56ab31822c787474c2aeba951ae9308596f",
+      "sizeBytes": 2425
+    },
+    {
+      "path": "phase3a-verification-v3.md",
+      "sha256": "4615e6f831d4d620d259d62007a6bbb1adec68b30b63a845a1305643b8fcaa23",
+      "sizeBytes": 3391
+    }
+  ]
+}

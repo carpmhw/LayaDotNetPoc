@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-pilot-noise-c-20260925-v3",
+  "scenario": "full-pipeline",
+  "mode": "pilot",
+  "status": "complete",
+  "plannedRequests": 1000,
+  "warmupRequests": 5,
+  "attemptedRequests": 1000,
+  "completedRequests": 1000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 1000,
+    "meanMilliseconds": 80.48293850000007,
+    "p50Milliseconds": 77.5275,
+    "p95Milliseconds": 111.638865,
+    "p99Milliseconds": 131.41697299999998,
+    "minMilliseconds": 47.0046,
+    "maxMilliseconds": 296.8167,
+    "lastMilliseconds": 77.6588
+  },
+  "checksum": 995.0954236437068
+}

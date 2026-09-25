@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-repro-arena-off-r1",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 5000,
+  "warmupRequests": 5,
+  "attemptedRequests": 5000,
+  "completedRequests": 5000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 5000,
+    "meanMilliseconds": 83.02215625999992,
+    "p50Milliseconds": 79.43805,
+    "p95Milliseconds": 115.94678,
+    "p99Milliseconds": 145.29055700000015,
+    "minMilliseconds": 46.2937,
+    "maxMilliseconds": 392.1687,
+    "lastMilliseconds": 73.8872
+  },
+  "checksum": 4955.674224215673
+}

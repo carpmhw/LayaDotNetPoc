@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-arena-on",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 5000,
+  "warmupRequests": 5,
+  "attemptedRequests": 5000,
+  "completedRequests": 5000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 5000,
+    "meanMilliseconds": 80.65758971999995,
+    "p50Milliseconds": 77.852,
+    "p95Milliseconds": 111.11430000000003,
+    "p99Milliseconds": 133.083719,
+    "minMilliseconds": 47.8546,
+    "maxMilliseconds": 179.9177,
+    "lastMilliseconds": 70.4503
+  },
+  "checksum": 4955.674224215673
+}

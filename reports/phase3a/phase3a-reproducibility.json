@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v3",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "737f971d1cf7de4409c026245c8cbf9f09fe1279e1149559f0c146b34924dfec"
+  },
+  "policySha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+  "status": "blocked",
+  "consistent": false,
+  "repetitionsBeforeThirdRun": 2,
+  "tolerances": {
+    "peakRelativeDifferenceMaximum": 0.05,
+    "endRelativeDifferenceMaximum": 0.05,
+    "slopeRelativeDifferenceMaximum": 0.25
+  },
+  "groups": [
+    {
+      "group": "baseline",
+      "runIds": ["phase3a-formal-20260925-v3-repro-baseline-r1", "phase3a-formal-20260925-v3-repro-baseline-r2", "phase3a-formal-20260925-v3-repro-baseline-r3"],
+      "runs": [
+        { "runId": "phase3a-formal-20260925-v3-repro-baseline-r1", "peakPrivateBytes": 2060103680, "endPrivateBytes": 675119104, "privateLateSlopeBytesPer100": 197424.23457013574, "peakRssBytes": 965836800, "endRssBytes": 481398784, "rssLateSlopeBytesPer100": 234707.10153846152 },
+        { "runId": "phase3a-formal-20260925-v3-repro-baseline-r2", "peakPrivateBytes": 2060124160, "endPrivateBytes": 675143680, "privateLateSlopeBytesPer100": -30551.34117647059, "peakRssBytes": 965869568, "endRssBytes": 481423360, "rssLateSlopeBytesPer100": 2760.8152036199094 },
+        { "runId": "phase3a-formal-20260925-v3-repro-baseline-r3", "peakPrivateBytes": 2060378112, "endPrivateBytes": 675389440, "privateLateSlopeBytesPer100": -30862.71131221719, "peakRssBytes": 965959680, "endRssBytes": 481509376, "rssLateSlopeBytesPer100": 3560.739909502262 }
+      ],
+      "maximumPairwiseRelativeDifference": { "peakPrivate": 0.00013319496960371513, "peakRss": 0.00012721027859051011, "endPrivate": 0.00040026684456304204, "endRss": 0.0002296777705944401, "privateSlope": 1.1563268632111783, "rssSlope": 0.9882371893073397 },
+      "status": "inconsistent-after-third",
+      "reasons": ["PrivateMemory late-slope pairwise difference exceeds 25%.", "RSS late-slope pairwise difference exceeds 25%."]
+    },
+    {
+      "group": "run-only",
+      "runIds": ["phase3a-formal-20260925-v3-repro-run-only-r1", "phase3a-formal-20260925-v3-repro-run-only-r2", "phase3a-formal-20260925-v3-repro-run-only-r3"],
+      "runs": [
+        { "runId": "phase3a-formal-20260925-v3-repro-run-only-r1", "peakPrivateBytes": 2032848896, "endPrivateBytes": 611635200, "privateLateSlopeBytesPer100": 2494.6678733031677, "peakRssBytes": 959459328, "endRssBytes": 466644992, "rssLateSlopeBytesPer100": 9407.82624434389 },
+        { "runId": "phase3a-formal-20260925-v3-repro-run-only-r2", "peakPrivateBytes": 2038214656, "endPrivateBytes": 611282944, "privateLateSlopeBytesPer100": 8664.244705882353, "peakRssBytes": 959057920, "endRssBytes": 466239488, "rssLateSlopeBytesPer100": 9556.097737556562 },
+        { "runId": "phase3a-formal-20260925-v3-repro-run-only-r3", "peakPrivateBytes": 2048946176, "endPrivateBytes": 611741696, "privateLateSlopeBytesPer100": 2668.8868778280544, "peakRssBytes": 959504384, "endRssBytes": 466690048, "rssLateSlopeBytesPer100": 8083.761809954751 }
+      ],
+      "maximumPairwiseRelativeDifference": { "peakPrivate": 0.007856370356895114, "peakRss": 0.00046530688910328104, "endPrivate": 0.0007499112828169882, "endRss": 0.0009654373431164317, "privateSlope": 0.7120732437751347, "rssSlope": 0.15407292474786666 },
+      "status": "inconsistent-after-third",
+      "reasons": ["PrivateMemory late-slope pairwise difference exceeds 25%."]
+    },
+    {
+      "group": "arena-on",
+      "runIds": ["phase3a-formal-20260925-v3-repro-arena-on-r1", "phase3a-formal-20260925-v3-repro-arena-on-r2", "phase3a-formal-20260925-v3-repro-arena-on-r3"],
+      "runs": [
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-on-r1", "peakPrivateBytes": 2060087296, "endPrivateBytes": 675098624, "privateLateSlopeBytesPer100": -31759.753846153846, "peakRssBytes": 965640192, "endRssBytes": 481193984, "rssLateSlopeBytesPer100": 3615.6003619909507 },
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-on-r2", "peakPrivateBytes": 2059923456, "endPrivateBytes": 674934784, "privateLateSlopeBytesPer100": -33157.21266968326, "peakRssBytes": 965693440, "endRssBytes": 481267712, "rssLateSlopeBytesPer100": 2381.240180995475 },
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-on-r3", "peakPrivateBytes": 2060533760, "endPrivateBytes": 675545088, "privateLateSlopeBytesPer100": -33409.274208144794, "peakRssBytes": 966012928, "endRssBytes": 481583104, "rssLateSlopeBytesPer100": 3847.6452488687783 }
+      ],
+      "maximumPairwiseRelativeDifference": { "peakPrivate": 0.00029618733351886455, "peakRss": 0.0003858499086256535, "endPrivate": 0.0009034245246410555, "endRss": 0.0008080017690986102, "privateSlope": 0.049373127704426874, "rssSlope": 0.38111753371868984 },
+      "status": "inconsistent-after-third",
+      "reasons": ["RSS late-slope pairwise difference exceeds 25%."]
+    },
+    {
+      "group": "arena-off",
+      "runIds": ["phase3a-formal-20260925-v3-repro-arena-off-r1", "phase3a-formal-20260925-v3-repro-arena-off-r2", "phase3a-formal-20260925-v3-repro-arena-off-r3"],
+      "runs": [
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-off-r1", "peakPrivateBytes": 2059939840, "endPrivateBytes": 666562560, "privateLateSlopeBytesPer100": -33387.033484162894, "peakRssBytes": 965533696, "endRssBytes": 472694784, "rssLateSlopeBytesPer100": 2356.0340271493214 },
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-off-r2", "peakPrivateBytes": 2059976704, "endPrivateBytes": 666599424, "privateLateSlopeBytesPer100": -29183.536651583712, "peakRssBytes": 965722112, "endRssBytes": 472875008, "rssLateSlopeBytesPer100": 5371.134841628959 },
+        { "runId": "phase3a-formal-20260925-v3-repro-arena-off-r3", "peakPrivateBytes": 2059923456, "endPrivateBytes": 666546176, "privateLateSlopeBytesPer100": -82192.07819004526, "peakRssBytes": 965464064, "endRssBytes": 472616960, "rssLateSlopeBytesPer100": 3533.3096832579186 }
+      ],
+      "maximumPairwiseRelativeDifference": { "peakPrivate": 0.00002584883600703088, "peakRss": 0.00026720730196969956, "endPrivate": 0.00007988005702147147, "endRss": 0.0005457002286743815, "privateSlope": 0.6449349220236861, "rssSlope": 0.5613526570048308 },
+      "status": "inconsistent-after-third",
+      "reasons": ["PrivateMemory late-slope pairwise difference exceeds 25%.", "RSS late-slope pairwise difference exceeds 25%."]
+    }
+  ],
+  "blockers": [
+    "All four groups exceeded at least one frozen late-slope replicate tolerance after the third run.",
+    "Do not average or select a favorable replicate; disagreement remains unresolved.",
+    "This report does not infer a leak from replicate disagreement."
+  ]
+}

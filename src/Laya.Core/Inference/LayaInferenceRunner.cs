@@ -34,11 +34,35 @@ public sealed class LayaInferenceRunner
 {
     private static readonly string[] OutputNames = { "logits", "act_probs" };
     private readonly LayaOnnxSession _session;
+    private readonly Func<LayaInputBatch, LayaInputTensorOwner> _createInputOwner;
+    private readonly Func<
+        RunOptions,
+        IReadOnlyDictionary<string, OrtValue>,
+        IReadOnlyCollection<string>,
+        IDisposableReadOnlyCollection<OrtValue>> _run;
 
     /// <summary>建立使用既有長生命週期 session 的 runner。</summary>
     public LayaInferenceRunner(LayaOnnxSession session)
+        : this(
+            session,
+            LayaInputTensorOwner.Create,
+            (runOptions, inputs, outputNames) => session.Run(runOptions, inputs, outputNames))
+    {
+    }
+
+    /// <summary>建立可替換 tensor owner 與 native Run 邊界的 runner。</summary>
+    internal LayaInferenceRunner(
+        LayaOnnxSession session,
+        Func<LayaInputBatch, LayaInputTensorOwner> createInputOwner,
+        Func<
+            RunOptions,
+            IReadOnlyDictionary<string, OrtValue>,
+            IReadOnlyCollection<string>,
+            IDisposableReadOnlyCollection<OrtValue>> run)
     {
         _session = session ?? throw new ArgumentNullException(nameof(session));
+        _createInputOwner = createInputOwner ?? throw new ArgumentNullException(nameof(createInputOwner));
+        _run = run ?? throw new ArgumentNullException(nameof(run));
     }
 
     /// <summary>建立五項 OrtValue、執行一次 Run 並複製 managed outputs。</summary>
@@ -47,39 +71,13 @@ public sealed class LayaInferenceRunner
         ArgumentNullException.ThrowIfNull(batch);
         ValidateBatch(batch);
 
-        using var inputIds = OrtValue.CreateTensorValueFromMemory(
-            batch.InputIds,
-            new long[] { batch.BatchSize, batch.SequenceLength });
-        var attentionMaskValues = batch.AttentionMask
-            .Select(value => value ? 1L : 0L)
-            .ToArray();
-        using var attentionMask = OrtValue.CreateTensorValueFromMemory(
-            attentionMaskValues,
-            new long[] { batch.BatchSize, batch.SequenceLength });
-        using var markerPositions = OrtValue.CreateTensorValueFromMemory(
-            batch.MarkerPositions,
-            new long[] { batch.BatchSize, batch.MarkerCount });
-        using var markerMask = OrtValue.CreateTensorValueFromMemory(
-            batch.MarkerMask,
-            new long[] { batch.BatchSize, batch.MarkerCount });
-        using var questionTypes = OrtValue.CreateTensorValueFromMemory(
-            batch.QuestionTypes,
-            new long[] { batch.BatchSize });
+        using var inputOwner = _createInputOwner(batch);
         using var runOptions = new RunOptions();
-
-        var inputs = new Dictionary<string, OrtValue>(StringComparer.Ordinal)
-        {
-            ["input_ids"] = inputIds,
-            ["attention_mask"] = attentionMask,
-            ["marker_pos"] = markerPositions,
-            ["marker_mask"] = markerMask,
-            ["qtype"] = questionTypes
-        };
 
         try
         {
             var stopwatch = Stopwatch.StartNew();
-            using var outputs = _session.Run(runOptions, inputs, OutputNames);
+            using var outputs = _run(runOptions, inputOwner.Inputs, OutputNames);
             stopwatch.Stop();
 
             var outputValues = outputs.ToArray();

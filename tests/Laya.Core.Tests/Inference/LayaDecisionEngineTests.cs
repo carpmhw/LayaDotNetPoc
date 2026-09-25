@@ -1,6 +1,7 @@
 using Laya.Core.Exceptions;
 using Laya.Core.Inference;
 using Laya.Core.Models;
+using Laya.Core.Tokenization;
 
 namespace Laya.Core.Tests.Inference;
 
@@ -87,6 +88,40 @@ public sealed class LayaDecisionEngineTests
             new[] { new LayaQuestion("score", LayaQuestionType.Score, "Rate", new[] { "low", "high" }) });
 
         Assert.Throws<LayaConfigurationException>(() => engine.Decide(request));
+    }
+
+    /// <summary>驗證長生命週期 engine 重用注入資源並於重複 Dispose 時釋放 owner。</summary>
+    [Fact]
+    public void Dispose_ReleasesInjectedSessionAndTokenizerAfterRepeatedDecisions()
+    {
+        var modelRoot = FindModelRoot();
+        var session = LayaOnnxSession.Open(modelRoot);
+        var tokenizer = LayaTokenizer.Load(
+            Path.Combine(modelRoot, "tokenizer", "tokenizer.json"),
+            Path.Combine(modelRoot, "tokenizer", "tokenizer_config.json"));
+        var engine = new LayaDecisionEngine(session, tokenizer);
+        var request = new LayaRequest(
+            "synthetic shared session ownership",
+            new[] { new LayaQuestion("category", LayaQuestionType.Choice, "Pick one", new[] { "food", "travel" }) });
+
+        _ = engine.Decide(request);
+        _ = engine.Decide(request);
+        engine.Dispose();
+        engine.Dispose();
+
+        Assert.Throws<ObjectDisposedException>(() =>
+        {
+            _ = session.OrtSession;
+        });
+        var tokenizationException = Assert.Throws<LayaTokenizationException>(() =>
+        {
+            _ = tokenizer.Encode("synthetic state");
+        });
+        Assert.IsType<ObjectDisposedException>(tokenizationException.InnerException);
+        Assert.Throws<ObjectDisposedException>(() =>
+        {
+            _ = engine.LoadDuration;
+        });
     }
 
     /// <summary>尋找 repository 內的本機模型目錄，允許 CI 透過環境變數覆寫。</summary>

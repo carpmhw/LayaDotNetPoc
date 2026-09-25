@@ -102,11 +102,7 @@ public sealed class LayaOnnxSession : IDisposable
 
         try
         {
-            sessionOptions = new SessionOptions
-            {
-                GraphOptimizationLevel = GraphOptimizationLevel.ORT_ENABLE_ALL
-            };
-            sessionOptions.AppendExecutionProvider_CPU();
+            sessionOptions = CreateSessionOptions(options.EnableCpuMemArena);
             var loadStopwatch = Stopwatch.StartNew();
             session = new InferenceSession(bundle.ModelPath, sessionOptions);
             loadStopwatch.Stop();
@@ -150,6 +146,27 @@ public sealed class LayaOnnxSession : IDisposable
 
     /// <summary>取得供 Core inference pipeline 使用的原生 session。</summary>
     internal InferenceSession OrtSession => _session ?? throw new ObjectDisposedException(nameof(LayaOnnxSession));
+
+    /// <summary>建立固定 CPU execution provider 與指定 memory arena 狀態的 session options。</summary>
+    internal static SessionOptions CreateSessionOptions(bool enableCpuMemArena)
+    {
+        var sessionOptions = new SessionOptions
+        {
+            GraphOptimizationLevel = GraphOptimizationLevel.ORT_ENABLE_ALL,
+            EnableCpuMemArena = enableCpuMemArena
+        };
+
+        try
+        {
+            sessionOptions.AppendExecutionProvider_CPU(enableCpuMemArena ? 1 : 0);
+            return sessionOptions;
+        }
+        catch
+        {
+            sessionOptions.Dispose();
+            throw;
+        }
+    }
 
     /// <summary>以指定 input OrtValues 執行一次 native Run。</summary>
     internal IDisposableReadOnlyCollection<OrtValue> Run(

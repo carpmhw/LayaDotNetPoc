@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "status": "pilot-complete-not-formal-gate-evidence",
+  "createdUtc": "2026-09-24T19:11:26Z",
+  "campaignId": "phase3a-pilot-20260925-v2",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "d77ea11b5bd8804606db84209fe498b0cee25ac9a1eb503ae4cd1622a509b778"
+  },
+  "campaignManifest": {
+    "path": "campaigns/phase3a-pilot-20260925-v2/pilot/campaign.json",
+    "sha256": "54569e497cafd109d31e48e95e3c21842622d86fa1695cf68378863df3cb825b"
+  },
+  "workload": {
+    "path": "test-data/phase3a/memory-workloads.json",
+    "sha256": "9c781dd4f312dc90b5f74443721650a7f2a5a87d2745bbdb6d353fb900a5b56a"
+  },
+  "model": {
+    "profile": "multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "tokenizerSha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+  },
+  "hostEnvironment": {
+    "os": "Linux Mint 22.3",
+    "kernel": "7.0.0-34-generic",
+    "cpu": "AMD Ryzen 7 255 w/ Radeon 780M Graphics",
+    "logicalCores": 10,
+    "ramBytes": 16692830208,
+    "swapBytes": 2147479552,
+    "dotnetSdk": "10.0.112",
+    "dotnetRuntime": ".NET 10.0.12",
+    "onnxRuntime": "1.30.0.0",
+    "executionProvider": "CPU",
+    "nativeCgroupMemoryLimitBytes": null,
+    "nativeCgroupSwapLimitBytes": null,
+    "linuxProcCounters": "all required status fields available in pilot samples"
+  },
+  "containerPilot": {
+    "runId": "phase3a-pilot-docker-fullpipeline-500-20260925-v2",
+    "manifestPath": "runs/phase3a-pilot-docker-fullpipeline-500-20260925-v2/manifest.json",
+    "manifestSha256": "ac2455d97d4eaf0a85b6c845cf76ebb1c6d2a4e0644f7225d652cb19ea99e792",
+    "runtime": ".NET 8.0.31",
+    "onnxRuntime": "1.30.0.0",
+    "dockerRuntime": "docker-29.8.1",
+    "requestedMemoryLimitBytes": 4000000000,
+    "effectiveCgroupMemoryLimitBytes": 3999997952,
+    "effectiveCgroupSwapLimitBytes": 0,
+    "requests": 500,
+    "status": "complete",
+    "errors": 0,
+    "integrityFailures": 0,
+    "negativeManagedHeapCounterCount": 0,
+    "classification": "Docker pilot; separate runtime group, not a target-limit formal replicate"
+  },
+  "runs": [
+    {
+      "runId": "phase3a-pilot-20260925-v2-pilot-tokenizer-en",
+      "scenario": "tokenizer-only",
+      "requests": 1000,
+      "runManifestSha256": "7d3c778c901ff0ec85bfe32dfdf9ea8fb09bf66abca9e5cb73ddf7966b0a1f44",
+      "summary": { "meanMs": 0.0107347, "p50Ms": 0.0078, "p95Ms": 0.02201, "p99Ms": 0.052353 },
+      "samplesSha256": "3e161d83ceb3b88180040720842067421fcf526833038ca632edca10eb6062cf",
+      "latencySha256": "992b63daf258c46355129373e81b3184e5e325d1b37f6a8df975319bc631b6af",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-20260925-v2-pilot-tokenizer-zh",
+      "scenario": "tokenizer-only",
+      "requests": 1000,
+      "runManifestSha256": "1b46957a303f4c3f15ca2fcebc3e88493d1af9416516d242929974862077c72f",
+      "summary": { "meanMs": 0.0089114, "p50Ms": 0.0058, "p95Ms": 0.018305, "p99Ms": 0.071801 },
+      "samplesSha256": "91dca39d61c52adbf78b87b8dd6634fafb696c7c06e7866b39396ad726271753",
+      "latencySha256": "05914f4e038359f5453c74829f2cc4676ab8211d2d3227304a475df3221709bc",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-20260925-v2-pilot-tokenizer-mixed",
+      "scenario": "tokenizer-only",
+      "requests": 1000,
+      "runManifestSha256": "43433a161f9bf541a95506a3ee6a5a06ba32a4b21ddeb5102d1af51cc5575379",
+      "summary": { "meanMs": 0.0118131, "p50Ms": 0.0086, "p95Ms": 0.0267, "p99Ms": 0.061915 },
+      "samplesSha256": "d583395281cc1e29c06b0172dad0da4fbd4e846c4a9f810c265f3aefa45dc606",
+      "latencySha256": "78c57452a335b8b8d58afcd97fe0b43732cd372bcb046ecef5f972691dbee601",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-20260925-v2-pilot-full-pipeline",
+      "scenario": "full-pipeline",
+      "requests": 200,
+      "warmupRequests": 5,
+      "runManifestSha256": "f5f080e648e96ae19f88693ead6e36104ab527bf28ba7383f174888da2b17f92",
+      "summary": { "meanMs": 80.820591, "p50Ms": 76.4448, "p95Ms": 114.76138, "p99Ms": 128.781198 },
+      "samplesSha256": "542e1a0eeab63fce9290aab16dd3b947edfef5fcb63f0cee27470fa205f4b70f",
+      "latencySha256": "299d6614605310d23f0ba4a0888ef882455d580d9e2acc1e26e29a2c6c18cf5f",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-noise-a-20260925-v2",
+      "scenario": "full-pipeline",
+      "requests": 1000,
+      "warmupRequests": 5,
+      "runManifestSha256": "a85bd121cfe0ae9199d2394a71a7da5c5b0424944cfbf1b1fd41e1f9e86ff094",
+      "summary": { "meanMs": 80.1946406, "p50Ms": 76.37825, "p95Ms": 113.789155, "p99Ms": 132.565905 },
+      "samplesSha256": "978478dee17104b4d97804c49f9c1048ffc34ccb73b5ea8f64399712922572e3",
+      "latencySha256": "990dc70802065528b49d9214683680095a526dd7e8d98fa24e4e718aae71dbe8",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-noise-b-20260925-v2",
+      "scenario": "full-pipeline",
+      "requests": 1000,
+      "warmupRequests": 5,
+      "runManifestSha256": "3d2491427dd91a33d6847a9cb7c069f2be062dcf30585a114d1292dde22d14be",
+      "summary": { "meanMs": 81.2058345, "p50Ms": 78.20635, "p95Ms": 112.55276, "p99Ms": 131.104061 },
+      "samplesSha256": "cb83ffc1d449896f1656b98d2f68efb89595bb0153f66f4685370f573c5656d3",
+      "latencySha256": "d213a2d64c09398ccc3ab1f29cb75549b80813d15904ea850040c7bf0e4f211d",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    },
+    {
+      "runId": "phase3a-pilot-docker-fullpipeline-500-20260925-v2",
+      "scenario": "full-pipeline",
+      "requests": 500,
+      "warmupRequests": 5,
+      "runManifestSha256": "ac2455d97d4eaf0a85b6c845cf76ebb1c6d2a4e0644f7225d652cb19ea99e792",
+      "status": "complete",
+      "errors": 0,
+      "integrityFailures": 0,
+      "negativeManagedHeapCounterCount": 0
+    }
+  ],
+  "observations": {
+    "nativeFullPipeline1000RequestRepeats": {
+      "endRssBytes": [968126464, 968048640],
+      "endPrivateMemoryBytes": [2044592128, 2044743680],
+      "request500To1000RssEndpointGrowthBytes": [53248, 393216],
+      "request500To1000RssEndpointRateBytesPer100Requests": [10649.6, 78643.2],
+      "p50LatencyMs": [76.37825, 78.20635],
+      "p95LatencyMs": [113.789155, 112.55276],
+      "errors": [0, 0],
+      "integrityFailures": [0, 0],
+      "negativeManagedHeapCounterCount": [0, 0]
+    },
+    "managedHeapAtRequest1000Bytes": [1185344, 1263760],
+    "totalAllocatedBytesAtRequest1000": [34024064, 34144736],
+    "pilotWriterArtifactsAt1000RequestRunBytes": {
+      "samples": [10107, 10117],
+      "latency": [25981, 25971],
+      "errorsCsv": 37,
+      "summary": [632, 624]
+    },
+    "historicalExcludedCounterAnomaly": {
+      "runId": "phase3a-formal-20260925-baseline-full-pipeline",
+      "manifestSha256": "5ab18b48f7cd0ce6fce7659350cc1e70bfeff416c7c4e5400e2e028c5e9a8456",
+      "samplesSha256": "81170c5b0085518b0245740a96d89a13e56612f090259c808dcbbe3c0ac136b3",
+      "plannedAndCompletedRequests": 5000,
+      "negativeManagedHeapSamples": 9,
+      "requestCounts": [250, 300, 350, 3200, 3250, 3300, 3850, 3900, 3950],
+      "sourceIdentity": "b62688199f34956240dd1aaccd3fc55a3805be0ff5561497c8c2113f4107ed18",
+      "includedInThresholdCalibration": false
+    },
+    "counters": {
+      "linuxProcStatus": "available for native pilot runs",
+      "nativeHostCgroupLimit": "unavailable at visible cgroup mount; stored as null",
+      "containerCgroupLimit": "available in .NET 8.0.31 run; memory.max page-rounded, swap limit zero",
+      "managedHeapNegativeValueHandling": "null plus managed_heap_unavailable_reason; no zero substitution"
+    }
+  },
+  "frozenPolicyProposal": {
+    "targetMemoryLimitBytes": 3000000000,
+    "deploymentHeadroomBytes": 600000000,
+    "privateMemory": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000,
+      "rationale": "Retain the 2 MB/100-request threshold as a conservative POC budget: it is below the 20% deployment reserve when projected across the 2500-request late segment (50 MB), with a separate 64 MB cap (10.7% of reserve) for total growth. Pilot private-memory checkpoints varied by about 33.7 MB around request 500, so disagreements remain subject to third-replicate evaluation."
+    },
+    "rss": {
+      "maximumLateSlopeBytesPer100Requests": 2000000,
+      "lateGrowthBudgetBytes": 64000000,
+      "rationale": "Both native repeats had stable 500-1000 VmRSS endpoints (maximum observed rate 78,643.2 bytes/100 requests). The 2 MB/100 threshold is a conservative ceiling tied to the 600 MB target reserve, not a claim that pilot is the formal late-segment slope."
+    },
+    "managedHeap": {
+      "maximumLateSlopeBytesPer100Requests": 1000000,
+      "lateGrowthBudgetBytes": 32000000,
+      "rationale": "Half the process/RSS growth cap, applied only to nonnegative GetTotalMemory(false) values; unavailable samples block the segment rather than becoming zero. TotalAllocatedBytes remains a separate allocation-rate metric."
+    },
+    "nearLinearR2Minimum": 0.95,
+    "nearLinearR2Rationale": "A strict fit-quality floor; an R-squared value alone never establishes leak evidence and must accompany a positive slope that exceeds its frozen budget.",
+    "replicateTolerance": {
+      "peakRelativeDifferenceMaximum": 0.05,
+      "endRelativeDifferenceMaximum": 0.05,
+      "slopeRelativeDifferenceMaximum": 0.25
+    },
+    "replicateToleranceRationale": "The v2 1000-request repeats ended within 0.01% RSS and 0.01% PrivateMemory; P50/P95 differences were about 2.4%/1.1%. A 5% peak/end tolerance admits observed noise; 25% slope tolerance forces a third run for larger differences."
+  },
+  "limitations": [
+    "The v2 native pilot was on .NET 10.0.12／ORT 1.30.0.0; the Docker pilot was .NET 8.0.31／ORT 1.30.0.0 and is a separate runtime group.",
+    "Native noise repeats ended at 1000 requests; the 2500-5000 formal late segment and 3000000000-byte Docker target remain untested.",
+    "Collector/writer/latency-window allocations are recorded but not isolated against a telemetry-disabled control.",
+    "Native host cgroup limits are unavailable at the visible mount; in-container cgroup limits were observed.",
+    "An earlier v1 formal baseline is retained with nine negative GC.GetTotalMemory(false) samples and is excluded from v2 policy calibration and the new formal campaign.",
+    "Thresholds are POC acceptance inputs, not measured outcomes or production SLA. Any threshold change requires a new policy hash and a new campaign."
+  ]
+}

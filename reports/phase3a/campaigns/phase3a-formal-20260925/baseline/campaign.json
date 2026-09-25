@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925",
+  "stage": "baseline",
+  "mode": "formal",
+  "evidenceStatus": "complete",
+  "createdUtc": "2026-09-24T18:19:38.7087504\u002B00:00",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "b62688199f34956240dd1aaccd3fc55a3805be0ff5561497c8c2113f4107ed18"
+  },
+  "policy": {
+    "path": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/reports/phase3a/memory-policy.json",
+    "sha256": "191da02a3ce54b74feff9942095604e2ad7f99fe1a8e7fa37849303380f4dfc5",
+    "targetMemoryLimitBytes": 3000000000
+  },
+  "workload": {
+    "path": "test-data/phase3a/memory-workloads.json",
+    "sha256": "9c781dd4f312dc90b5f74443721650a7f2a5a87d2745bbdb6d353fb900a5b56a",
+    "profile": "multilingual",
+    "questionCount": 1,
+    "questionCounts": [
+      1,
+      2,
+      5
+    ],
+    "serializationVersion": "laya-state-v1"
+  },
+  "model": {
+    "profile": "multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+    "bundleRoot": "/srv/hermes_agent/home/workspace/Repo/LayaDotNetPoc/models/laya-multilingual/versions/8f37a12e6df5ef1adebad26bb08a4f552f93119dbc8391e2df3d828317f73728",
+    "bundleManifestSha256": "75866db31d4dce160349a5ed986118e79c446527b8b23b1a956946a3744cc553",
+    "tokenizerSha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+  },
+  "environment": {
+    "os": "Linux Mint 22.3",
+    "kernel": "7.0.0-34-generic",
+    "architecture": "X64",
+    "cpu": "AMD Ryzen 7 255 w/ Radeon 780M Graphics",
+    "logicalCores": 10,
+    "ramBytes": 16692830208,
+    "swapBytes": 2147479552,
+    "dotnetSdk": "10.0.112",
+    "dotnetRuntime": ".NET 10.0.12",
+    "onnxRuntime": "1.30.0.0",
+    "executionProvider": "CPU",
+    "containerRuntime": null,
+    "memoryLimitBytes": null,
+    "memorySwapLimitBytes": null
+  },
+  "requiredRunIds": [
+    "phase3a-formal-20260925-baseline-full-pipeline"
+  ],
+  "stageStatus": {
+    "baseline-full-pipeline": "complete"
+  },
+  "blockers": [],
+  "artifacts": [
+    {
+      "path": "host-logs/phase3a-formal-20260925-baseline-full-pipeline.stdout.log",
+      "sha256": "1a0c9bb274d7f7b0a280438300b1374d805a3dfc0693f99a1aa02fae777a985a",
+      "sizeBytes": 270,
+      "status": "complete",
+      "unavailableReason": null
+    },
+    {
+      "path": "host-logs/phase3a-formal-20260925-baseline-full-pipeline.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0,
+      "status": "complete",
+      "unavailableReason": null
+    }
+  ]
+}

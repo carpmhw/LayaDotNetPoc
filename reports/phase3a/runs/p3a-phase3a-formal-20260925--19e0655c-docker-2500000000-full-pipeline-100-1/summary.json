@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "p3a-phase3a-formal-20260925--19e0655c-docker-2500000000-full-pipeline-100-1",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 100,
+  "warmupRequests": 5,
+  "attemptedRequests": 100,
+  "completedRequests": 100,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 100,
+    "meanMilliseconds": 88.36282299999998,
+    "p50Milliseconds": 83.72229999999999,
+    "p95Milliseconds": 125.89909999999999,
+    "p99Milliseconds": 138.8026430000004,
+    "minMilliseconds": 58.6817,
+    "maxMilliseconds": 212.1461,
+    "lastMilliseconds": 75.5888
+  },
+  "checksum": 103.96519351501445
+}

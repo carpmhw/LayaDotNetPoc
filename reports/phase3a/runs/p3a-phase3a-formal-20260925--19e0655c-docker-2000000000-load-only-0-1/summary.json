@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "runId": "p3a-phase3a-formal-20260925--19e0655c-docker-2000000000-load-only-0-1",
+  "scenario": "load-only",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 0,
+  "warmupRequests": 0,
+  "attemptedRequests": 0,
+  "completedRequests": 0,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": null,
+  "checksum": 0
+}

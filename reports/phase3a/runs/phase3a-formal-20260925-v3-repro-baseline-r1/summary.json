@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-formal-20260925-v3-repro-baseline-r1",
+  "scenario": "full-pipeline",
+  "mode": "formal",
+  "status": "complete",
+  "plannedRequests": 5000,
+  "warmupRequests": 5,
+  "attemptedRequests": 5000,
+  "completedRequests": 5000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 5000,
+    "meanMilliseconds": 80.68082118000005,
+    "p50Milliseconds": 78.10225,
+    "p95Milliseconds": 110.57705000000003,
+    "p99Milliseconds": 129.28770900000006,
+    "minMilliseconds": 48.2614,
+    "maxMilliseconds": 291.6952,
+    "lastMilliseconds": 66.6639
+  },
+  "checksum": 4955.674224215673
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3a-pilot-20260925-v2-pilot-tokenizer-mixed",
+  "scenario": "tokenizer-only",
+  "mode": "pilot",
+  "status": "complete",
+  "plannedRequests": 1000,
+  "warmupRequests": 5,
+  "attemptedRequests": 1000,
+  "completedRequests": 1000,
+  "errors": 0,
+  "integrityFailures": 0,
+  "latency": {
+    "sampleCount": 1000,
+    "meanMilliseconds": 0.011813100000000005,
+    "p50Milliseconds": 0.0086,
+    "p95Milliseconds": 0.0267,
+    "p99Milliseconds": 0.061914999999999984,
+    "minMilliseconds": 0.0055,
+    "maxMilliseconds": 0.1465,
+    "lastMilliseconds": 0.0086
+  },
+  "checksum": 203317530
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "phase3a-formal-20260925-v3",
+  "stage": "shape",
+  "status": "blocked-incomplete-run",
+  "sourceIdentity": {
+    "commit": "98f4840c2b7746b94825fe904f9228ed63c43392",
+    "dirty": true,
+    "dirtyIdentity": "737f971d1cf7de4409c026245c8cbf9f09fe1279e1149559f0c146b34924dfec"
+  },
+  "policySha256": "a72da66f85f95497d8b54bc3fa0e258dfc4bc61518ebff735406df383d2928be",
+  "plannedCases": 7,
+  "completedCases": [
+    "phase3a-formal-20260925-v3-shape-short-q1",
+    "phase3a-formal-20260925-v3-shape-medium-q1",
+    "phase3a-formal-20260925-v3-shape-long-q1",
+    "phase3a-formal-20260925-v3-shape-question-short-q1",
+    "phase3a-formal-20260925-v3-shape-question-short-q2",
+    "phase3a-formal-20260925-v3-shape-question-short-q5"
+  ],
+  "incompleteRun": {
+    "runId": "phase3a-formal-20260925-v3-shape-retention-short-long-short",
+    "status": "in-progress",
+    "plannedRequests": 3000,
+    "attemptedRequests": 2600,
+    "completedRequests": 2600,
+    "errors": 0,
+    "integrityFailures": 0,
+    "terminalOutcome": "in-progress",
+    "artifactsIndexed": 0,
+    "rawCsvFilesPresent": true,
+    "reason": "The stage command exceeded its 30-minute tool timeout before completion; the child process is no longer running."
+  },
+  "resumeDisposition": {
+    "canReuseIncompleteRun": false,
+    "reason": "MemoryCampaignResumeValidator only reuses complete manifests with verified artifact hashes; a new run ID/campaign identity is needed for another retention run."
+  },
+  "gateInterpretation": "The six complete shape/question cases and partial 2600/3000 retention run are not a complete shape matrix. Keep stage and overall evidence blocked; do not treat the planned 3000 requests as completed."
+}

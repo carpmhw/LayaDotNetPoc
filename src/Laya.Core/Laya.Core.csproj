@@ -11,4 +11,9 @@
     <PackageReference Include="Tokenizers.HuggingFace" Version="3.23.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="Laya.Core.Tests" />
+    <InternalsVisibleTo Include="Laya.MemoryProbe" />
+  </ItemGroup>
+
 </Project>
